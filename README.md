@@ -11,6 +11,5 @@ yarn serve
 ## Technos 
 - Vue Js
 - Greensock 
+- SASS
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
