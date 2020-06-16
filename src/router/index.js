@@ -9,12 +9,12 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home,
-    meta: { transition: 'overlay-right-full' }
+    meta: { transitionName: `fade` }
   },
   {
     path: '/about',
     name: 'About',
-    meta: { transition: 'overlay-right-full' },
+    meta: { transitionName: `fade` },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

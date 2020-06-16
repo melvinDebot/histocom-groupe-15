@@ -4,11 +4,22 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <vue-page-transition name="overlay-right-full">
+    <transition-page>
     <router-view/>
-    </vue-page-transition>
+    </transition-page>
   </div>
 </template>
+
+<script>
+import TransitionPage from './transition/TransitionPage.vue';
+
+export default {
+  name :'App',
+  components : {
+    TransitionPage
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -32,9 +43,7 @@
   color: #42b983;
 }
 
-.overlay-right-full{
-  background: #42b983;
-}
+
 
 
 </style>
