@@ -4,11 +4,13 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <vue-page-transition name="overlay-right-full">
     <router-view/>
+    </vue-page-transition>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,4 +31,10 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.overlay-right-full{
+  background: #42b983;
+}
+
+
 </style>
