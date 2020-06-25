@@ -15,7 +15,7 @@
 <script>
 import img from '../assets/images/perso-one.svg';
 import book from '../assets/images/book.png';
-import gsap from 'gsap'
+import gsap , {Power3}from 'gsap'
 
 export default {
   name : 'Intro',
@@ -31,8 +31,17 @@ export default {
     }
   },
   mounted : ()=> {
-    gsap.to('.perso', 1, {
-      x : 20
+    // gsap.to('.perso', 3, {
+    //   x : 20,
+    //   ease : Power3.easeIn
+    // })
+    gsap.fromTo('.perso',3, {x : -150, opacity : 0}, { x:0, opacity : 1})
+
+
+    gsap.to('.text--containt',1, {
+      opacity : 1,
+      ease : Power3.easeInOut,
+      delay: 3
     })
   }
 }
@@ -74,6 +83,7 @@ export default {
         height: 158px;
         background:white;
         border-radius: 20px;
+        opacity: 0;
         display: flex;
         align-items: center;
         justify-content:space-between;

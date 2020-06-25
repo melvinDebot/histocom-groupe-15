@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Intro :show="showTemplate" v-if="this.test === true"/>
+    <Intro :show="showTemplate" v-if="this.toggle === true"/>
     <PagePeriode v-else/>
   </div>
 </template>
@@ -19,12 +19,12 @@ export default {
   },
   data : ()=> {
     return {
-      test : true
+      toggle : true
     }
   },
   methods : {
     showTemplate(){
-      this.test = false
+      this.toggle = false
     }
   }
   

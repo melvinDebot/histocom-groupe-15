@@ -79,6 +79,9 @@ export default {
   z-index: 1;
   margin-top: 50px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+  &:active{
+    color: red;
+  }
 
     .block--text{
       width:100%;
@@ -130,9 +133,7 @@ export default {
   background: #E299E3;
 }
 
-#nav .block-exact-active {
-  border: 1px solid white;
-}
+
 // #nav a.router-link-exact-active {
 //   color: #42b983;
 // }
