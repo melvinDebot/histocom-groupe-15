@@ -2,33 +2,43 @@
   <div id="app">
     <div id="nav">
       <!-- <div class="logo">HISTOCOM</div> -->
-      <div class="block">
-        <div class="block--text">
-          <router-link to="/">La préhistoire</router-link> 
+      <router-link class="chapter_link" to="/">
+        <div class="block">
+          <div class="block--text">
+          La préhistoire
+          </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="block--text">
-          <router-link to="/about">L'ère romaine</router-link>
+      </router-link>
+      <router-link class="chapter_link" to="/about"> 
+        <div class="block">
+          <div class="block--text">
+            L'ère romaine
+          </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="block--text">
-          <router-link to="/">La préhistoire</router-link>
+      </router-link>
+      <router-link class="chapter_link" to="/">
+        <div class="block">
+          <div class="block--text">
+            La préhistoire
+          </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="block--text">
-          <router-link to="/">La préhistoire</router-link>
+      </router-link>
+      <router-link class="chapter_link" to="/">
+        <div class="block">
+          <div class="block--text">
+            La préhistoire
+          </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="block--text">
-          <router-link to="/">La préhistoire</router-link>
+      </router-link>
+      <router-link class="chapter_link" to="/">
+        <div class="block">
+          <div class="block--text">
+            La préhistoire
+          </div>
         </div>
-      </div>
+        </router-link>
       <div class="bar"></div>
-    </div>
+      </div>
     <transition-page>
     <router-view/>
     </transition-page>
@@ -48,7 +58,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Gotham rounded, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -76,11 +86,11 @@ export default {
   height: 125.27px;
   display: flex;
   border-radius: 10px 10px 10px 10px;
-  z-index: 1;
+  //z-index: 1;
   margin-top: 50px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
   &:active{
-    color: red;
+    //color: red;
   }
 
     .block--text{
@@ -95,24 +105,24 @@ export default {
       &:nth-child(2){
         background: #D36D33;
       }
-
-      a{
-        color: white;
-        font-size: 18px;
-        line-height: 20px;
-        font-weight: 700;
-        text-decoration: none
-      }
     } 
+  }
+  .chapter_link{
+    color: white;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 99999;
   }
   .bar{
     position: absolute;
     width: 100%;
     height: 33px;
-    background: #EBEFF0;
+    background: #4F5A67;
     border-radius: 20px;
     z-index:  0;
-    top: 6em;
+    bottom: 2em;
   }
 }
 
