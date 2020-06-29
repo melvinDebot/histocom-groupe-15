@@ -5,9 +5,9 @@
       <img :src="fleche " alt="" />
       Retour
     </button>
-    <h2>LES OBJETS DE COMMUNICATION</h2>
+    <h2>{{ title }}</h2>
     <canvas id="bridge" width="488" height="378" style="border : 2px solid black"></canvas>
-    <h4>Nom de l'outil</h4>
+    <h4>{{ titleTool }}</h4>
   </div>
   <div class="containt-video"></div>
 </div>
@@ -19,6 +19,16 @@
 
 export default {
   name : 'ObjectDesc',
+  props : {
+    title : {
+      type : String,
+      default : 'LES OBJETS DE COMMUNICATION'
+    },
+    titleTool : {
+      type : String,
+      default : 'Nom de l/outil'
+    }
+  },
   mounted(){
     var bridge = document.getElementById("bridge"),
     bridgeCanvas = bridge.getContext('2d'),

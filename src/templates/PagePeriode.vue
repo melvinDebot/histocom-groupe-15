@@ -5,7 +5,7 @@
       <h3>{{ title }}</h3>
       <h4>{{ subtitle }}</h4>
       <p>{{ text }}</p>
-      <button>Découvrir</button>
+      <button @click="show()">Découvrir</button>
     </div>
     <img :src="this.imageTwo" alt="personnage préhistoire" class="containt--img two"/>
   </div>
@@ -38,6 +38,9 @@ export default {
       type : String,
       default : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.'
     },
+    show : {
+      type: Function
+    }
   }
 }
 </script>
