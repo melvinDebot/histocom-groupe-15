@@ -21,14 +21,3 @@
     }
   }
 </style>
-
-z-index: -9999999;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffbb95;
-    .title{
-      margin-top: 150px;
-    }
