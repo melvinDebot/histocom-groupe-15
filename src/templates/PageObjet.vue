@@ -3,7 +3,7 @@
     <div class="containt--text">
       <h3>{{ title }}</h3>
       <div class="picture">
-        <img src="{{ image }}">
+        <img :src="required(`image`)">
       </div>
       <p>{{ nom }}</p>
     </div>
@@ -11,18 +11,18 @@
 </template>
 
 <script>
-import img from '../assets/images/perso-one.svg';
-import imgTwo from '../assets/images/perso-two.svg';
-import test from '../assets/images/TEST.jpg';
+// import img from '../assets/images/perso-one.svg';
+// import imgTwo from '../assets/images/perso-two.svg';
+// import test from '../assets/images/TEST.jpg';
 
 
 export default {
   name : 'PagePeriode',
   data : ()=> {
     return {
-      image : img,
-      imageTwo : imgTwo,
-      test : test
+      
+      // imageTwo : imgTwo,
+      // test : test
     }
   },
   
@@ -41,7 +41,7 @@ export default {
     },
     image : {
       type : String,
-      default : '../assets/images/TEST.jpg'
+      default : 'https://ibb.co/bQdvj7j'
     },
   }
 }

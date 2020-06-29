@@ -2,14 +2,14 @@
   <div class="home">
     <Intro :show="showTemplate" v-if="this.toggle === true"/>
     <PagePeriode v-else/>
-    <PageObjet/>
+    <!-- <PageObjet/> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import PagePeriode from '../templates/PagePeriode.vue';
-import PageObjet from '../templates/PageObjet.vue'
+// import PageObjet from '../templates/PageObjet.vue'
 import Intro from '../components/Intro.vue';
 
 export default {
@@ -17,7 +17,7 @@ export default {
   name: 'Home',
   components: {
     PagePeriode,
-    PageObjet,
+    // PageObjet,
     Intro
   },
   data : ()=> {
