@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
@@ -29,6 +30,10 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+=======
+  <div class="about">
+    <h1>This is an Home page</h1>
+>>>>>>> 4b667624e28fe22e01ccb7f31cc05892d6b726dd
   </div>
 </template>
 
@@ -37,7 +42,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  beforeRouteEnter(to, from, next) {
+    console.log('home - before route enter');
+    next();
+  },
 }
 </script>
 
