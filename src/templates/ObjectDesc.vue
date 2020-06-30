@@ -2,12 +2,12 @@
 <div class="containt">
   <div class="containt-name">
     <button>
-      <img :src="fleche " alt="" />
+      <img :src="fleche" alt="" />
       Retour
     </button>
-    <h2>{{ title }}</h2>
+    <h2>{{ currentDataPage.title }}</h2>
     <canvas id="bridge" width="488" height="378" style="border : 2px solid black"></canvas>
-    <h4>{{ titleTool }}</h4>
+    <h4>{{ currentDataPage.titleTool }}</h4>
   </div>
   <div class="containt-video">
     <button>Lancez les questions</button>
@@ -23,20 +23,10 @@
 
 export default {
   name : 'ObjectDesc',
-  props : {
-    title : {
-      type : String,
-      default : 'LES OBJETS DE COMMUNICATION'
-    },
-    titleTool : {
-      type : String,
-      default : 'Nom de l/outil'
-    }
-  },
   data: ()=> {
     return {
       pages : {
-        'pre-hisoire-object' : {
+        'object' : {
           title : 'LES OBJETS DE COMMUNICATION',
           titleTool : 'Nom de l/outil'
         }
@@ -44,7 +34,7 @@ export default {
     }
   },
   computed: {
-    currentData(){
+    currentDataPage(){
       return this.pages[this.$route.params.type]
     }
   },

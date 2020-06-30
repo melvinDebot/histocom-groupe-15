@@ -41,6 +41,7 @@ export default {
   .home{
     width: 100vw;
     height: 100vh;
+    border: 1px solid red;
     background-image: url('../assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;

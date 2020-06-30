@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PagePeriode from '../templates/PagePeriode.vue';
-// import PageObjet from '../templates/PageObjet.vue'
+import ObjectDesc from '../templates/ObjectDesc.vue';
 import Intro from '../components/Intro.vue';
 
 Vue.use(VueRouter)
@@ -17,6 +17,12 @@ Vue.use(VueRouter)
     path: '/periode/:type',
     name: 'Periode',
     component: PagePeriode,
+    meta: { transitionName: `fade` }
+  },
+  {
+    path: '/objectdesc/:type',
+    name: 'ObjectDesc',
+    component: ObjectDesc,
     meta: { transitionName: `fade` }
   },
   {

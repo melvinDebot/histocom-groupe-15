@@ -5,7 +5,7 @@
       <h3>{{ currrentData.title }}</h3>
       <h4>{{ currrentData.subtitle }}</h4>
       <p>{{ currrentData.text }}</p>
-      <button @click="show()">Découvrir</button>
+      <router-link :to="{path : '/objectdesc/object' }"><button>Découvrir</button></router-link>
     </div>
     <img :src="currrentData.leftPepoel" alt="personnage préhistoire" class="containt--img two"/>
   </div>
