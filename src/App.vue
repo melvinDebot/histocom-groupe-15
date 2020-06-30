@@ -14,7 +14,7 @@
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">La préhistoire</router-link>
+          <router-link to="/slider">La préhistoire</router-link>
         </div>
       </div>
       <div class="block">

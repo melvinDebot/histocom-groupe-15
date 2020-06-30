@@ -1,75 +1,59 @@
 <template>
-<div class="section" >
-  <div class="containt" v-if="this.showT === true">
-    <img :src="this.image" alt="personnage préhistoire" class="containt--img"/>
+  <div class="containt">
+    <img :src="currrentData.rigthPepoel" alt="personnage préhistoire" class="containt--img"/>
     <div class="containt--text">
-      <h3>{{ title }}</h3>
-      <h4>{{ subtitle }}</h4>
-      <p>{{ text }}</p>
-      <button @click="showPage()">Découvrir</button>
+      <h3>{{ currrentData.title }}</h3>
+      <h4>{{ currrentData.subtitle }}</h4>
+      <p>{{ currrentData.text }}</p>
+      <button @click="show()">Découvrir</button>
     </div>
-    <img :src="this.imageTwo" alt="personnage préhistoire" class="containt--img two"/>
+    <img :src="currrentData.leftPepoel" alt="personnage préhistoire" class="containt--img two"/>
   </div>
-  <ObjectDesc v-else/> 
-</div>
 </template>
 
 <script>
-import img from '../assets/images/perso-one.svg';
-import imgTwo from '../assets/images/perso-two.svg';
- import ObjectDesc from '../templates/ObjectDesc.vue'
-
 
 export default {
   name : 'PagePeriode',
-  components: {
-    ObjectDesc 
-  },
   data : ()=> {
     return {
-      image : img,
-      imageTwo : imgTwo,
-      showT : true
+      datasPage : {
+        'pre-histoire' : {
+          title : 'LA PREHISTOIRE',
+          subtitle : 'Afrique, Europe, Asie',
+          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+          rigthPepoel :  require('@/assets/images/perso-one.svg'),
+          leftPepoel : require('../assets/images/perso-two.svg'),
+        },
+        'histoire' : {
+          title : 'L\'histoire',
+          subtitle : 'Afrique, Europe, Asie',
+          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+          rigthPepoel :  require('@/assets/images/perso-one.svg'),
+          leftPepoel : require('@/assets/images/perso-two.svg'),
+        }
+      }
     }
   },
-
-  methods : {
-    showPage(){
-      this.showT = false
+  mounted() {
+    console.log(this.$route.params.type)
+  },
+  computed: {
+    currrentData () {
+      return this.datasPage[this.$route.params.type]
     }
   },
-  
-  props : {
-    title : {
-      type : String,
-      default : 'LA PREHISTOIRE'
-    },
-    subtitle : {
-      type : String,
-      default : 'Afrique, Europe, Asie'
-    },
-    text : {
-      type : String,
-      default : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.'
-    },
-    show : {
-      type: Function
-    }
-  }
 }
 </script>
 
-<style lang="scss">
-.section{
-  width: 100%;
-  height: 100vh;
-}
+<style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
   .containt{
     width: 100%;
     height: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: black;
 
     .containt--img{
       position: absolute;
@@ -122,5 +106,3 @@ export default {
 
   }
 </style>
-
-

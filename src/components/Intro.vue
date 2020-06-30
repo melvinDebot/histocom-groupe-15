@@ -6,7 +6,7 @@
       <div class="text--containt">
         <img :src="this.imageTwo" alt="" />
         <p>Découvrer la communication à travers le temps !</p>
-        <button @click="show">C'est parti !</button>
+        <router-link :to="{path : '/Periode/pre-histoire' }"><button>C'est parti !</button></router-link>
       </div>
     </div>
   </div>
@@ -121,5 +121,4 @@ export default {
     }
 }
 </style>
-
 

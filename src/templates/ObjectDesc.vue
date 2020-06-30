@@ -33,6 +33,21 @@ export default {
       default : 'Nom de l/outil'
     }
   },
+  data: ()=> {
+    return {
+      pages : {
+        'pre-hisoire-object' : {
+          title : 'LES OBJETS DE COMMUNICATION',
+          titleTool : 'Nom de l/outil'
+        }
+      }
+    }
+  },
+  computed: {
+    currentData(){
+      return this.pages[this.$route.params.type]
+    }
+  },
   mounted(){
     var bridge = document.getElementById("bridge"),
     bridgeCanvas = bridge.getContext('2d'),

@@ -1,14 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import PagePeriode from '../templates/PagePeriode.vue';
+// import PageObjet from '../templates/PageObjet.vue'
+import Intro from '../components/Intro.vue';
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Intro',
+    component: Intro,
+    meta: { transitionName: `fade` }
+  },
+  {
+    path: '/periode/:type',
+    name: 'Periode',
+    component: PagePeriode,
     meta: { transitionName: `fade` }
   },
   {
@@ -27,3 +35,4 @@ const router = new VueRouter({
 })
 
 export default router
+
