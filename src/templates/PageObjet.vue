@@ -1,11 +1,11 @@
 <template>
   <div class="containt">
     <div class="containt--text">
-      <h3>{{ title }}</h3>
+      <h3>{{ currentDataPage.title }}</h3>
       <div class="picture">
         <img :src="required(`image`)">
       </div>
-      <p>{{ nom }}</p>
+      <p>{{ currentDataPage.titleTool }}</p>
     </div>
   </div>
 </template>
@@ -17,33 +17,28 @@
 
 
 export default {
-  name : 'PagePeriode',
+  name : 'PageObjet',
   data : ()=> {
     return {
-      
-      // imageTwo : imgTwo,
-      // test : test
+      pages : {
+        'object' : {
+          title : 'LES OBJETS DE COMMUNICATION',
+          titleTool : 'Nom de l/outil'
+        },
+        'objectTwo' : {
+          title : 'LES OBJETS DE COMMUNICATIO',
+          titleTool : 'Nom de l/outil'
+        },
+      }
+    }
+  },
+
+  computed : {
+    currentDataPage(){
+      return this.pages[this.$route.params.type]
     }
   },
   
-  props : {
-    title : {
-      type : String,
-      default : 'LES OBJETS DE COMMUNICATION'
-    },
-    nom : {
-      type : String,
-      default : 'Nom de l\'outil'
-    },
-    text : {
-      type : String,
-      default : 'Ceci est un texte sur un objet c\'est trop ouf quoi...genre un objet tu imagines?! c\'est trop fifou lol !'
-    },
-    image : {
-      type : String,
-      default : 'https://ibb.co/bQdvj7j'
-    },
-  }
 }
 </script>
 

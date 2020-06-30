@@ -1,16 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
+// TEMPLATE
+import PagePeriode from '../templates/PagePeriode.vue';
+import ObjectDesc from '../templates/ObjectDesc.vue';
+import Intro from '../components/Intro.vue';
 
 Vue.use(VueRouter)
 
   const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-    meta: { transitionName: `fade` }
-  },
+    {
+      path: '/',
+      name: 'Intro',
+      component: Intro,
+      meta: { transitionName: `fade` }
+    },
+    {
+      path: '/periode/:type',
+      name: 'Periode',
+      component: PagePeriode,
+      meta: { transitionName: `fade` }
+    },
+    {
+      path: '/objectdesc/:type',
+      name: 'ObjectDesc',
+      component: ObjectDesc,
+      meta: { transitionName: `fade` }
+    },
   {
     path: '/about',
     name: 'About',
