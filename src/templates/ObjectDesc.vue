@@ -29,7 +29,11 @@ export default {
         'object' : {
           title : 'LES OBJETS DE COMMUNICATION',
           titleTool : 'Nom de l/outil'
-        }
+        },
+        'objectTwo' : {
+          title : 'LES OBJETS DE COMMUNICATIO',
+          titleTool : 'Nom de l/outil'
+        },
       }
     }
   },

@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <Intro :show="showTemplate" v-if="this.toggle === true"/>
-    <PagePeriode v-else/>
+    
   </div>
 </template>
 

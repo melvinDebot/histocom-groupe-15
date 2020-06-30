@@ -9,7 +9,7 @@
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/about">L'ère romaine</router-link>
+          <router-link to="/periode/histoire">L'ère romaine</router-link>
         </div>
       </div>
       <div class="block">
