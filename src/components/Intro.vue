@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
   .intro{
     width: 100%;
     height: 100vh;
