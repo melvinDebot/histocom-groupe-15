@@ -1,11 +1,12 @@
 <template>
-  <div class="containt">
+  <div class="containt-page-objet">
     <div class="containt--text">
-      <h3>{{ title }}</h3>
+      <h3>{{ currentDataPage.title }}</h3>
       <div class="picture">
-        <img :src="required(`image`)">
+        <!-- <img :src="required(`image`)"> -->
       </div>
-      <p>{{ nom }}</p>
+      <p>{{ currentDataPage.titleTool }}</p>
+      <router-link :to="{path : currentDataPage.link }"><button>Découvrir</button></router-link>
     </div>
   </div>
 </template>
@@ -17,38 +18,35 @@
 
 
 export default {
-  name : 'PagePeriode',
+  name : 'PageObjet',
   data : ()=> {
     return {
-      
-      // imageTwo : imgTwo,
-      // test : test
+      pages : {
+        'object' : {
+          title : 'LES OBJETS DE COMMUNICATIONnn',
+          titleTool : 'Nom de l/outil',
+          link: '/objectdesc/object'
+        },
+        'objectTwo' : {
+          title : 'LES OBJETS DE COMMUNICATIO',
+          titleTool : 'Nom de l/outil',
+          link: '/objectdesc/objectTwo'
+        },
+      }
+    }
+  },
+
+  computed : {
+    currentDataPage(){
+      return this.pages[this.$route.params.type]
     }
   },
   
-  props : {
-    title : {
-      type : String,
-      default : 'LES OBJETS DE COMMUNICATION'
-    },
-    nom : {
-      type : String,
-      default : 'Nom de l\'outil'
-    },
-    text : {
-      type : String,
-      default : 'Ceci est un texte sur un objet c\'est trop ouf quoi...genre un objet tu imagines?! c\'est trop fifou lol !'
-    },
-    image : {
-      type : String,
-      default : 'https://ibb.co/bQdvj7j'
-    },
-  }
 }
 </script>
 
 <style lang="scss">
-  .containt{
+  .containt-page-objet{
     width: 40%;
     height: 100%;
     display: flex;
