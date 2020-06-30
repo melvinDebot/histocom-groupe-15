@@ -10,7 +10,7 @@
     <h4>{{ currentDataPage.titleTool }}</h4>
   </div>
   <div class="containt-video">
-    <button>Lancez les questions</button>
+    <router-link :to="{path : '/quizz/pre-histoire-quizz' }"><button>Lancez les questions</button></router-link>
     <div class="video"></div>
     <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
   </div>
@@ -26,11 +26,12 @@ export default {
       pages : {
         'object' : {
           title : 'LES OBJETS DE COMMUNICATION',
-          titleTool : 'Nom de l/outil'
+          titleTool : 'Nom de l/outil',
         },
         'objectTwo' : {
           title : 'LES OBJETS DE COMMUNICATIO',
-          titleTool : 'Nom de l/outil'
+          titleTool : 'Nom de l/outil',
+
         },
       }
     }

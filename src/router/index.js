@@ -5,7 +5,8 @@ import VueRouter from 'vue-router'
 import PagePeriode from '../templates/PagePeriode.vue';
 import ObjectDesc from '../templates/ObjectDesc.vue';
 import Intro from '../components/Intro.vue';
-import PageObjet from '../templates/PageObjet.vue'
+import PageObjet from '../templates/PageObjet.vue';
+import Quizz from '../templates/Quizz.vue';
 
 Vue.use(VueRouter)
 
@@ -33,7 +34,13 @@ Vue.use(VueRouter)
       name : 'PageObject',
       component : PageObjet,
       meta: { transitionName: `fade` }
-    }
+    },
+    {
+      path: '/quizz/:type',
+      name : 'Quizz',
+      component : Quizz,
+      meta: { transitionName: `fade` }
+    },
 ]
 
 const router = new VueRouter({
