@@ -7,40 +7,48 @@
       <p>{{ currrentData.text }}</p>
       <router-link :to="{path : '/objectdesc/object' }"><button>Découvrir</button></router-link>
     </div>
+    <!-- {{ db }} -->
     <img :src="currrentData.leftPepoel" alt="personnage préhistoire" class="containt--img two"/>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
+  
   name : 'PagePeriode',
   data : ()=> {
     return {
-      datasPage : {
-        'pre-histoire' : {
-          title : 'LA PREHISTOIRE',
-          subtitle : 'Afrique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPepoel :  require('@/assets/images/perso-one.svg'),
-          leftPepoel : require('../assets/images/perso-two.svg'),
-        },
-        'histoire' : {
-          title : 'L\'histoire',
-          subtitle : 'Afrique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPepoel :  require('@/assets/images/perso-one.svg'),
-          leftPepoel : require('@/assets/images/perso-two.svg'),
-        }
-      }
+      db : null,
+      // datasPage : {
+      //   'pre-histoire' : {
+      //     title : 'LA PREHISTOIRE',
+      //     subtitle : 'Afrique, Europe, Asie',
+      //     text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+      //     rigthPepoel :  require('@/assets/images/perso-one.svg'),
+      //     leftPepoel : require('../assets/images/perso-two.svg'),
+      //   },
+      //   'histoire' : {
+      //     title : 'L\'histoire',
+      //     subtitle : 'Afrique, Europe, Asie',
+      //     text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+      //     rigthPepoel :  require('@/assets/images/perso-one.svg'),
+      //     leftPepoel : require('@/assets/images/perso-two.svg'),
+      //   }
+      // }
     }
   },
   mounted() {
-    console.log(this.$route.params.type)
+    axios
+    .get('https://my-json-server.typicode.com/melvinDebot/db_histocom/pagePeriode')
+    .then(response => (this.db = response))
+    console.log(this.db)
   },
   computed: {
     currrentData () {
-      return this.datasPage[this.$route.params.type]
+      // return this.datasPage[this.$route.params.type]
+      return this.db[this.$route.params.type]
     }
   },
 }
