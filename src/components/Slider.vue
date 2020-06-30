@@ -6,7 +6,6 @@
         <div v-for="(item, index) in items" :key="index">
           <img :src="item.src" style="width:100%" />
           <router-link :to="item.link"><h4>{{ item.title }}</h4></router-link>
-          
         </div>
       </div>
       <div class="control">
@@ -20,6 +19,8 @@
 <script>
 import leftArrow from '../assets/icons/left-arrow.png';
 import rightArrow from '../assets/icons/right-arrow.png';
+import objectOne from '../assets/images/object-painting.png';
+import objectTwo from '../assets/images/object-painting-two.png';
 
 export default {
   name : 'Slider',
@@ -30,24 +31,24 @@ export default {
       items : [
         {
           id:1,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src : objectOne,
           title: 'la peinture',
           link: '/objectdesc/object'
         },
         {
           id:2,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src : objectTwo,
           title: 'les instruments',
           link: '/objectdesc/objectTwo'
         },
         {
           id:3,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src : objectOne,
           link: '/objectdesc/object'
         },
         {
           id:4,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src : 'objectOne',
           link: '/objectdesc/object'
         }
       ],

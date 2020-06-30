@@ -4,7 +4,34 @@
       Des Questions sur lA Préhistoire
     </div>
     <div class="survey">
-      <h3>{{ currentDataQuizz.question.text }}</h3>
+      <div v-for="(question, index) in quizz.currentDataQuizz.question" :key="question.id">
+        <div v-show="index === questionIndex">
+          <h2>{{ question.currentDataQuizz.text }}</h2>
+          <ul>
+            <li v-for="response in question.responses" :key="response.id">
+              <label>
+                <input 
+                  type ="radio"
+                  v-bind:value="response.correct" 
+                  v-bind:name="index" 
+                  v-model="userResponses[index]"
+                />
+                  {{ response.text }}
+              </label>
+            </li>
+          </ul>
+          <button v-if="questionIndex > 0" v-on:click="prev">
+            prev
+          </button>
+          <button v-on:click="next">
+            next
+          </button>
+        </div>
+      </div>
+      <div v-show="questionIndex === quizz.question.length">
+      <h2>Quiz finished</h2>
+      <p>Total score: {{ score() }} / {{ quizz.question.length }}</p>
+    </div>
     </div>
   </div>
 </template>
@@ -15,7 +42,7 @@ export default {
   data : ()=> {
     return {
       quizz : {
-        "pre-histoire-quizz": {
+        'histoire-quizz': {
           question : [
             {
               id : 0,
