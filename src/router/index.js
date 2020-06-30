@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import PagePeriode from '../templates/PagePeriode.vue';
 import ObjectDesc from '../templates/ObjectDesc.vue';
 import Intro from '../components/Intro.vue';
+import PageObjet from '../templates/PageObjet.vue'
 
 Vue.use(VueRouter)
 
@@ -27,15 +28,12 @@ Vue.use(VueRouter)
       component: ObjectDesc,
       meta: { transitionName: `fade` }
     },
-  {
-    path: '/about',
-    name: 'About',
-    meta: { transitionName: `zoom` },
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
+    {
+      path: '/pageobjet/:type',
+      name : 'PageObject',
+      component : PageObjet,
+      meta: { transitionName: `fade` }
+    }
 ]
 
 const router = new VueRouter({

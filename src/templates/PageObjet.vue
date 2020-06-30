@@ -1,11 +1,12 @@
 <template>
-  <div class="containt">
+  <div class="containt-page-objet">
     <div class="containt--text">
       <h3>{{ currentDataPage.title }}</h3>
       <div class="picture">
-        <img :src="required(`image`)">
+        <!-- <img :src="required(`image`)"> -->
       </div>
       <p>{{ currentDataPage.titleTool }}</p>
+      <router-link :to="{path : currentDataPage.link }"><button>Découvrir</button></router-link>
     </div>
   </div>
 </template>
@@ -22,12 +23,14 @@ export default {
     return {
       pages : {
         'object' : {
-          title : 'LES OBJETS DE COMMUNICATION',
-          titleTool : 'Nom de l/outil'
+          title : 'LES OBJETS DE COMMUNICATIONnn',
+          titleTool : 'Nom de l/outil',
+          link: '/objectdesc/object'
         },
         'objectTwo' : {
           title : 'LES OBJETS DE COMMUNICATIO',
-          titleTool : 'Nom de l/outil'
+          titleTool : 'Nom de l/outil',
+          link: '/objectdesc/objectTwo'
         },
       }
     }
@@ -43,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .containt{
+  .containt-page-objet{
     width: 40%;
     height: 100%;
     display: flex;

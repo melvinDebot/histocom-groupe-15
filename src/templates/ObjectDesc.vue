@@ -1,5 +1,5 @@
 <template>
-<div class="containt">
+<div class="containt--objet">
   <div class="containt-name">
     <button>
       <img :src="fleche" alt="" />
@@ -103,7 +103,7 @@ export default {
 </script>
 
 <style lang="scss">
-.containt {
+.containt--objet {
   width:100%;
   height: 100vh;
   border:1px solid green;

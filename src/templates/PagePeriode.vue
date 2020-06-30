@@ -25,7 +25,7 @@ export default {
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
           rigthPepoel :  require('@/assets/images/perso-one.svg'),
           leftPepoel : require('../assets/images/perso-two.svg'),
-          link: '/objectdesc/object'
+          link: '/pageobjet/object'
         },
         'histoire' : {
           title : 'L\'histoire',
@@ -33,7 +33,7 @@ export default {
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
           rigthPepoel :  require('@/assets/images/perso-one.svg'),
           leftPepoel : require('@/assets/images/perso-two.svg'),
-          link : '/objectdesc/objectTwo'
+          link : '/pageobjet/objectTwo'
         }
       }
     }
@@ -59,7 +59,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     .containt--img{
       position: absolute;
       bottom: 0;
