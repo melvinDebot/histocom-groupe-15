@@ -1,11 +1,11 @@
 <template>
   <div class="page">
     <div class="page--containt">
-      <img :src="this.image" alt="personnage"  class="perso"/>
+      <img :src="this.image" alt="personnage"  class="img-person-left"/>
       <div class="page-text">
-        <h2>{{ currentDataPage.title }}</h2>
-        <h4>{{ currentDataPage.subtitle }}</h4>
-        <p>{{ currentDataPage.text }}</p>
+        <h2>{{ routingDataPage.title }}</h2>
+        <h4>{{ routingDataPage.subtitle }}</h4>
+        <p>{{ routingDataPage.text }}</p>
       </div>
     </div>
     <div class="page--containt">
@@ -29,7 +29,7 @@ export default {
       image : img,
       pages : {
         'object' : {
-          title : 'LES OBJETS DE COMMUNICATIONnn',
+          title : 'LES OBJETS DE COMMUNICATION',
           titleTool : 'Nom de l/outil',
           subtitle:'Afrique, Europe, Asie',
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
@@ -47,7 +47,7 @@ export default {
   },
 
   computed : {
-    currentDataPage(){
+    routingDataPage(){
       return this.pages[this.$route.params.type]
     }
   },

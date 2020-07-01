@@ -5,7 +5,7 @@
     </div>
     <div class="survey">
       <div v-for="(question, index) in quizz.currentDataQuizz.question" :key="question.id">
-        <div v-show="index === questionIndex">
+        <div v-show="index == questionIndex">
           <h2>{{ question.currentDataQuizz.text }}</h2>
           <ul>
             <li v-for="response in question.responses" :key="response.id">
@@ -28,7 +28,7 @@
           </button>
         </div>
       </div>
-      <div v-show="questionIndex === quizz.question.length">
+      <div v-show="questionIndex == quizz.question.length">
       <h2>Quiz finished</h2>
       <p>Total score: {{ score() }} / {{ quizz.question.length }}</p>
     </div>

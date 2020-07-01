@@ -117,11 +117,7 @@ export default {
           clearInterval(id);
         } else {
           pos += 5; 
-          if(position == 'next'){
-            el.scrollLeft += 5
-          } else {
-            el.scrollLeft -= 5
-          }
+          el.scrollLeft += position === 'next' ? 5 : -5
         }
       }
     }
