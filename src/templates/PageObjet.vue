@@ -6,7 +6,6 @@
         <h2>{{ currentDataPage.title }}</h2>
         <h4>{{ currentDataPage.subtitle }}</h4>
         <p>{{ currentDataPage.text }}</p>
-        <router-link :to="{path : currentDataPage.link }"><button>Découvrir</button></router-link>
       </div>
     </div>
     <div class="page--containt">
