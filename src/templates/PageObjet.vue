@@ -5,7 +5,7 @@
       <div class="page-text">
         <h2>{{ routingDataPage.title }}</h2>
         <h4>{{ routingDataPage.subtitle }}</h4>
-        <p>{{ routingDataPage.text }}</p>
+        <!--<p>{{ routingDataPage.text }}</p>-->
       </div>
     </div>
     <div class="page--containt">
@@ -36,7 +36,7 @@ export default {
           link: '/objectdesc/object'
         },
         'objectTwo' : {
-          title : 'LES OBJETS DE COMMUNICATIO',
+          title : 'LES OBJETS DE COMMUNICATION',
           titleTool : 'Nom de l/outil',
           subtitle:'Afrique, Europe, Asie',
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
@@ -57,12 +57,20 @@ export default {
 
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
   .page{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
     .page--containt{
       width: 50%;
       height: 100%;
+      .img-person-left{
+        margin-top: 20vh;
+        margin-left: 20px;
+        height: 80vh;
+      }
       &:nth-child(1){
         width: 80%;
         background-image: url('../assets/background.png');
@@ -74,7 +82,6 @@ export default {
       }
       .page-text{
         width: 410px;
-        height: 337px;
         text-align: left;
         color: white;
         h2 {
@@ -89,10 +96,10 @@ export default {
           margin-top: 10px;
           margin-bottom: 0;
         }
-        p{
-          font-weight: 500;
-          font-size: 16px;
-        }
+        //p{
+        //  font-weight: 500;
+        //  font-size: 16px;
+        //}
         button {
           width: 266px;
           height: 48px;
@@ -116,6 +123,9 @@ export default {
         }
       }
     }
+  }
+  #nav{
+    //display: none;
   }
 </style>
 

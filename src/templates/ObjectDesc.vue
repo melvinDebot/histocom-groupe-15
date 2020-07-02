@@ -1,11 +1,11 @@
 <template>
 <div class="containt--objet">
   <div class="containt-name">
-    <button>
-      <img :src="fleche" alt="" />
+    <button class="back">
+      <!--<img :src="fleche" alt="Flèche" />-->
       Retour
     </button>
-    <h2>LES OBJETS DE COMMUNICATION</h2>
+    <h2>LES OBJETS DE <br/><span>COMMUNICATION</span></h2>
     <div class="containt-img">
       <img :src="currentDataPage.img" alt="image" />
     </div>
@@ -62,6 +62,12 @@ export default {
   width:100%;
   height: 100vh;
   display: flex;
+  background-image: url('../assets/background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
   .containt-name{
     width: 40%;
     height: 100%;
@@ -71,8 +77,7 @@ export default {
     align-items: flex-start;
     padding-left: 20px;
     button{
-      width: 227px;
-      height: 57px;
+      padding: 15px 25px;
       background: #EBEFF0;
       border-radius: 10px;
       border: none;
@@ -81,6 +86,7 @@ export default {
       font-weight: 500;
       font-size: 20px;
       color: #7E92AE;
+      margin-top: 20px;
       img{
         width:15px;
       }
@@ -91,6 +97,10 @@ export default {
       font-weight: 500;
       color: #6D6D6D;
       text-align:start;
+      max-width: 400px;
+      span{
+        color: white;
+      }
     }
     .containt-img{
       width: 485px;
@@ -98,7 +108,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #AEBFD7;
+      background: #FFF;
       border-radius: 15px;
       img {
 
@@ -108,7 +118,7 @@ export default {
     h4{
       font-weight: 500;
       font-size: 30px;
-      color: #6D6D6D;
+      color: #FFF;
       font-family: Gotham rounded, Helvetica, Arial, sans-serif;
     }
   }
@@ -118,11 +128,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    background-image: url('../assets/background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-
     div{
       width: 70%;
       height: 70%;
@@ -140,14 +145,15 @@ export default {
         font-family: Gotham rounded, Helvetica, Arial, sans-serif;
         font-weight: 350;
         font-size: 20px;
+        margin-top: -20px;
+        margin-bottom: 20px;
       }
       .video{
         width: 100%;
-        height: 295px;
         background: #C4C4C4;
       }
       p{
-        font-size: 20px;
+        font-size: 16px;
         font-family: Gotham rounded, Helvetica, Arial, sans-serif;
         color: white;
         text-align: start

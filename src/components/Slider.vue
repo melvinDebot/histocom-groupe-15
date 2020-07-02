@@ -5,7 +5,7 @@
       <div id="slide">
         <div v-for="(item, index) in items" :key="index">
           <img :src="item.src" style="width:100%" />
-          <router-link :to="item.link"><h4>{{ item.title }}</h4></router-link>
+          <router-link :to="item.link" class="link"><h4>{{ item.title }}</h4></router-link>
         </div>
       </div>
       <div class="control">
@@ -128,7 +128,8 @@ export default {
 <style lang="scss">
   .containt-slider{
     width: 100%;
-    height: 100%;
+    height: 70%;
+    margin-top: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,7 +147,7 @@ export default {
   }
   #slide {
   display: flex;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   align-items: flex-start;
   div {
@@ -158,6 +159,9 @@ export default {
     img{
       height: 85%;
       display: block;
+    }
+    .link{
+      text-decoration: none;
     }
     h4{
       font-weight: 500;
@@ -172,7 +176,7 @@ export default {
 .control{
   width: 227px;
   height: 57px;
-  margin-top: 20px;
+  margin: 20px auto;
   background: #4F5A67;
   display: flex;
   justify-content: space-around;

@@ -60,7 +60,7 @@ export default {
   height: auto;
   position: absolute;
   display: flex;
-  bottom: 6em;
+  bottom: 0em;
   justify-content: space-evenly;
   z-index: 3;
 
