@@ -1,5 +1,5 @@
 <template>
-  <div class="page-periode">
+  <div class="page-periode" >
     <img :src="routingDataPeriode.rigthPerson" alt="personnage préhistoire droite" class="img-person"/>
     <div class="page-periode-text">
       <h3>{{ routingDataPeriode.title }}</h3>
@@ -24,7 +24,8 @@ export default {
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
           rigthPerson :  require('@/assets/images/perso-one.svg'),
           leftPerson : require('../assets/images/perso-two.svg'),
-          link: '/pageobjet/object'
+          link: '/pageobjet/object',
+          background: '../assets/background.png'
         },
         'histoire' : {
           title : 'L\'histoire',
@@ -32,7 +33,8 @@ export default {
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
           rigthPerson :  require('@/assets/images/perso-one.svg'),
           leftPerson : require('@/assets/images/perso-two.svg'),
-          link : '/pageobjet/objectTwo'
+          link : '/pageobjet/objectTwo',
+          background: '../assets/images/background-ere-romaine.png'
         }
       }
     }
