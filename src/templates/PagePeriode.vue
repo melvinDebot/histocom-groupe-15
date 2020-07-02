@@ -5,42 +5,50 @@
       <h3>{{ routingDataPeriode.title }}</h3>
       <h4>{{ routingDataPeriode.subtitle }}</h4>
       <p>{{ routingDataPeriode.text }}</p>
-      <router-link :to="{path : routingDataPeriode.link }"><button>Découvrir</button></router-link>
+      <router-link :to="{name:'PageObject', params: {type: $route.params.type}}"><button>Découvrir</button></router-link>
     </div>
     <img :src="routingDataPeriode.leftPerson" alt="personnage préhistoire" class="img-person right"/>
   </div>
 </template>
 
 <script>
+
+import periods from '@/utils/periods.json'
+
 export default {
-  
-  name : 'PagePeriode',
+  name:"PagePeriode",
   data : ()=> {
     return {
-      datasPage : {
-        'pre-histoire' : {
-          title : 'LA PREHISTOIRE',
-          subtitle : 'Afrique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPerson :  require('@/assets/images/perso-one.svg'),
-          leftPerson : require('../assets/images/perso-two.svg'),
-          link: '/pageobjet/object'
-        },
-        'histoire' : {
-          title : 'L\'histoire',
-          subtitle : 'Amérique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPerson :  require('@/assets/images/perso-one.svg'),
-          leftPerson : require('@/assets/images/perso-two.svg'),
-          link : '/pageobjet/objectTwo'
-        }
-      }
+    //   datasPage : {
+    //     'pre-histoire' : {
+    //       title : 'LA PREHISTOIRE',
+    //       subtitle : 'Afrique, Europe, Asie',
+    //       text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+    //       rigthPerson :  require('@/assets/images/perso-one.svg'),
+    //       leftPerson : require('../assets/images/perso-two.svg'),
+    //       link: '/pageobjet/object'
+    //     },
+    //     'histoire' : {
+    //       title : 'L\'histoire',
+    //       subtitle : 'Amérique, Europe, Asie',
+    //       text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+    //       rigthPerson :  require('@/assets/images/perso-one.svg'),
+    //       leftPerson : require('@/assets/images/perso-two.svg'),
+    //       link : '/pageobjet/objectTwo'
+    //     }
+    //   }
     }
   },
 
   computed: {
     routingDataPeriode () {
       return this.datasPage[this.$route.params.type]
+    },
+    periods() {
+      return periods
+    },
+    currentPeriod() {
+      return this.periods.find(period => period.periodName === this.$route.params.type)
     }
   },
 }

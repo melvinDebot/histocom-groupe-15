@@ -3,11 +3,19 @@
     <div class="slider">
       <h2>Les objets de communication</h2>
       <div id="slide">
-        <div>
+        <div v-for="(bloc, index) in currentPeriod.blocs" :key="'bloc' + index" >
+          <img :src="getImagePath(bloc.imgName)" style="width:100%" />
+          <router-link 
+            :to="{name:'ObjectDesc', params: {type: bloc.routeParam}}"
+          >
+            <h4>{{ routingObject.titleOne }}</h4>
+          </router-link>
+        </div>
+        <!-- <div>
           <img :src="routingObject.imgSourceOne" style="width:100%" />
           <router-link :to="routingObject.link"><h4>{{ routingObject.titleOne }}</h4></router-link>
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <img :src="routingObject.imgSourceTwo" style="width:100%" />
           <router-link :to="routingObject.link"><h4>{{ routingObject.titleTwo }}</h4></router-link>
         </div>
@@ -18,7 +26,7 @@
         <div>
           <img :src="routingObject.imgSourceFour" style="width:100%" />
           <router-link :to="routingObject.link"><h4>{{ routingObject.titleFour }}</h4></router-link>
-        </div>
+        </div> -->
       </div>
       <div class="control">
         <img :src="this.arrowOne" alt="left arrow" @click="previous"/>
@@ -31,58 +39,50 @@
 <script>
 import leftArrow from '../assets/icons/left-arrow.png';
 import rightArrow from '../assets/icons/right-arrow.png';
-import objectOne from '../assets/images/object-painting.png';
-import objectTwo from '../assets/images/object-painting-two.png';
+// import objectOne from '../assets/images/object-painting.png';
+// import objectTwo from '../assets/images/object-painting-two.png';
 export default {
   name : 'Slider',
   data : function(){
     return {
       arrowOne : leftArrow,
       arrowTwo: rightArrow,
-      slides : {
-        'prehistoire' : {
-          imgSourceOne : require('@/assets/images/object-painting.png'),
-          titleOne : 'la peinture',
-          linkOne : '/objectdesc/object',
-          // OBJECTW0
-          imgSourceTwo : objectTwo,
-          titleTwo : 'Les instruments',
-          linkTwo: '/objectdesc/objectTwo',
-          // OBJECTHREE
-          imgSourceThree : objectTwo,
-          titleThree : 'La parole',
-          linkThree: '/objectdesc/objectTwo',
-          // OBJECTFOUR
-          imgSourceFour : objectTwo,
-          titleFour : 'La parole',
-          linkFour: '/objectdesc/objectTwo',
+      slides: [
+        {
+          name:"prehistoire",
+          blocs : [
+            {
+              imgName:"object-painting",
+              title:"la peinture",
+              routeParam: "object"
+            },
+            {
+              imgName:"object-painting",
+              title:"la peinture",
+              routeParam: "objectTwo"
+            },
+            {
+              imgName:"object-painting",
+              title:"la peinture",
+              routeParam: "objectThree"
+            },
+          ]
         },
-        'ere-romaine' : {
-          imgSourceOne : objectOne,
-          titleOne : 'la peinture',
-          linkOne : '/objectdesc/object',
-          // OBJECTW0
-          imgSourceTwo : objectTwo,
-          titleTwo : 'Les instruments',
-          linkTwo: '/objectdesc/objectTwo',
-          // OBJECTHREE
-          imgSourceThree : objectTwo,
-          titleThree : 'La parole',
-          linkThree: '/objectdesc/objectTwo',
-          // OBJECTFOUR
-          imgSourceFour : objectTwo,
-          titleFour : 'La parole',
-          linkFour: '/objectdesc/objectTwo',
-        }
-      },
+      ],
       direction: 'forward',
       frame: 2,
       count : 0
     }
   },
+  props: {
+    blocs: {
+      type: Array,
+      required: true
+    }
+  },
   computed : {
-    routingObject(){
-      return this.slides[this.$route.params.type]
+    currentPeriod(){
+      return this.slides.find(slide => slide.name === this.$route.params.type)
     }
   },
   created(){
@@ -148,6 +148,9 @@ export default {
           el.scrollLeft += position === 'next' ? 5 : -5
         }
       }
+    },
+    getImagePath(imgName) {
+      return require(`@/assets/images/${imgName}.png`)
     }
   }
 }

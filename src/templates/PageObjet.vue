@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="page--containt">
-      <Slider />
+      <Slider :blocs="currentPeriod.sliderBlocs"/>
     </div>
   </div>
 </template>

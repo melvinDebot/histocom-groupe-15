@@ -1,0 +1,74 @@
+[
+  {
+    "periodName": "prehistoire",
+    "title": "LA PREHISTOIRE",
+    "text" : "Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.",
+    "rigthPerson" : "perso-one",
+    "leftPerson" : "perso-two",
+    "objects": [
+      {
+        "titleTool" : "La peinture",
+        "img" : "objectOne" ,
+        "text" : "Les premiers Humains"
+      },
+      {
+        "titleTool" : "La peinture",
+        "img" : "objectOne" ,
+        "text" : "Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge.."
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"object-painting",
+        "title":"la peinture",
+        "routeParam": "object"
+      },
+      {
+        "imgName":"object-painting",
+        "title":"la peinture",
+        "routeParam": "objectTwo"
+      },
+      {
+        "imgName":"object-painting",
+        "title":"la peinture",
+        "routeParam": "objectThree"
+      }
+    ]
+  },
+  {
+    "periodName": "histoire",
+    "title": "LA PREHISTOIRE",
+    "text" : "Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.",
+    "rigthPerson" : "perso-one",
+    "leftPerson" : "perso-two",
+    "objects": [
+      {
+        "titleTool" : "La peinture",
+        "img" : "objectOne" ,
+        "text" : "Les premiers Humains"
+      },
+      {
+        "titleTool" : "La peinture",
+        "img" : "objectOne" ,
+        "text" : "Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge.."
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"object-painting",
+        "title":"la peinture",
+        "routeParam": "object"
+      },
+      {
+        "imgName":"object-painting",
+        "title":"la peinture",
+        "routeParam": "objectTwo"
+      },
+      {
+        "imgName":"object-painting",
+        "title":"la peinture",
+        "routeParam": "objectThree"
+      }
+    ]
+  }
+]
