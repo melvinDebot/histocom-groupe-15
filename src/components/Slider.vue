@@ -3,7 +3,7 @@
     <div class="slider">
       <h2>Les objets de communication</h2>
       <div id="slide">
-        <div v-for="(bloc, index) in currentPeriod.blocs" :key="'bloc' + index" >
+        <div v-for="(bloc, index) in blocs" :key="'bloc' + index" >
           <img :src="getImagePath(bloc.imgName)" style="width:100%" />
           <router-link 
             :to="{name:'ObjectDesc', params: {type: bloc.routeParam}}"
