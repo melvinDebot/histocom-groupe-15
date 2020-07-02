@@ -43,9 +43,6 @@ export default {
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`)
     },
-    getBackgroundPath(imgName) {
-      return require(`../assets/${imgName}.png`)
-    }
   },
   computed: {
     periods() {
@@ -60,24 +57,28 @@ export default {
 
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
   .page-periode{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-image: url('../assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     .img-person{
+      height: 80vh;
       position: absolute;
-      bottom: 0;
+      top: 20vh;
       z-index: 0;
+      margin-left: 20px;
       &:nth-child(2){
         right: 0;
       }
     }
     .right {
-      right: 0;
+      right: 40px;
     }
     .page-periode-text{
       width: 427px;
@@ -103,14 +104,15 @@ export default {
         margin-bottom:15px;
       }
       button {
-        width: 266px;
-        height: 48px;
+        //width: 266px;
+        //height: 48px;
+        padding: 15px 25px;
         background: #4F5A67;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
         border-radius: 10px;
         text-align: center;
-        line-height: 48px;
-        font-size: 20px;
+        //line-height: 48px;
+        font-size: 25px;
         border: none;
         color: white;
         cursor: pointer;

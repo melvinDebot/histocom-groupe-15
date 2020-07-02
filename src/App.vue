@@ -19,12 +19,7 @@
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">Epoque Moderne</router-link>
-        </div>
-      </div>
-      <div class="block">
-        <div class="block--text">
-          <router-link to="/">La préhistoire</router-link>
+          <router-link to="/">Epoque</router-link>
         </div>
       </div>
       <div class="bar"></div>

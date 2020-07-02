@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div class="page--containt">
+    <div class="page--containt" :style="{backgroundImage : `url(${getImagePath(currentPeriod.objects[0].background)})`}">
       <img :src="this.image" alt="personnage"  class="img-person-left"/>
       <div class="page-text">
         <h2>{{ currentPeriod.objects[0].titlePeriod }}</h2>
@@ -44,6 +44,11 @@ export default {
       // }
     }
   },
+  methods : {
+    getImagePath(imgName) {
+      return require(`@/assets/images/${imgName}.png`)
+    },
+  },
   computed : {
     // routingDataPage(){
     //   return this.pages[this.$route.params.type]
@@ -61,15 +66,22 @@ export default {
 
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
   .page{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
     .page--containt{
       width: 50%;
       height: 100%;
+      .img-person-left{
+        margin-top: 20vh;
+        margin-left: 20px;
+        height: 80vh;
+      }
       &:nth-child(1){
         width: 80%;
-        background-image: url('../assets/background.png');
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -78,7 +90,6 @@ export default {
       }
       .page-text{
         width: 410px;
-        height: 337px;
         text-align: left;
         color: white;
         h2 {
@@ -93,10 +104,10 @@ export default {
           margin-top: 10px;
           margin-bottom: 0;
         }
-        p{
-          font-weight: 500;
-          font-size: 16px;
-        }
+        //p{
+        //  font-weight: 500;
+        //  font-size: 16px;
+        //}
         button {
           width: 266px;
           height: 48px;
@@ -120,6 +131,9 @@ export default {
         }
       }
     }
+  }
+  #nav{
+    //display: none;
   }
 </style>
 
