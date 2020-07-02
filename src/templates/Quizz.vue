@@ -29,6 +29,7 @@
       <h2>Quiz finished</h2>
       <p>Total score: {{ score() }} / {{ currentPeriod.quizz.question.length }}</p>
     </div>
+    <router-link :to="{path : currentPeriod.linkNextPeriode }"><button>Periode Suivante</button></router-link>
   </main>
 </template>
 

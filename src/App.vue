@@ -19,7 +19,12 @@
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">Epoque</router-link>
+          <router-link to="/">Moderne</router-link>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block--text">
+          <router-link to="/">Actuelle</router-link>
         </div>
       </div>
       <div class="bar"></div>
