@@ -4,22 +4,22 @@
       <!-- <div class="logo">HISTOCOM</div> -->
       <div class="block">
         <div class="block--text">
-          <router-link to="/">La préhistoire</router-link> 
+          <router-link :to="{path : '/Periode/prehistoire' }">La préhistoire</router-link> 
         </div>
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/periode/histoire">L'ère romaine</router-link>
+          <router-link :to="{path : '/Periode/Egypte' }">Egypte</router-link>
         </div>
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/slider">La préhistoire</router-link>
+          <router-link to="/slider">Moyen-age</router-link>
         </div>
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">La préhistoire</router-link>
+          <router-link to="/">Epoque Moderne</router-link>
         </div>
       </div>
       <div class="block">

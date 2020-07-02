@@ -1,48 +1,58 @@
 <template>
-  <div class="page-periode" >
-    <img :src="routingDataPeriode.rigthPerson" alt="personnage préhistoire droite" class="img-person"/>
+  <div class="page-periode" :style="{backgroundImage : `url(${getImagePath(currentPeriod.background)})`}">
+    <img :src="getImagePath(currentPeriod.rigthPerson)" alt="personnage préhistoire droite" class="img-person"/>
     <div class="page-periode-text">
-      <h3>{{ routingDataPeriode.title }}</h3>
-      <h4>{{ routingDataPeriode.subtitle }}</h4>
-      <p>{{ routingDataPeriode.text }}</p>
-      <router-link :to="{path : routingDataPeriode.link }"><button>Découvrir</button></router-link>
+      <h3>{{ currentPeriod.title }}</h3>
+      <h4>{{ currentPeriod.subtitle }}</h4>
+      <p>{{ currentPeriod.text }}</p>
+      <router-link :to="{name:'PageObject', params: {type: $route.params.type}}"><button>Découvrir</button></router-link>
     </div>
-    <img :src="routingDataPeriode.leftPerson" alt="personnage préhistoire" class="img-person right"/>
+    <img :src="getImagePath(currentPeriod.rigthPerson)" alt="personnage préhistoire" class="img-person right"/>
   </div>
 </template>
 
 <script>
+
+import periods from '@/utils/periods.json'
+
 export default {
-  
-  name : 'PagePeriode',
+  name:"PagePeriode",
   data : ()=> {
     return {
-      datasPage : {
-        'pre-histoire' : {
-          title : 'LA PREHISTOIRE',
-          subtitle : 'Afrique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPerson :  require('@/assets/images/perso-one.svg'),
-          leftPerson : require('../assets/images/perso-two.svg'),
-          link: '/pageobjet/object',
-          background: '../assets/background.png'
-        },
-        'histoire' : {
-          title : 'L\'histoire',
-          subtitle : 'Amérique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPerson :  require('@/assets/images/perso-one.svg'),
-          leftPerson : require('@/assets/images/perso-two.svg'),
-          link : '/pageobjet/objectTwo',
-          background: '../assets/images/background-ere-romaine.png'
-        }
-      }
+    //   datasPage : {
+    //     'pre-histoire' : {
+    //       title : 'LA PREHISTOIRE',
+    //       subtitle : 'Afrique, Europe, Asie',
+    //       text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+    //       rigthPerson :  require('@/assets/images/perso-one.svg'),
+    //       leftPerson : require('../assets/images/perso-two.svg'),
+    //       link: '/pageobjet/object'
+    //     },
+    //     'histoire' : {
+    //       title : 'L\'histoire',
+    //       subtitle : 'Amérique, Europe, Asie',
+    //       text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+    //       rigthPerson :  require('@/assets/images/perso-one.svg'),
+    //       leftPerson : require('@/assets/images/perso-two.svg'),
+    //       link : '/pageobjet/objectTwo'
+    //     }
+    //   }
     }
   },
-
+  methods : {
+    getImagePath(imgName) {
+      return require(`@/assets/images/${imgName}.png`)
+    },
+    getBackgroundPath(imgName) {
+      return require(`../assets/${imgName}.png`)
+    }
+  },
   computed: {
-    routingDataPeriode () {
-      return this.datasPage[this.$route.params.type]
+    periods() {
+      return periods
+    },
+    currentPeriod() {
+      return this.periods.find(period => period.periodName === this.$route.params.type)
     }
   },
 }
@@ -55,7 +65,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../assets/background.png');
+    // background-image: url('../assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     .img-person{

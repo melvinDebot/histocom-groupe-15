@@ -1,23 +1,26 @@
 <template>
 <div class="containt--objet">
   <div class="containt-name">
-    <button>
-      <img :src="fleche" alt="" />
-      Retour
-    </button>
-    <h2>LES OBJETS DE COMMUNICATION</h2>
-    <div class="containt-img">
-      <img :src="currentDataPage.img" alt="image" />
-    </div>
-    <h4>{{ currentDataPage.titleTool }}</h4>
-  </div>
-  <div class="containt-video">
-    <div>
-      <router-link :to="{path : '/quizz' }"><button>Lancez les questions</button></router-link>
-    <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/vFFvBLG31PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p>{{ currentDataPage.text }}</p>
+    <div v-for="(desc, index) in currentPeriod.objectDesc" :key="'bloc' + index" >
+      <button>
+        <img :src="fleche" alt="" />
+        Retour
+      </button>
+      <h2>{{ desc.objectTitle }}</h2>
+      <div class="containt-img">
+        getImagePath(currentPeriod.rigthPerson)
+        <img :src="getImagePath(desc.imgName)" alt="image" />
+      </div>
+      <h4>{{ desc.objectTitle }}</h4>
+      <div class="containt-video">
+        <div>
+          <router-link :to="{name:'Quizz', params: {type: $route.params.type}}"><button>Lancez les questions</button></router-link>
+        <div class="video">
+          <iframe width="560" height="315" :src="desc.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>{{ desc.text }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -25,29 +28,43 @@
 </template>
 
 <script>
-import objectOne from '../assets/images/object-painting.png';
-import objectTwo from '../assets/images/object-painting-two.png';
+// import objectOne from '../assets/images/object-painting.png';
+// import objectTwo from '../assets/images/object-painting-two.png';
+
+import periods from '@/utils/periods.json'
+
 export default {
   name : 'ObjectDesc',
   data: ()=> {
     return {
-      pages : {
-        'object' : {
-          titleTool : 'La peinture',
-          img : objectOne ,
-          text : 'Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..).',
-        },
-        'objectTwo' : {
-          titleTool : 'Les intruments',
-          img : objectTwo,
-          text : 'Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..).'
-        },
-      }
+      // pages : {
+      //   'peinture' : {
+      //     titleTool : 'La peinture',
+      //     img : objectOne ,
+      //     text : 'Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..).',
+      //   },
+      //   'objectTwo' : {
+      //     titleTool : 'Les intruments',
+      //     img : objectTwo,
+      //     text : 'Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..).'
+      //   },
+      // }
+    }
+  },
+  methods : {
+    getImagePath(imgName) {
+      return require(`@/assets/images/${imgName}.png`)
     }
   },
   computed: {
-    currentDataPage(){
-      return this.pages[this.$route.params.type]
+    // currentDataPage(){
+    //   return this.pages[this.$route.params.type]
+    // },
+    periods() {
+      return periods
+    },
+    currentPeriod() {
+      return this.periods.find(period => period.periodName === this.$route.params.type)
     }
   },
   

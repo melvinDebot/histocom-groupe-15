@@ -6,14 +6,14 @@
       <div class="text--containt">
         <img :src="this.imageTwo" alt="" />
         <p>Découvrer la communication à travers le temps !</p>
-        <router-link :to="{path : '/Periode/pre-histoire' }"><button>C'est parti !</button></router-link>
+        <router-link :to="{path : '/Periode/prehistoire' }"><button>C'est parti !</button></router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import img from '../assets/images/perso-one.svg';
+import img from '../assets/images/perso-one.png';
 import book from '../assets/images/book.png';
 import gsap , {Power3}from 'gsap'
 

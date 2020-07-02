@@ -8,7 +8,7 @@ import Intro from '../components/Intro.vue';
 import PageObjet from '../templates/PageObjet.vue';
 import Quizz from '../templates/Quizz.vue';
 
-import Slider from '../components/Slider.vue';
+// import Slider from '../components/Slider.vue';
 
 Vue.use(VueRouter)
 
@@ -38,17 +38,17 @@ Vue.use(VueRouter)
       meta: { transitionName: `fade` }
     },
     {
-      path: '/quizz',
+      path: '/quizz/:type',
       name : 'Quizz',
       component : Quizz,
       meta: { transitionName: `fade` }
-    },
-    {
-      path: '/slider/:type',
-      name : 'slider',
-      component : Slider,
-      meta: { transitionName: `fade` }
-    },
+    }
+    // {
+    //   path: '/slider/:type',
+    //   name : 'slider',
+    //   component : Slider,
+    //   meta: { transitionName: `fade` }
+    // },
 ]
 
 const router = new VueRouter({

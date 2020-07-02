@@ -3,21 +3,20 @@
     <div class="page--containt">
       <img :src="this.image" alt="personnage"  class="img-person-left"/>
       <div class="page-text">
-        <h2>{{ routingDataPage.title }}</h2>
-        <h4>{{ routingDataPage.subtitle }}</h4>
-        <p>{{ routingDataPage.text }}</p>
+        <h2>{{ currentPeriod.objects[0].titlePeriod }}</h2>
+        <p>{{ currentPeriod.objects[0].text }}</p>
       </div>
     </div>
     <div class="page--containt">
-      <Slider />
+      <Slider :blocs="currentPeriod.sliderBlocs"/>
     </div>
   </div>
 </template>
 
 <script>
-import img from '../assets/images/perso-one.svg';
+import img from '../assets/images/perso-one.png';
 import Slider from '../components/Slider.vue';
-
+import periods from '@/utils/periods.json'
 
 export default {
   name : 'PageObjet',
@@ -27,28 +26,33 @@ export default {
   data : ()=> {
     return {
       image : img,
-      pages : {
-        'object' : {
-          title : 'LES OBJETS DE COMMUNICATION',
-          titleTool : 'Nom de l/outil',
-          subtitle:'Afrique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          link: '/objectdesc/object'
-        },
-        'objectTwo' : {
-          title : 'LES OBJETS DE COMMUNICATIO',
-          titleTool : 'Nom de l/outil',
-          subtitle:'Afrique, Europe, Asie',
-          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          link: '/objectdesc/objectTwo'
-        },
-      }
+      // pages : {
+      //   'object' : {
+      //     title : 'LES OBJETS DE COMMUNICATION',
+      //     titleTool : 'Nom de l/outil',
+      //     subtitle:'Afrique, Europe, Asie',
+      //     text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+      //     link: '/objectdesc/object'
+      //   },
+      //   'objectTwo' : {
+      //     title : 'LES OBJETS DE COMMUNICATIO',
+      //     titleTool : 'Nom de l/outil',
+      //     subtitle:'Afrique, Europe, Asie',
+      //     text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+      //     link: '/objectdesc/objectTwo'
+      //   },
+      // }
     }
   },
-
   computed : {
-    routingDataPage(){
-      return this.pages[this.$route.params.type]
+    // routingDataPage(){
+    //   return this.pages[this.$route.params.type]
+    // },
+    periods() {
+      return periods
+    },
+    currentPeriod() {
+      return this.periods.find(period => period.periodName === this.$route.params.type)
     }
   },
   
