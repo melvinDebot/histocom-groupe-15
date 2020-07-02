@@ -3,56 +3,88 @@
     <div class="slider">
       <h2>Les objets de communication</h2>
       <div id="slide">
-        <div v-for="(item, index) in items" :key="index">
-          <img :src="item.src" style="width:100%" />
-          <div>
-            <h5>Test</h5>
-          </div>
+        <div>
+          <img :src="routingObject.imgSourceOne" style="width:100%" />
+          <router-link :to="routingObject.link"><h4>{{ routingObject.titleOne }}</h4></router-link>
+        </div>
+        <div>
+          <img :src="routingObject.imgSourceTwo" style="width:100%" />
+          <router-link :to="routingObject.link"><h4>{{ routingObject.titleTwo }}</h4></router-link>
+        </div>
+        <div>
+          <img :src="routingObject.imgSourceThree" style="width:100%" />
+          <router-link :to="routingObject.link"><h4>{{ routingObject.titleThree }}</h4></router-link>
+        </div>
+        <div>
+          <img :src="routingObject.imgSourceFour" style="width:100%" />
+          <router-link :to="routingObject.link"><h4>{{ routingObject.titleFour }}</h4></router-link>
         </div>
       </div>
       <div class="control">
-
-      <p @click="previous" class="prev">
-        PREVIOUS
-      </p>
-      <P @click="next" class="next">
-        NEXT
-      </P>
+        <img :src="this.arrowOne" alt="left arrow" @click="previous"/>
+        <img :src="this.arrowTwo" alt="left arrow" @click="next"/>
     </div>
-
     </div>
   </div>
 </template>
 
 <script>
+import leftArrow from '../assets/icons/left-arrow.png';
+import rightArrow from '../assets/icons/right-arrow.png';
+import objectOne from '../assets/images/object-painting.png';
+import objectTwo from '../assets/images/object-painting-two.png';
 export default {
   name : 'Slider',
   data : function(){
     return {
-      items : [
-        {
-          id:1,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
+      arrowOne : leftArrow,
+      arrowTwo: rightArrow,
+      slides : {
+        'prehistoire' : {
+          imgSourceOne : require('@/assets/images/object-painting.png'),
+          titleOne : 'la peinture',
+          linkOne : '/objectdesc/object',
+          // OBJECTW0
+          imgSourceTwo : objectTwo,
+          titleTwo : 'Les instruments',
+          linkTwo: '/objectdesc/objectTwo',
+          // OBJECTHREE
+          imgSourceThree : objectTwo,
+          titleThree : 'La parole',
+          linkThree: '/objectdesc/objectTwo',
+          // OBJECTFOUR
+          imgSourceFour : objectTwo,
+          titleFour : 'La parole',
+          linkFour: '/objectdesc/objectTwo',
         },
-        {
-          id:2,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-        },
-        {
-          id:3,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-        },
-        {
-          id:4,
-          src : 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
+        'ere-romaine' : {
+          imgSourceOne : objectOne,
+          titleOne : 'la peinture',
+          linkOne : '/objectdesc/object',
+          // OBJECTW0
+          imgSourceTwo : objectTwo,
+          titleTwo : 'Les instruments',
+          linkTwo: '/objectdesc/objectTwo',
+          // OBJECTHREE
+          imgSourceThree : objectTwo,
+          titleThree : 'La parole',
+          linkThree: '/objectdesc/objectTwo',
+          // OBJECTFOUR
+          imgSourceFour : objectTwo,
+          titleFour : 'La parole',
+          linkFour: '/objectdesc/objectTwo',
         }
-      ],
+      },
       direction: 'forward',
       frame: 2,
       count : 0
     }
   },
-
+  computed : {
+    routingObject(){
+      return this.slides[this.$route.params.type]
+    }
+  },
   created(){
     // var slide = setInterval(()=>this.slideLoop(this.direction),2000)
   },
@@ -105,7 +137,7 @@ export default {
       let pos = 0;
       let id = setInterval(frame, 5);
       let num = this.items.length - this.frame
-      let width = 250;
+      let width = 265;
       let resize = num * width
       let check = position == "reset" ? resize : width 
       function frame() {
@@ -113,11 +145,7 @@ export default {
           clearInterval(id);
         } else {
           pos += 5; 
-          if(position == 'next'){
-            el.scrollLeft += 5
-          } else {
-            el.scrollLeft -= 5
-          }
+          el.scrollLeft += position === 'next' ? 5 : -5
         }
       }
     }
@@ -127,65 +155,58 @@ export default {
 
 <style lang="scss">
   .containt-slider{
-    width: 583px;
-    height: 900px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
-
+    padding-left: 20px;
     .slider {
       width: 549px;
       height: 618px;
+      h2{
+        font-weight: 500;
+        font-size: 38px;
+        text-align: start;
+        color: #6D6D6D;
+      }
     }
   }
-
   #slide {
   display: flex;
+  width: 100%;
   overflow: hidden;
   align-items: flex-start;
+  div {
+    min-width: 265px;
+    height: 324px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    img{
+      height: 85%;
+      display: block;
+    }
+    h4{
+      font-weight: 500;
+      font-size: 20px;
+      color: #6D6D6D;
+    }
+  }
 }
-.container {
-  padding-left: 50px;
-  width: 500px;
-  padding-bottom: 100px;
-}
-.prev {
-  display: inline-block;
-  margin-right: 50px;
-  cursor: pointer;
-}
-.next {
-  display: inline-block;
-  cursor: pointer;
-}
-.control {
-  
-}
-#slide > div {
-  min-width: 250px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-#slide > div > img {
-  height: 180px;
-  display: block;
-}
-#slide > div > div {
-  
-  color: #6D6D6D;
-  font-size: 20px;
-}
-#slide > div > div > h6 {
-    margin: 0;
-    font-size: 16px;
-}
-#slide > div > div > p {
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 14px;
+.control{
+  width: 227px;
+  height: 57px;
+  margin-top: 20px;
+  background: #4F5A67;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  img {
+    cursor: pointer;
+    width: 15px;
+  }
 }
 </style>
-
-

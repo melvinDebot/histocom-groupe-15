@@ -1,88 +1,119 @@
 <template>
-  <div class="containt">
-    <div class="containt--text">
-      <h3>{{ title }}</h3>
-      <div class="picture">
-        <img :src="required(`image`)">
+  <div class="page">
+    <div class="page--containt">
+      <img :src="this.image" alt="personnage"  class="img-person-left"/>
+      <div class="page-text">
+        <h2>{{ routingDataPage.title }}</h2>
+        <h4>{{ routingDataPage.subtitle }}</h4>
+        <p>{{ routingDataPage.text }}</p>
       </div>
-      <p>{{ nom }}</p>
+    </div>
+    <div class="page--containt">
+      <Slider />
     </div>
   </div>
 </template>
 
 <script>
-// import img from '../assets/images/perso-one.svg';
-// import imgTwo from '../assets/images/perso-two.svg';
-// import test from '../assets/images/TEST.jpg';
+import img from '../assets/images/perso-one.svg';
+import Slider from '../components/Slider.vue';
 
 
 export default {
-  name : 'PagePeriode',
+  name : 'PageObjet',
+  components : {
+    Slider
+  },
   data : ()=> {
     return {
-      
-      // imageTwo : imgTwo,
-      // test : test
+      image : img,
+      pages : {
+        'object' : {
+          title : 'LES OBJETS DE COMMUNICATION',
+          titleTool : 'Nom de l/outil',
+          subtitle:'Afrique, Europe, Asie',
+          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+          link: '/objectdesc/object'
+        },
+        'objectTwo' : {
+          title : 'LES OBJETS DE COMMUNICATIO',
+          titleTool : 'Nom de l/outil',
+          subtitle:'Afrique, Europe, Asie',
+          text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
+          link: '/objectdesc/objectTwo'
+        },
+      }
+    }
+  },
+
+  computed : {
+    routingDataPage(){
+      return this.pages[this.$route.params.type]
     }
   },
   
-  props : {
-    title : {
-      type : String,
-      default : 'LES OBJETS DE COMMUNICATION'
-    },
-    nom : {
-      type : String,
-      default : 'Nom de l\'outil'
-    },
-    text : {
-      type : String,
-      default : 'Ceci est un texte sur un objet c\'est trop ouf quoi...genre un objet tu imagines?! c\'est trop fifou lol !'
-    },
-    image : {
-      type : String,
-      default : 'https://ibb.co/bQdvj7j'
-    },
-  }
 }
 </script>
 
-<style lang="scss">
-  .containt{
-    width: 40%;
-    height: 100%;
+<style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
+  .page{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 999999999;
-    margin-right: 0%;
-    background-color: white;
-    .containt--text{
-      color: black;
-      width: 70%;
-      margin-left: 15%;
-      margin-top: -100px;
-      text-align: left;
-      h3{
-        font-size: 23px;
-        margin: 0;
-        padding: 0;
+    .page--containt{
+      width: 50%;
+      height: 100%;
+      &:nth-child(1){
+        width: 80%;
+        background-image: url('../assets/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      .picture{
-        height: 300px;
-        width: 300px;
-        background-color: #AEBFD7;
-        margin: 15px 0px;
-        img{
-          height: 100%;
-          width: 100%;
+      .page-text{
+        width: 410px;
+        height: 337px;
+        text-align: left;
+        color: white;
+        h2 {
+          font-weight: 500;
+          font-size: 38px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        h4{
+          font-weight: normal;
+          font-size: 30px;
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
+        p{
+          font-weight: 500;
+          font-size: 16px;
+        }
+        button {
+          width: 266px;
+          height: 48px;
+          background: #4F5A67;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          border: none;
+          color: white;
+          text-align: center;
+          font-weight: 500;
+          font-size: 20px;
         }
       }
-      p{
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-        margin-bottom:15px;
+      .slider{
+        width: 549px;
+        height: 618px;
+        #slide {
+          display: flex;
+          overflow: hidden;
+          align-items: flex-start;
+        }
       }
     }
   }

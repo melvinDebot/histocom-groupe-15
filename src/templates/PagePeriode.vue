@@ -1,19 +1,17 @@
 <template>
-  <div class="containt">
-    <img :src="currrentData.rigthPepoel" alt="personnage préhistoire" class="containt--img"/>
-    <div class="containt--text">
-      <h3>{{ currrentData.title }}</h3>
-      <h4>{{ currrentData.subtitle }}</h4>
-      <p>{{ currrentData.text }}</p>
-      <router-link :to="{path : currrentData.link }"><button>Découvrir</button></router-link>
+  <div class="page-periode">
+    <img :src="routingDataPeriode.rigthPerson" alt="personnage préhistoire droite" class="img-person"/>
+    <div class="page-periode-text">
+      <h3>{{ routingDataPeriode.title }}</h3>
+      <h4>{{ routingDataPeriode.subtitle }}</h4>
+      <p>{{ routingDataPeriode.text }}</p>
+      <router-link :to="{path : routingDataPeriode.link }"><button>Découvrir</button></router-link>
     </div>
-    <img :src="currrentData.leftPepoel" alt="personnage préhistoire" class="containt--img two"/>
+    <img :src="routingDataPeriode.leftPerson" alt="personnage préhistoire" class="img-person right"/>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   
   name : 'PagePeriode',
@@ -24,30 +22,24 @@ export default {
           title : 'LA PREHISTOIRE',
           subtitle : 'Afrique, Europe, Asie',
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPepoel :  require('@/assets/images/perso-one.svg'),
-          leftPepoel : require('../assets/images/perso-two.svg'),
-          link: '/objectdesc/object'
+          rigthPerson :  require('@/assets/images/perso-one.svg'),
+          leftPerson : require('../assets/images/perso-two.svg'),
+          link: '/pageobjet/object'
         },
         'histoire' : {
           title : 'L\'histoire',
           subtitle : 'Amérique, Europe, Asie',
           text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-          rigthPepoel :  require('@/assets/images/perso-one.svg'),
-          leftPepoel : require('@/assets/images/perso-two.svg'),
-          link : '/objectdesc/objectTwo'
+          rigthPerson :  require('@/assets/images/perso-one.svg'),
+          leftPerson : require('@/assets/images/perso-two.svg'),
+          link : '/pageobjet/objectTwo'
         }
       }
     }
   },
-  mounted() {
 
-    axios
-    .get('https://my-json-server.typicode.com/melvinDebot/db_histocom/pagePeriode')
-    .then(response => (this.db = response))
-    console.log(this.db)
-  },
   computed: {
-    currrentData () {
+    routingDataPeriode () {
       return this.datasPage[this.$route.params.type]
     }
   },
@@ -55,15 +47,16 @@ export default {
 </script>
 
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
-  .containt{
+  .page-periode{
     width: 100%;
-    height: 70%;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
-
-    .containt--img{
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .img-person{
       position: absolute;
       bottom: 0;
       z-index: 0;
@@ -71,10 +64,10 @@ export default {
         right: 0;
       }
     }
-    .two {
+    .right {
       right: 0;
     }
-    .containt--text{
+    .page-periode-text{
       width: 427px;
       height: 300px;
       color: white;
@@ -111,6 +104,5 @@ export default {
         cursor: pointer;
       }
     }
-
   }
 </style>

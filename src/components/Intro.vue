@@ -31,13 +31,7 @@ export default {
     }
   },
   mounted : ()=> {
-    // gsap.to('.perso', 3, {
-    //   x : 20,
-    //   ease : Power3.easeIn
-    // })
     gsap.fromTo('.perso',3, {x : -150, opacity : 0}, { x:0, opacity : 1})
-
-
     gsap.to('.text--containt',1, {
       opacity : 1,
       ease : Power3.easeInOut,
@@ -47,7 +41,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
   .intro{
     width: 100%;
     height: 100vh;
@@ -59,7 +53,6 @@ export default {
     background-image: url('../assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;
-
     .intro--text{
       width: 70%;
       height: 100%;
@@ -67,7 +60,6 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
       h1{
         font-weight: 500;
         font-size: 38px;
@@ -75,8 +67,6 @@ export default {
         overflow: hidden;
         animation: typing 3.5s steps(30, end);
         white-space: nowrap;
-
-        
       }
       .text--containt{
         width: 90%;
@@ -117,7 +107,7 @@ export default {
       width: 0% 
     }
     to { 
-        width: 100% 
+      width: 100% 
     }
 }
 </style>
