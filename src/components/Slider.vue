@@ -11,22 +11,6 @@
             <h4>{{ bloc.title }}</h4>
           </router-link>
         </div>
-        <!-- <div>
-          <img :src="routingObject.imgSourceOne" style="width:100%" />
-          <router-link :to="routingObject.link"><h4>{{ routingObject.titleOne }}</h4></router-link>
-        </div> -->
-        <!-- <div>
-          <img :src="routingObject.imgSourceTwo" style="width:100%" />
-          <router-link :to="routingObject.link"><h4>{{ routingObject.titleTwo }}</h4></router-link>
-        </div>
-        <div>
-          <img :src="routingObject.imgSourceThree" style="width:100%" />
-          <router-link :to="routingObject.link"><h4>{{ routingObject.titleThree }}</h4></router-link>
-        </div>
-        <div>
-          <img :src="routingObject.imgSourceFour" style="width:100%" />
-          <router-link :to="routingObject.link"><h4>{{ routingObject.titleFour }}</h4></router-link>
-        </div> -->
       </div>
       <div class="control">
         <img :src="this.arrowOne" alt="left arrow" @click="previous"/>
@@ -39,36 +23,12 @@
 <script>
 import leftArrow from '../assets/icons/left-arrow.png';
 import rightArrow from '../assets/icons/right-arrow.png';
-// import objectOne from '../assets/images/object-painting.png';
-// import objectTwo from '../assets/images/object-painting-two.png';
 export default {
   name : 'Slider',
   data : function(){
     return {
       arrowOne : leftArrow,
       arrowTwo: rightArrow,
-      // slides: [
-      //   {
-      //     name:"prehistoire",
-      //     blocs : [
-      //       {
-      //         imgName:"object-painting",
-      //         title:"la peinture",
-      //         routeParam: "object"
-      //       },
-      //       {
-      //         imgName:"object-painting",
-      //         title:"la peinture",
-      //         routeParam: "objectTwo"
-      //       },
-      //       {
-      //         imgName:"object-painting",
-      //         title:"la peinture",
-      //         routeParam: "objectThree"
-      //       },
-      //     ]
-      //   },
-      // ],
       direction: 'forward',
       frame: 2,
       count : 0

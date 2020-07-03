@@ -1,6 +1,7 @@
 <template>
-<div class="containt--objet" :style="{backgroundImage : `url(${getImagePath(currentPeriod.objectDesc.background)})`}">
-  <div class="containt-name">
+<div class="containt--objet">
+  <h2>{{ currentDesc.objectTitle }}</h2>
+  <!-- <div class="containt-name">
     <div v-for="(desc, index) in currentPeriod.objectDesc" :key="'bloc' + index" >
       <button>
         <img :src="fleche" alt="" />
@@ -21,7 +22,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
   
 </template>
@@ -30,7 +31,7 @@
 // import objectOne from '../assets/images/object-painting.png';
 // import objectTwo from '../assets/images/object-painting-two.png';
 
-import periods from '@/utils/periods.json'
+import objectDesc from '@/utils/objectDesc.json'
 
 export default {
   name : 'ObjectDesc',
@@ -59,11 +60,8 @@ export default {
     // currentDataPage(){
     //   return this.pages[this.$route.params.type]
     // },
-    periods() {
-      return periods
-    },
     currentDesc() {
-      return this.periods.find(period => period.periodName === this.$route.params.type)
+      return objectDesc[this.$route.params.period];
     }
   },
   

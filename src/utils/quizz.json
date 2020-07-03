@@ -1,45 +1,48 @@
 {
   "prehistoire":{
-     "questions":[
+    "questions":[
         {
-           "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
-           "responses":[
+          "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
+          "goodAnswer" : "Cunéiforme",
+          "responses":[
               {
-                 "text":"Cunéiforme"
+                "value" : "Cunéiforme",
+                "text":"Cunéiforme"
               },
               {
-                 "text":"Cur-nez-iforme",
-                 "correct":true
+                "text":"Cur-nez-iforme",
+                "value" : "Cur-nez-iforme"
               },
               {
-                 "text":"Carréiforme"
+                "value" : "Carréiforme",
+                "text":"Carréiforme"
               }
-           ]
+          ]
         },
         {
-           "questionText":"Les hiéroglyphes ont été utilisés ?",
-           "responses":[
+          "questionText":"Les hiéroglyphes ont été utilisés ?",
+          "responses":[
               {
-                 "text":"En france"
+                "text":"En france"
               },
               {
-                 "text":"Dans l’empire romain",
-                 "correct":true
+                "text":"Dans l’empire romain",
+                "correct":true
               },
               {
-                 "text":"En Egypte"
+                "text":"En Egypte"
               }
-           ]
+          ]
         },
         {
-           "questionText":"Les scribes ?",
-           "responses":[
+          "questionText":"Les scribes ?",
+          "responses":[
               {
-                 "text":"chantaient "
+                "text":"chantaient "
               },
               {
-                 "text":"écrivaient",
-                 "correct":true
+                "text":"écrivaient",
+                "correct":true
               },
               {
                  "text":"dansaient"
@@ -49,7 +52,7 @@
      ],
      "linkNextPeriode":"/Periode/Egypte"
   },
-  "histoir":{
+  "egypte":{
      "questions":[
         {
            "questionText":"Les premiers humains dessinaient ?",

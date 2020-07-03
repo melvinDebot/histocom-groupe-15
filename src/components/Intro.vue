@@ -69,7 +69,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: start;
+      // align-items: start;
       h1{
         margin-left: 0px;
         font-weight: 500;
