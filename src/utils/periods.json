@@ -1,0 +1,162 @@
+[
+  {
+    "periodName": "prehistoire",
+    "title": "Invention de la peinture",
+    "subtitle" : "Afrique, Europe, Asie",
+    "text" : "-30 000 AVJC",
+    "rigthPerson" : "perso-one",
+    "leftPerson" : "perso-two",
+    "background" : "background",
+    "objects": [
+      {
+        "titlePeriod" : "LES OBJETS DE COMMUNICATION PRE-HISTOIRE",
+        "img" : "../assets/images/perso-one.svg" ,
+        "background" : "background",
+        "text" : "Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..)"
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"object-painting",
+        "title":"la peinture",
+        "routeParam": "prehistoire"
+      },
+      {
+        "imgName":"object-painting",
+        "title":"la sculture",
+        "routeParam": "sculture"
+      },
+      {
+        "imgName":"object-painting",
+        "title":"la parole",
+        "routeParam": "parole"
+      }
+    ],
+    "objectDesc" : {
+      "peinture" : {
+        "objectTitle" : "La peinture",
+        "imgName" : "object-painting",
+        "text" : "Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..)",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background"
+      },
+      "sculture" : {
+        "objectTitle" : "La sculture",
+        "imgName" : "object-painting-two",
+        "text" : "Les premières sculptures sont apparues peu après la peinture. Elles représentaient des objets réels, comme des hommes ou des femmes mais aussi, de temps en temps, des choses fictives. Par exemple, la sculpture de l’homme-lion (ou femme-lionne) retrouvée en Allemagne mélange le corps d’un homme et la tête d’un lion. Elle a été fabriquée il y a environ 32 000 ans.",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background"
+      },
+      "parole" : {
+        "objectTitle" : "La parole",
+        "imgName" : "object-painting-two",
+        "text" : "Les humains comme les autres animaux peuvent communiquer par la parole. Un son correspond à un message (de danger ou d’amour par exemple). Mais les premiers humains de notre espèce ont su créer des phrases complexes qui permettent de dire des choses plus détaillées et précis",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background"
+      }
+    },
+    "quizz" : {
+      "questions" : [
+        {
+          "questionText" : "Les premiers humains dessinaient ?",
+          "responses" : [
+            { "text" : "Des animaux"},
+            { "text" : "Des voitures", "correct" : true},
+            { "text" : "Des immeubles"}
+          ]
+        },
+        {
+          "questionText" : "La sculpture retrouvée est un homme",
+          "responses" : [
+            { "text" : "chien"},
+            { "text" : "singe", "correct" : true},
+            { "text" : "lion"}
+          ]
+        },
+        {
+          "questionText" : "Les animaux peuvent communiquer ?",
+          "responses" : [
+            { "text" : "un danger"},
+            { "text" : "la météo", "correct" : true},
+            { "text" : "l’heure qu’il est"}
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "periodName": "Egypte",
+    "title": "Invention de l'écriture",
+    "subtitle" : "Moyen Orient",
+    "text" : "-30 000 AVJC",
+    "background" : "background-egypte",
+    "rigthPerson" : "perso-egypte",
+    "leftPerson" : "perso-egypte",
+    "objects": [
+      {
+        "titlePeriod" : "LES OBJETS DE COMMUNICATION EGYPTE",
+        "img" : "../assets/images/perso-one.svg" ,
+        "background" : "background-egypte",
+        "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens."
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"object-painting",
+        "title":"hiéroglyphes",
+        "routeParam": "hiéroglyphes"
+      },
+      {
+        "imgName":"object-painting",
+        "title":"La pierre de Rosette",
+        "routeParam": "pierrerosette"
+      }
+    ],
+    "objectDesc" : {
+      "hiéroglyphes" : {
+        "objectTitle" : "hiéroglyphes",
+        "imgName" : "object-painting",
+        "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens.",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background-egypte"
+      },
+      "pierrerosette" : {
+        "objectTitle" : "La pierre de Rosette",
+        "imgName" : "object-painting-two",
+        "text" : "La pierre de Rosette est une pierre gravée d’un texte traduit en Grec et en hiéroglyphes. A l’époque de sa découverte les européens savaient déjà lire le grec, donc la compréhension des hiéroglyphes s’est faite sans problème. Ainsi la signification des signes et phrases s’est éclaircie à l’aide de cette pierre.",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background-egypte"
+      }
+    },
+    "quizz" : {
+      "questions" : [
+        {
+          "questionText" : "L’un des premiers systèmes d’écriture s’appelle ?",
+          "responses" : [
+            { "text" : "Cunéiforme"},
+            { "text" : "Cur-nez-iforme", "correct" : true},
+            { "text" : "Carréiforme"}
+          ]
+        },
+        {
+          "questionText" : "Les hiéroglyphes ont été utilisés ?",
+          "responses" : [
+            { "text" : "En france"},
+            { "text" : "Dans l’empire romain", "correct" : true},
+            { "text" : "En Egypte"}
+          ]
+        },
+        {
+          "questionText" : "Les scribes ?",
+          "responses" : [
+            { "text" : "chantaient "},
+            { "text" : "écrivaient", "correct" : true},
+            { "text" : "dansaient"}
+          ]
+        }
+      ],
+      "linkNextPeriode" : "/Periode/Egypte"
+    }
+  }
+  
+]

@@ -5,6 +5,7 @@
     :enter-active-class="transitionEnterActiveClass"
   >
     <slot/>
+    <div class="overlay"></div>
   </transition>
 </template>
 
@@ -33,7 +34,6 @@ export default {
       if (from.meta.transitionName === `zoom`) {
         this.transitionMode = null;
         this.transitionEnterActiveClass = null;
-        document.body.style.overflow = null;
       }
       this.transitionName = transitionName;
       next();
@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style>
+
+
 
 .fade-enter-active,
 .fade-leave-active {

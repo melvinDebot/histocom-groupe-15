@@ -20,3 +20,7 @@ Histocom permet aux enfants de 8 à 13 ans d'apprendre quels outils de communica
 Pour ce qui est des choix techniques, nous avons voulu privilégier le desktop étant donné que notre audiance la plus jeune (8 ans) ne possède souvent pas de smartphone. De plus, leur seul accès à internet est souvent l'ordinateur familial, et plus occasionnellement une tablette. Nous utilisons Vue.js pour la possibilité d'ajouter des tansitions entre les pages nativement, avec l'ajout de Greensock pour des transitions plus variées. Enfin, l'utilisation de Saas permet d'avoir un fichier CSS plus lisible et plus rapidement rédigé.
 
 N'ayant pas de développeur back, nous utilisons un fichier Json pour stocker les textes ainsi que les quizzs. Ainsi, il est inutile de multiplier les pages à coder car seul les textes et certaines couleurs d'accentuation changeront d'une page à l'autre.
+
+### Site Histocom
+
+[Pour voir le site cliquez ici](https://histocom.netlify.app/#/)
