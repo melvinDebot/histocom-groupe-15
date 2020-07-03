@@ -26,7 +26,7 @@ Vue.use(VueRouter)
       meta: { transitionName: `fade` }
     },
     {
-      path: '/objectdesc/:type',
+      path: '/objectdesc/:period/:type',
       name: 'ObjectDesc',
       component: ObjectDesc,
       meta: { transitionName: `fade` }
@@ -38,7 +38,7 @@ Vue.use(VueRouter)
       meta: { transitionName: `fade` }
     },
     {
-      path: '/quizz/:type',
+      path: '/quizz/:period',
       name : 'Quizz',
       component : Quizz,
       meta: { transitionName: `fade` }

@@ -62,7 +62,7 @@ export default {
     periods() {
       return periods
     },
-    currentPeriod() {
+    currentDesc() {
       return this.periods.find(period => period.periodName === this.$route.params.type)
     }
   },

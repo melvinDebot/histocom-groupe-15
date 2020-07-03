@@ -1,0 +1,101 @@
+{
+  "prehistoire":{
+     "questions":[
+        {
+           "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
+           "responses":[
+              {
+                 "text":"Cunéiforme"
+              },
+              {
+                 "text":"Cur-nez-iforme",
+                 "correct":true
+              },
+              {
+                 "text":"Carréiforme"
+              }
+           ]
+        },
+        {
+           "questionText":"Les hiéroglyphes ont été utilisés ?",
+           "responses":[
+              {
+                 "text":"En france"
+              },
+              {
+                 "text":"Dans l’empire romain",
+                 "correct":true
+              },
+              {
+                 "text":"En Egypte"
+              }
+           ]
+        },
+        {
+           "questionText":"Les scribes ?",
+           "responses":[
+              {
+                 "text":"chantaient "
+              },
+              {
+                 "text":"écrivaient",
+                 "correct":true
+              },
+              {
+                 "text":"dansaient"
+              }
+           ]
+        }
+     ],
+     "linkNextPeriode":"/Periode/Egypte"
+  },
+  "histoir":{
+     "questions":[
+        {
+           "questionText":"Les premiers humains dessinaient ?",
+           "responses":[
+              {
+                 "text":"Des animaux"
+              },
+              {
+                 "text":"Des voitures",
+                 "correct":true
+              },
+              {
+                 "text":"Des immeubles"
+              }
+           ]
+        },
+        {
+           "questionText":"La sculpture retrouvée est un homme",
+           "responses":[
+              {
+                 "text":"chien"
+              },
+              {
+                 "text":"singe",
+                 "correct":true
+              },
+              {
+                 "text":"lion"
+              }
+           ]
+        },
+        {
+           "questionText":"Les animaux peuvent communiquer ?",
+           "responses":[
+              {
+                 "text":"un danger"
+              },
+              {
+                 "text":"la météo",
+                 "correct":true
+              },
+              {
+                 "text":"l’heure qu’il est"
+              }
+           ]
+        }
+     ]
+  }
+}
