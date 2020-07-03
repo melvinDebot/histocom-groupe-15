@@ -6,7 +6,7 @@
         <div v-for="(bloc, index) in blocs" :key="'bloc' + index" >
           <img :src="getImagePath(bloc.imgName)" style="width:100%" />
           <router-link 
-            :to="{name:'ObjectDesc', params: {type: bloc.routeParam}}"
+            :to="{name:'ObjectDesc', params: {period: bloc.routeParam}}"
           >
             <h4>{{ bloc.title }}</h4>
           </router-link>

@@ -1,6 +1,6 @@
 <template>
 <div class="containt--objet">
-  <h2>{{ currentDesc.objectTitle }}</h2>
+  <h2>{{ currentDesc[0].objectTitle }} </h2>
   <!-- <div class="containt-name">
     <div v-for="(desc, index) in currentPeriod.objectDesc" :key="'bloc' + index" >
       <button>
@@ -30,9 +30,7 @@
 <script>
 // import objectOne from '../assets/images/object-painting.png';
 // import objectTwo from '../assets/images/object-painting-two.png';
-
 import objectDesc from '@/utils/objectDesc.json'
-
 export default {
   name : 'ObjectDesc',
   data: ()=> {
