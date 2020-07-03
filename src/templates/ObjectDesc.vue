@@ -1,28 +1,25 @@
 <template>
 <div class="containt--objet">
-  <h2>{{ currentDesc[0].objectTitle }} </h2>
-  <!-- <div class="containt-name">
-    <div v-for="(desc, index) in currentPeriod.objectDesc" :key="'bloc' + index" >
-      <button>
-        <img :src="fleche" alt="" />
+  <div class="containt-name">
+    <button>
+      <img :src="fleche" alt="" />
         Retour
       </button>
-      <h2>{{ desc.objectTitle }}</h2>
+      <h2>{{ currentDesc.peinture.objectTitle }}</h2>
       <div class="containt-img">
-        <img :src="getImagePath(desc.imgName)" alt="image" />
+        <img :src="getImagePath(currentDesc.peinture.imgName)" alt="image" />
       </div>
-      <h4>{{ desc.objectTitle }}</h4>
-      <div class="containt-video">
+      <h4>{{ currentDesc.peinture.objectTitle }}</h4>
+  </div>
+  <div class="containt-video">
         <div>
-          <router-link :to="{name:'Quizz', params: {type: $route.params.type}}"><button>Lancez les questions</button></router-link>
+          <router-link :to="{path : '/quizz/prehistoire' }"><button>Lancez les questions</button></router-link>
         <div class="video">
-          <iframe width="560" height="315" :src="desc.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" :src="currentDesc.peinture.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>{{ desc.text }}</p>
         </div>
       </div>
-    </div>
-  </div> -->
 </div>
   
 </template>
@@ -58,8 +55,11 @@ export default {
     // currentDataPage(){
     //   return this.pages[this.$route.params.type]
     // },
+    desc(){
+      return objectDesc
+    },
     currentDesc() {
-      return objectDesc[this.$route.params.period];
+      return this.desc[this.$route.params.period]
     }
   },
   
