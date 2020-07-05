@@ -22,7 +22,9 @@
           </div>
         </div>
         <div class="quizz--buttons">
-          <button @click="$router.go(-1)">Retournez au chapitre</button>
+          <router-link :to="currentQuizz.linkNextPeriode">
+            <button>Chapitre suivant</button>
+          </router-link>
           <button @click="addAnswer()">Question Suivante {{  currentQuestion }} / {{ currentQuizz.questions.length }}</button>
         </div>
       </div>
