@@ -9,7 +9,6 @@
 
 <script>
 import arrowBack from '../assets/icons/left-arrow.png';
-
 export default {
   name : 'ButtonBack',
   data : ()=> {
@@ -43,7 +42,4 @@ button {
   justify-content: space-around;
   align-items: center;
 }
-
 </style>
-
-

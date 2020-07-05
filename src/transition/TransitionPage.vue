@@ -1,12 +1,14 @@
 <template>
+<div>
   <transition
     :name="transitionName"
     :mode="transitionMode"
     :enter-active-class="transitionEnterActiveClass"
   >
-    <slot />
-    <div class="overlay"></div>
+    <slot/>
   </transition>
+  <div class="overlay-left"></div>
+</div>
 </template>
 
 <script>
@@ -29,14 +31,25 @@ export default {
       this.transitionMode = DEFAULT_TRANSITION_MODE;
 
       this.transitionEnterActiveClass = `${transitionName}-enter-active`;
-      if (to.meta.transitionName === 'zoom') {
-        this.transitionMode = 'in-out';
-        this.transitionEnterActiveClass = 'zoom-enter-active';
+
+      if (to.meta.transitionName === `zoom`) {
+        this.transitionMode = `in-out`;
+        this.transitionEnterActiveClass = `zoom-enter-active`;
       }
       if (from.meta.transitionName === 'zoom') {
         this.transitionMode = null;
         this.transitionEnterActiveClass = null;
       }
+
+      if (to.meta.transitionName === `overlay-left`) {
+        this.transitionMode = `in-out`;
+        this.transitionEnterActiveClass = `overlay-left-enter-active`;
+      }
+      if (from.meta.transitionName === `overlay-left`) {
+        this.transitionMode = `in-out`;
+        this.transitionEnterActiveClass = `overlay-left-enter-active`;
+      }
+
       this.transitionName = transitionName;
       next();
     });
@@ -45,6 +58,42 @@ export default {
 </script>
 
 <style>
+/* ANIMATION OVERLAY LEFT */
+.overlay-left {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  z-index: 7;
+  background: #ebeff0;
+  transition-duration: .55s;
+}
+.overlay-left-enter ~ .overlay-left,
+.overlay-left-leave-to ~ .overlay-left {
+  width: 0;
+}
+
+.overlay-left-enter-active ~ .overlay-left,
+.overlay-left-leave-active ~ .overlay-left {
+  width: 100vw;
+}
+
+.overlay-left-enter-active ~ .overlay-left {
+  transition-timing-function: ease-in;
+}
+
+.overlay-left-leave-active ~ .overlay-left {
+  transition-timing-function: ease-out;
+}
+
+.overlay-left-enter-active,
+.overlay-left-leave-active {
+  transition-duration: .55s;
+}
+
+
+
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;

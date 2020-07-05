@@ -58,7 +58,7 @@
         ]
       }
     ],
-    "linkNextPeriode":"/Periode/Egypte"
+    "linkNextPeriode":"/Periode/egypte"
   },
   "egypte":{
     "background" : "background-egypte",
@@ -118,7 +118,8 @@
           }
         ]
       }
-    ]
+    ],
+    "linkNextPeriode":"/Periode/moyen-age"
   },
   "moyen-age":{
     "background" : "background-egypte",

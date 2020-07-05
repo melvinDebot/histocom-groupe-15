@@ -19,13 +19,11 @@
 </template>
 
 <script>
-
 import periods from '@/utils/periods.json';
 import img from '../assets/images/perso-one.png';
 import arrowBack from '../assets/icons/left-arrow.png';
 import Slider from '../components/Slider.vue';
 import ButtonBack from '../components/ButtonBack.vue'
-
 export default {
   name: 'PageObjet',
   components: {
@@ -95,10 +93,6 @@ export default {
         margin-top: 10px;
         margin-bottom: 0;
       }
-      //p{
-      //  font-weight: 500;
-      //  font-size: 16px;
-      //}
       button {
         width: 266px;
         height: 48px;
@@ -122,8 +116,5 @@ export default {
       }
     }
   }
-}
-#nav {
-  //display: none;
 }
 </style>

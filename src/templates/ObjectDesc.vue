@@ -12,8 +12,6 @@
       <div>
         <div class="video">
           <iframe
-            width="560"
-            height="315"
             :src="currentDesc[currentActivity].video"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -32,7 +30,6 @@
 <script>
 import objectDesc from '@/utils/objectDesc.json';
 import ButtonBack from '../components/ButtonBack.vue'
-
 export default {
   name: 'ObjectDesc',
   components : {
@@ -124,7 +121,6 @@ export default {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-
       button {
         width: 297px;
         height: 56px;
@@ -139,7 +135,13 @@ export default {
       }
       .video {
         width: 100%;
-        background: #c4c4c4;
+
+        iframe {
+          border-radius: 5px;
+          width:560px;
+          height:315px;
+        }
+
       }
       p {
         font-size: 16px;

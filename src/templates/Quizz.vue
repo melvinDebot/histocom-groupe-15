@@ -22,7 +22,9 @@
           </div>
         </div>
         <div class="quizz--buttons">
-          <button>Retournez au chapitre</button>
+          <router-link :to="currentQuizz.linkNextPeriode">
+            <button>Chapitre suivant</button>
+          </router-link>
           <button @click="addAnswer()">Question Suivante {{  currentQuestion }} / {{ currentQuizz.questions.length }}</button>
         </div>
       </div>
@@ -32,9 +34,7 @@
 
 <script>
 // import gsap from 'gsap';
-
 import quizz from '@/utils/quizz.json';
-
 export default {
   name: 'Quizz',
   data() {
@@ -44,18 +44,12 @@ export default {
       currentAnswer: null,
     };
   },
-
   methods: {
     addAnswer() {
       this.Answers.push(this.currentAnswer);
       this.currentQuestion++;
       this.currentAnswer = null;
     },
-    // removeAnswer() {
-    //   this.Answers.pop();
-    //   this.currentQuestion--;
-    //   this.currentAnswer = null;
-    // },
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`);
     },
@@ -91,7 +85,6 @@ main {
       position: absolute;
       left : -10px;
       z-index:-2
-
     }
     .quizz--content{
       width: 881px;
@@ -161,5 +154,4 @@ main {
     }
   }
 }
-
 </style>
