@@ -1,162 +1,149 @@
 <template>
-<div class="containt--objet">
-  <div class="containt-name">
-    <button class="back">
-      <!--<img :src="fleche" alt="Flèche" />-->
-      Retour
-    </button>
-    <h2>LES OBJETS DE <br/><span>COMMUNICATION</span></h2>
-    <div class="containt-img">
-      <img :src="currentDataPage.img" alt="image" />
+  <div class="containt--objet">
+    <div class="containt-name">
+      <ButtonBack :backgroundColor="currentDesc[currentActivity].backgroundButton" @click="$router.go(-1)"/>
+      <h2>{{ currentDesc[currentActivity].objectTitle }}</h2>
+      <div class="containt-img" :style="{backgroundColor : currentDesc[currentActivity].backgroundImg}">
+        <img :src="getImagePath(currentDesc[currentActivity].imgName)" alt="image" />
+      </div>
+      <h4>{{ currentDesc[currentActivity].objectSubtitle }}</h4>
     </div>
-    <h4>{{ currentDataPage.titleTool }}</h4>
+    <div class="containt-video" :style="{backgroundImage : `url(${getImagePath(currentDesc[currentActivity].background)})`}">
+      <div>
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            :src="currentDesc[currentActivity].video"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>{{ currentDesc[currentActivity].text }}</p>
+        <router-link :to="{name:'Quizz', params: {type: $route.params.type}}">
+          <button>Lancez le quizz</button>
+        </router-link>
+      </div>
+    </div>
   </div>
-  <div class="containt-video">
-    <div>
-      <router-link :to="{path : '/quizz/pre-histoire-quizz' }"><button>Lancez les questions</button></router-link>
-    <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/vFFvBLG31PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p>{{ currentDataPage.text }}</p>
-    </div>
-  </div>
-</div>
-  
 </template>
 
 <script>
-import objectOne from '../assets/images/object-painting.png';
-import objectTwo from '../assets/images/object-painting-two.png';
-
-
+import objectDesc from '@/utils/objectDesc.json';
+import ButtonBack from '../components/ButtonBack.vue'
 export default {
-  name : 'ObjectDesc',
-  data: ()=> {
-    return {
-      pages : {
-        'object' : {
-          titleTool : 'La peinture',
-          img : objectOne ,
-          text : 'Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..).',
-        },
-        'objectTwo' : {
-          titleTool : 'Les intruments',
-          img : objectTwo,
-          text : 'Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..).'
-
-        },
-      }
-    }
+  name: 'ObjectDesc',
+  components : {
+    ButtonBack
+  },
+  data: () => ({}),
+  methods: {
+    getImagePath(imgName) {
+      return require(`@/assets/images/${imgName}.png`);
+    },
   },
   computed: {
-    currentDataPage(){
-      return this.pages[this.$route.params.type]
-    }
+    desc() {
+      return objectDesc;
+    },
+    currentDesc() {
+      return this.desc[this.$route.params.period];
+    },
+    currentActivity() {
+      return this.$route.params.activity;
+    },
   },
-  
-}
+};
 </script>
 
 <style lang="scss">
 .containt--objet {
-  width:100%;
+  width: 100%;
   height: 100vh;
   display: flex;
-  background-image: url('../assets/background.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
-  .containt-name{
+  z-index: 5;
+  background: white;
+  .containt-name {
     width: 40%;
     height: 100%;
     display: flex;
+    z-index: 5;
+    background: white;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    
     padding-left: 20px;
-    button{
-      padding: 15px 25px;
-      background: #EBEFF0;
-      border-radius: 10px;
-      border: none;
-      font-family: Gotham rounded, Helvetica, Arial, sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      color: #7E92AE;
-      margin-top: 20px;
-      img{
-        width:15px;
-      }
-    }
-    h2{
+    h2 {
       font-size: 38px;
       font-family: Gotham rounded, Helvetica, Arial, sans-serif;
       font-weight: 500;
-      color: #6D6D6D;
-      text-align:start;
+      color: #6d6d6d;
+      text-align: start;
       max-width: 400px;
-      span{
+      margin-top: 45px;
+      span {
         color: white;
       }
     }
-    .containt-img{
+    .containt-img {
       width: 485px;
       height: 357px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #FFF;
       border-radius: 15px;
-      img {
-
-      }
+      
     }
-
-    h4{
+    h4 {
       font-weight: 500;
       font-size: 30px;
-      color: #FFF;
+      color: black;
       font-family: Gotham rounded, Helvetica, Arial, sans-serif;
     }
   }
-  .containt-video{
+  .containt-video {
     width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    div{
+    background-size: cover;
+    background-repeat: no-repeat;
+    div {
       width: 70%;
       height: 70%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      button{
+      button {
         width: 297px;
         height: 56px;
-        background: #4F5A67;
+        background: #4f5a67;
         border-radius: 10px;
         color: white;
         border: none;
         font-family: Gotham rounded, Helvetica, Arial, sans-serif;
         font-weight: 350;
         font-size: 20px;
-        margin-top: -20px;
-        margin-bottom: 20px;
+        margin-top: 20px;
       }
-      .video{
+      .video {
         width: 100%;
-        background: #C4C4C4;
+        background: #c4c4c4;
       }
-      p{
+      p {
         font-size: 16px;
         font-family: Gotham rounded, Helvetica, Arial, sans-serif;
         color: white;
-        text-align: start
+        text-align: start;
       }
     }
   }

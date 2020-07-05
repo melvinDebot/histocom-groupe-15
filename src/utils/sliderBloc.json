@@ -1,0 +1,31 @@
+{
+  "prehistoire" : {
+    "peinture" : {
+      "imgName":"object-painting",
+      "title":"la peinture",
+      "routeParam": "peinture"
+    },
+    "sculture" : {
+      "imgName":"object-painting",
+      "title":"la sculture",
+      "routeParam": "sculture"
+    },
+    "parole" : {
+      "imgName":"object-painting",
+      "title":"la parole",
+      "routeParam": "parole"
+    }
+  },
+  "egypte" : {
+    "hieroglyphes" : {
+      "imgName":"object-painting",
+      "title":"hiéroglyphes",
+      "routeParam": "hiéroglyphes"
+    },
+    "pierrerosette" : {
+      "imgName":"object-painting",
+      "title":"La pierre de Rosette",
+      "routeParam": "pierrerosette"
+    }
+  }
+}

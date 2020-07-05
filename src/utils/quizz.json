@@ -1,0 +1,183 @@
+{
+  "prehistoire":{
+    "background" : "background",
+    "leftPerson" : "perso-two",
+    "questions":[
+      {
+        "questionText":"Les premiers humains dessinaient ?",
+        "goodAnswer" : "Des animaux",
+        "responses":[
+          {
+            "value" : "Des animaux",
+            "reponseText":"Des animaux"
+          },
+          {
+            "reponseText":"Des voitures",
+            "value" : "Des voitures"
+          },
+          {
+            "value" : "Des immeubles",
+            "reponseText":"Des immeubles"
+          }
+        ]
+      },
+      {
+        "questionText":"La sculpture retrouvée est un homme ?",
+        "goodAnswer" : "chien",
+        "responses":[
+          {
+            "value" : "chien",
+            "reponseText":"chien"
+          },
+          {
+            "reponseText":"singe",
+            "value" : "singe"
+          },
+          {
+            "reponseText":"lion",
+            "value" : "lion"
+          }
+        ]
+      },
+      {
+        "questionText":"Les animaux peuvent communiquer ?",
+        "goodAnswer" : "un danger",
+        "responses":[
+          {
+            "value" : "un danger",
+            "reponseText":"un danger"
+          },
+          {
+            "reponseText":"la météo",
+            "value" : "écrivaient"
+          },
+          {
+            "value" : "l’heure qu’il est",
+            "reponseText":"l’heure qu’il est"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/Egypte"
+  },
+  "egypte":{
+    "background" : "background-egypte",
+    "leftPerson" : "perso-egypte",
+    "questions":[
+      {
+        "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
+        "goodAnswer" : "Cunéiforme",
+        "responses":[
+          {
+            "reponseText":"Cunéiforme",
+            "value" : "Cunéiforme"
+          },
+          {
+            "reponseText":"Cur-nez-iforme",
+            "value" : "Cur-nez-iforme"
+          },
+          {
+            "reponseText":"Carréiforme",
+            "value" : "Carréiforme"
+          }
+        ]
+      },
+      {
+        "questionText":"Les hiéroglyphes ont été utilisés",
+        "goodAnswer" : "En france",
+        "responses":[
+          {
+            "reponseText":"En france",
+            "value" : "En france"
+          },
+          {
+            "reponseText":"Dans l’empire romain",
+            "value" : "Dans l’empire romain"
+          },
+          {
+            "reponseText":"En Egypte",
+            "value" : "En Egypte"
+          }
+        ]
+      },
+      {
+        "questionText":"Les scribes ?",
+        "goodAnswer" : "chantaient",
+        "responses":[
+          {
+            "reponseText":"chantaient",
+            "value" : "chantaient"
+          },
+          {
+            "reponseText":"écrivaient",
+            "value" : "écrivaient"
+          },
+          {
+            "reponseText":"dansaient",
+            "value" : "dansaient"
+          }
+        ]
+      }
+    ]
+  },
+  "moyen-age":{
+    "background" : "background-egypte",
+    "leftPerson" : "perso-egypte",
+    "questions":[
+      {
+        "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
+        "goodAnswer" : "Cunéiforme",
+        "responses":[
+          {
+            "reponseText":"Cunéiforme",
+            "value" : "Cunéiforme"
+          },
+          {
+            "reponseText":"Cur-nez-iforme",
+            "value" : "Cur-nez-iforme"
+          },
+          {
+            "reponseText":"Carréiforme",
+            "value" : "Carréiforme"
+          }
+        ]
+      },
+      {
+        "questionText":"Les hiéroglyphes ont été utilisés",
+        "goodAnswer" : "En france",
+        "responses":[
+          {
+            "reponseText":"En france",
+            "value" : "En france"
+          },
+          {
+            "reponseText":"Dans l’empire romain",
+            "value" : "Dans l’empire romain"
+          },
+          {
+            "reponseText":"En Egypte",
+            "value" : "En Egypte"
+          }
+        ]
+      },
+      {
+        "questionText":"Les scribes ?",
+        "goodAnswer" : "chantaient",
+        "responses":[
+          {
+            "reponseText":"chantaient",
+            "value" : "chantaient"
+          },
+          {
+            "reponseText":"écrivaient",
+            "value" : "écrivaient"
+          },
+          {
+            "reponseText":"dansaient",
+            "value" : "dansaient"
+          }
+        ]
+      }
+    ]
+  }
+}

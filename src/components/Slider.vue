@@ -3,9 +3,14 @@
     <div class="slider">
       <h2>Les objets de communication</h2>
       <div id="slide">
-        <div v-for="(item, index) in items" :key="index">
-          <img :src="item.src" style="width:100%" />
-          <router-link :to="item.link" class="link"><h4>{{ item.title }}</h4></router-link>
+        <div v-for="(bloc, index) in blocs" :key="'bloc' + index" :style="{backgroundColor : bloc.backgroundColor}">
+          <img :src="getImagePath(bloc.imgName)" />
+          <router-link 
+            class="link"
+            :to="{name:'ObjectDesc', params: {period: currentPeriodName , activity : bloc.routeParam}}"
+          >
+            <h4>{{ bloc.title }}</h4>
+          </router-link>
         </div>
       </div>
       <div class="control">
@@ -19,42 +24,26 @@
 <script>
 import leftArrow from '../assets/icons/left-arrow.png';
 import rightArrow from '../assets/icons/right-arrow.png';
-import objectOne from '../assets/images/object-painting.png';
-import objectTwo from '../assets/images/object-painting-two.png';
-
 export default {
   name : 'Slider',
   data : function(){
     return {
       arrowOne : leftArrow,
       arrowTwo: rightArrow,
-      items : [
-        {
-          id:1,
-          src : objectOne,
-          title: 'la peinture',
-          link: '/objectdesc/object'
-        },
-        {
-          id:2,
-          src : objectTwo,
-          title: 'les instruments',
-          link: '/objectdesc/objectTwo'
-        },
-        {
-          id:3,
-          src : objectOne,
-          link: '/objectdesc/object'
-        },
-        {
-          id:4,
-          src : 'objectOne',
-          link: '/objectdesc/object'
-        }
-      ],
       direction: 'forward',
       frame: 2,
       count : 0
+    }
+  },
+  props: {
+    blocs: {
+      type: Array,
+      required: true
+    }
+  },
+  computed : {
+    currentPeriodName(){
+      return this.$route.params.type
     }
   },
   created(){
@@ -120,20 +109,26 @@ export default {
           el.scrollLeft += position === 'next' ? 5 : -5
         }
       }
+    },
+    getImagePath(imgName) {
+      return require(`@/assets/images/${imgName}.png`)
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .containt-slider{
     width: 100%;
-    height: 70%;
+    height: 80%;
     margin-top: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
+    z-index: 5;
+    background: white;
+    
     .slider {
       width: 549px;
       height: 618px;
@@ -156,23 +151,28 @@ export default {
     padding-right: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    margin-right: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     img{
-      height: 85%;
+      width: 162px;
+      height: 162px;
       display: block;
     }
     .link{
       text-decoration: none;
+      h4{
+        font-weight: 500;
+        font-size: 20px;
+        color: #6D6D6D;
+      }
     }
-    h4{
-      font-weight: 500;
-      font-size: 20px;
-      color: #6D6D6D;
-    }
+    
   }
 }
-
-
-
 .control{
   width: 227px;
   height: 57px;

@@ -2,21 +2,20 @@
   <div class="intro">
     <img :src="this.image" alt="personnage"  class="perso"/>
     <div class="intro--text">
-      <h1>Bienvenue sur Histo <br /> Apprendre n’a jamais été aussi simple !</h1>
+      <h1>Bienvenue sur Histo apprendre n’a jamais été aussi simple !</h1>
       <div class="text--containt">
         <img :src="this.imageTwo" alt="" />
-        <p>Découvre la communication à travers le temps !</p>
-        <router-link :to="{path : '/Periode/pre-histoire' }"><button>C'est parti !</button></router-link>
+        <p>Découvrer la communication à travers le temps !</p>
+        <router-link :to="{path : '/Periode/prehistoire' }"><button>C'est parti !</button></router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import img from '../assets/images/perso-one.svg';
+import img from '../assets/images/perso-one.png';
 import book from '../assets/images/book.png';
 import gsap , {Power3}from 'gsap'
-
 export default {
   name : 'Intro',
   props : {
@@ -69,7 +68,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: start;
+      // align-items: start;
       h1{
         margin-left: 0px;
         font-weight: 500;
@@ -114,7 +113,6 @@ export default {
       }
     }
   }
-
 @keyframes typing {
     from { 
       width: 0% 
@@ -124,5 +122,3 @@ export default {
     }
 }
 </style>
-
-

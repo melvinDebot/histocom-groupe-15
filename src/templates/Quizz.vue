@@ -1,146 +1,160 @@
 <template>
-  <div class="quizz">
-    <div class="quizz-title">
-      Des Questions sur lA Préhistoire
-    </div>
-    <div class="survey">
-      <div v-for="(question, index) in quizz.currentDataQuizz.question" :key="question.id">
-        <div v-show="index == questionIndex">
-          <h2>{{ question.currentDataQuizz.text }}</h2>
-          <ul>
-            <li v-for="response in question.responses" :key="response.id">
-              <label>
-                <input 
-                  type ="radio"
-                  v-bind:value="response.correct" 
-                  v-bind:name="index" 
-                  v-model="userResponses[index]"
+  <main >
+    <div class="quizz" :style="{backgroundImage : `url(${getImagePath(currentQuizz.background)})`}">
+      <img :src="getImagePath(currentQuizz.leftPerson)" alt="test"  class="left-img-person"/>
+      <div class="quizz--content">
+        <h2>{{ currentQuizz.questions[currentQuestion].questionText }}</h2>
+        <div class="question">
+          <div class="question--content" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
+            <!-- IMAGE -->
+            <div class="question--input">
+                <label>
+                  <input
+                  type="radio"
+                  :id="index"
+                  v-bind:value="response.value"
+                  v-bind:name="index"
+                  v-model="currentAnswer"
                 />
-                  {{ response.text }}
+                {{ response.reponseText }}
               </label>
-            </li>
-          </ul>
-          <button v-if="questionIndex > 0" v-on:click="prev">
-            prev
-          </button>
-          <button v-on:click="next">
-            next
-          </button>
+            </div>
+          </div>
+        </div>
+        <div class="quizz--buttons">
+          <button @click="$router.go(-1)">Retournez au chapitre</button>
+          <button @click="addAnswer()">Question Suivante {{  currentQuestion }} / {{ currentQuizz.questions.length }}</button>
         </div>
       </div>
-      <div v-show="questionIndex == quizz.question.length">
-      <h2>Quiz finished</h2>
-      <p>Total score: {{ score() }} / {{ quizz.question.length }}</p>
     </div>
-    </div>
-  </div>
+  </main>
 </template>
 
 <script>
+// import gsap from 'gsap';
+import quizz from '@/utils/quizz.json';
 export default {
-  name : 'Quizz',
-  data : ()=> {
+  name: 'Quizz',
+  data() {
     return {
-      quizz : {
-        'histoire-quizz': {
-          question : [
-            {
-              id : 0,
-              text : "Pour quel outil de communication des pétale de fleurs étaient écrasé ?",
-              responses : [
-                { text : "la peinture", correct : true},
-                { text : "la sculture"},
-                { text : "la parole"}
-              ]
-            },
-            {
-              id : 1,
-              text : "Pour quel outil ?",
-              responses : [
-                { text : "la peinture"},
-                { text : "la sculture", correct : true},
-                { text : "la parole"}
-              ]
-            },
-          ]
-        },
-        "ere-romaine": {
-          question : [
-            {
-              id : 0,
-              text : "Pour quel outil de communication des pétal",
-              responses : [
-                { text : "la peinture", correct : true},
-                { text : "la sculture"},
-                { text : "la parole"}
-              ]
-            },
-            {
-              id : 1,
-              text : "Pour quel outil ?",
-              responses : [
-                { text : "la peinture"},
-                { text : "la sculture", correct : true},
-                { text : "la parole"}
-              ]
-            },
-          ]
-        },
-      },
-      questionIndex: 0,
-      userResponses: Array(this.quizz.question.lenght).fill(false)
-    }
+      currentQuestion: 0,
+      Answers: [],
+      currentAnswer: null,
+    };
   },
-  methods : {
-    next: function() {
-      this.questionIndex++;
+  methods: {
+    addAnswer() {
+      this.Answers.push(this.currentAnswer);
+      this.currentQuestion++;
+      this.currentAnswer = null;
     },
-    prev: function() {
-      this.questionIndex--;
+    // removeAnswer() {
+    //   this.Answers.pop();
+    //   this.currentQuestion--;
+    //   this.currentAnswer = null;
+    // },
+    getImagePath(imgName) {
+      return require(`@/assets/images/${imgName}.png`);
     },
-    score: function() {
-      return this.userResponses.filter(function(val) { return val }).length;
-    }
   },
-  computed : {
-    currentDataQuizz(){
-      return this.quizz[this.$route.params.type]
-    }
-  }
-}
+  computed: {
+    currentQuizz() {
+      return quizz[this.$route.params.period];
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   .quizz{
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: url('../assets/background.png');
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    .quizz-title{
-      width: 881px;
-      height: 161px;
-      background: #FFFFFF;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-      border-radius: 20px;
-      text-align: center;
-      line-height: 161px;
-      font-weight: 500;
-      font-size: 38px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left-img-person{
+      position: absolute;
+      left : -10px;
+      z-index:-2
     }
-    .survey{
+    .quizz--content{
       width: 881px;
-      height: 487px;
+      height: 426px;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
       display: flex;
-      justify-content: space-evenly;
+      flex-direction: column;
+      justify-content: space-around;
       align-items: center;
-
+      h2{
+        font-weight: 500;
+        font-size: 30px;
+        color: #6D6D6D;
+      }
+      .question{
+        width: 805px;
+        height: 161px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .question--content{
+          width: 248px;
+          height: 145px;
+          background: #AEBFD7;
+          border-radius: 10px;
+          .question--input {
+            background: #8F9CAF;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 20px;
+            font-size: 16px;
+          }
+        }
+      }
+      .quizz--buttons{
+        width: 800px;
+        height: 56px;
+        display: flex;
+        justify-content: space-between;
+        button:nth-child(1){
+          width: 296px;
+          height: 57px;
+          background: #4F5A67;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          color: white;
+          font-weight: 500;
+          font-size: 20px;
+          border: none;
+        }
+        button:nth-child(2){
+          width: 296px;
+          height: 57px;
+          background: #8F9CAF;
+          border-radius: 10px;
+          color: white;
+          font-weight: 500;
+          font-size: 20px;
+          border: none;
+        }
+      }
     }
   }
+}
 </style>
-
-
