@@ -13,13 +13,29 @@
   </div>
   <div class="containt-video">
         <div>
-          <router-link :to="{path : '/quizz/prehistoire' }"><button>Lancez les questions</button></router-link>
+          <router-link :to="{name:'Quizz', params: {type: $route.params.type}}"><button>Lancez les questions</button></router-link>
         <div class="video">
           <iframe width="560" height="315" :src="currentDesc.peinture.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>{{ desc.text }}</p>
         </div>
       </div>
+
+    <!-- <div>
+      
+      
+      
+      
+      <div class="containt-video">
+        <div>
+          <router-link :to="{name:'Quizz', params: {type: $route.params.type}}"><button>Lancez les questions</button></router-link>
+        <div class="video">
+          <iframe width="560" height="315" :src="currentDesc.peinture.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>{{ desc.text }}</p>
+        </div>
+      </div>
+    </div> --> 
 </div>
   
 </template>

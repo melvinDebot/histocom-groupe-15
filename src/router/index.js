@@ -26,7 +26,7 @@ Vue.use(VueRouter)
       meta: { transitionName: `fade` }
     },
     {
-      path: '/objectdesc/:period/:type',
+      path: '/objectdesc/:type',
       name: 'ObjectDesc',
       component: ObjectDesc,
       meta: { transitionName: `fade` }

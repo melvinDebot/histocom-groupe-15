@@ -22,5 +22,21 @@
       "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
       "background" : "background"
     }
+  },
+  "egypte" : {
+    "hiéroglyphes" : {
+      "objectTitle" : "hiéroglyphes",
+      "imgName" : "object-painting",
+      "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens.",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background-egypte"
+    },
+    "pierrerosette" : {
+      "objectTitle" : "La pierre de Rosette",
+      "imgName" : "object-painting-two",
+      "text" : "La pierre de Rosette est une pierre gravée d’un texte traduit en Grec et en hiéroglyphes. A l’époque de sa découverte les européens savaient déjà lire le grec, donc la compréhension des hiéroglyphes s’est faite sans problème. Ainsi la signification des signes et phrases s’est éclaircie à l’aide de cette pierre.",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background-egypte"
+    }
   }
 }
