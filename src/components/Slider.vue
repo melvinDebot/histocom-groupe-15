@@ -3,9 +3,10 @@
     <div class="slider">
       <h2>Les objets de communication</h2>
       <div id="slide">
-        <div v-for="(bloc, index) in blocs" :key="'bloc' + index" >
-          <img :src="getImagePath(bloc.imgName)" style="width:100%" />
+        <div v-for="(bloc, index) in blocs" :key="'bloc' + index" :style="{backgroundColor : bloc.backgroundColor}">
+          <img :src="getImagePath(bloc.imgName)" />
           <router-link 
+            class="link"
             :to="{name:'ObjectDesc', params: {period: currentPeriodName , activity : bloc.routeParam}}"
           >
             <h4>{{ bloc.title }}</h4>
@@ -119,12 +120,15 @@ export default {
 <style lang="scss" scoped>
   .containt-slider{
     width: 100%;
-    height: 70%;
+    height: 80%;
     margin-top: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
+    z-index: 5;
+    background: white;
+    
     .slider {
       width: 549px;
       height: 618px;
@@ -147,18 +151,26 @@ export default {
     padding-right: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    margin-right: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     img{
-      height: 85%;
+      width: 162px;
+      height: 162px;
       display: block;
     }
     .link{
       text-decoration: none;
+      h4{
+        font-weight: 500;
+        font-size: 20px;
+        color: #6D6D6D;
+      }
     }
-    h4{
-      font-weight: 500;
-      font-size: 20px;
-      color: #6D6D6D;
-    }
+    
   }
 }
 .control{

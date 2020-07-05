@@ -1,21 +1,15 @@
 <template>
   <div class="containt--objet">
     <div class="containt-name">
-      <button @click="$router.go(-1)">
-        <img :src="fleche" alt />
-        Retour
-      </button>
+      <ButtonBack :backgroundColor="currentDesc[currentActivity].backgroundButton" @click="$router.go(-1)"/>
       <h2>{{ currentDesc[currentActivity].objectTitle }}</h2>
-      <div class="containt-img">
+      <div class="containt-img" :style="{backgroundColor : currentDesc[currentActivity].backgroundImg}">
         <img :src="getImagePath(currentDesc[currentActivity].imgName)" alt="image" />
       </div>
-      <h4>{{ currentDesc[currentActivity].objectTitle }}</h4>
+      <h4>{{ currentDesc[currentActivity].objectSubtitle }}</h4>
     </div>
-    <div class="containt-video">
+    <div class="containt-video" :style="{backgroundImage : `url(${getImagePath(currentDesc[currentActivity].background)})`}">
       <div>
-        <router-link :to="{name:'Quizz', params: {type: $route.params.type}}">
-          <button>Lancez les questions</button>
-        </router-link>
         <div class="video">
           <iframe
             width="560"
@@ -26,7 +20,10 @@
             allowfullscreen
           ></iframe>
         </div>
-        <p>{{ desc.text }}</p>
+        <p>{{ currentDesc[currentActivity].text }}</p>
+        <router-link :to="{name:'Quizz', params: {type: $route.params.type}}">
+          <button>Lancez le quizz</button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -34,9 +31,13 @@
 
 <script>
 import objectDesc from '@/utils/objectDesc.json';
+import ButtonBack from '../components/ButtonBack.vue'
 
 export default {
   name: 'ObjectDesc',
+  components : {
+    ButtonBack
+  },
   data: () => ({}),
   methods: {
     getImagePath(imgName) {
@@ -62,35 +63,24 @@ export default {
   width: 100%;
   height: 100vh;
   display: flex;
-  // background-image: url('../assets/background.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 5;
+  background: white;
   .containt-name {
     width: 40%;
     height: 100%;
     display: flex;
+    z-index: 5;
+    background: white;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    
     padding-left: 20px;
-    button {
-      padding: 15px 25px;
-      background: #ebeff0;
-      border-radius: 10px;
-      border: none;
-      font-family: Gotham rounded, Helvetica, Arial, sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      color: #7e92ae;
-      margin-top: 20px;
-      img {
-        width: 15px;
-      }
-    }
     h2 {
       font-size: 38px;
       font-family: Gotham rounded, Helvetica, Arial, sans-serif;
@@ -98,6 +88,7 @@ export default {
       color: #6d6d6d;
       text-align: start;
       max-width: 400px;
+      margin-top: 45px;
       span {
         color: white;
       }
@@ -108,13 +99,13 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #fff;
       border-radius: 15px;
+      
     }
     h4 {
       font-weight: 500;
       font-size: 30px;
-      color: #fff;
+      color: black;
       font-family: Gotham rounded, Helvetica, Arial, sans-serif;
     }
   }
@@ -124,6 +115,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     div {
       width: 70%;
       height: 70%;
@@ -131,6 +124,7 @@ export default {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+
       button {
         width: 297px;
         height: 56px;
@@ -141,8 +135,7 @@ export default {
         font-family: Gotham rounded, Helvetica, Arial, sans-serif;
         font-weight: 350;
         font-size: 20px;
-        margin-top: -20px;
-        margin-bottom: 20px;
+        margin-top: 20px;
       }
       .video {
         width: 100%;

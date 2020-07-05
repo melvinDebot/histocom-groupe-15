@@ -4,9 +4,11 @@
       class="page--containt"
       :style="{backgroundImage : `url(${getImagePath(currentPeriod.objects[0].background)})`}"
     >
+      <ButtonBack :backgroundColor="currentPeriod.objects[0].buttonBackground" @click="$router.go(-1)"/>
       <img :src="this.image" alt="personnage" class="img-person-left" />
       <div class="page-text">
         <h2>{{ currentPeriod.objects[0].titlePeriod }}</h2>
+        <h4>{{ currentPeriod.objects[0].subtitle }}</h4>
         <p>{{ currentPeriod.objects[0].text }}</p>
       </div>
     </div>
@@ -20,31 +22,18 @@
 
 import periods from '@/utils/periods.json';
 import img from '../assets/images/perso-one.png';
+import arrowBack from '../assets/icons/left-arrow.png';
 import Slider from '../components/Slider.vue';
+import ButtonBack from '../components/ButtonBack.vue'
 
 export default {
   name: 'PageObjet',
   components: {
-    Slider,
+    Slider,ButtonBack
   },
   data: () => ({
     image: img,
-    // pages : {
-    //   'object' : {
-    //     title : 'LES OBJETS DE COMMUNICATION',
-    //     titleTool : 'Nom de l/outil',
-    //     subtitle:'Afrique, Europe, Asie',
-    //     text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-    //     link: '/objectdesc/object'
-    //   },
-    //   'objectTwo' : {
-    //     title : 'LES OBJETS DE COMMUNICATIO',
-    //     titleTool : 'Nom de l/outil',
-    //     subtitle:'Afrique, Europe, Asie',
-    //     text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-    //     link: '/objectdesc/objectTwo'
-    //   },
-    // }
+    arrowBack : arrowBack
   }),
   methods: {
     getImagePath(imgName) {
@@ -52,9 +41,6 @@ export default {
     },
   },
   computed: {
-    // routingDataPage(){
-    //   return this.pages[this.$route.params.type]
-    // },
     periods() {
       return periods;
     },
@@ -75,9 +61,11 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 5;
   .page--containt {
     width: 50%;
     height: 100%;
+    
     .img-person-left {
       margin-top: 20vh;
       margin-left: 20px;

@@ -29,26 +29,6 @@ import periods from '@/utils/periods.json';
 
 export default {
   name: 'PagePeriode',
-  data: () => ({
-    //   datasPage : {
-    //     'pre-histoire' : {
-    //       title : 'LA PREHISTOIRE',
-    //       subtitle : 'Afrique, Europe, Asie',
-    //       text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-    //       rigthPerson :  require('@/assets/images/perso-one.svg'),
-    //       leftPerson : require('../assets/images/perso-two.svg'),
-    //       link: '/pageobjet/object'
-    //     },
-    //     'histoire' : {
-    //       title : 'L\'histoire',
-    //       subtitle : 'Amérique, Europe, Asie',
-    //       text : 'Les premières histoires de la vie des Hommes nous sont apportées par les peintures rupestres retrouvées sur les parois des grottes. Les Hommes des cavernes racontaient leurs chasses, les danger et leur vie commune à travers des dessins.',
-    //       rigthPerson :  require('@/assets/images/perso-one.svg'),
-    //       leftPerson : require('@/assets/images/perso-two.svg'),
-    //       link : '/pageobjet/objectTwo'
-    //     }
-    //   }
-  }),
   methods: {
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`);

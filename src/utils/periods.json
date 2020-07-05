@@ -9,9 +9,11 @@
     "background" : "background",
     "objects": [
       {
-        "titlePeriod" : "LES OBJETS DE COMMUNICATION PRE-HISTOIRE",
+        "titlePeriod" : "La pré-histoire",
+        "subtitle" : "Afrique, Europe, Asie",
         "img" : "../assets/images/perso-one.svg" ,
         "background" : "background",
+        "buttonBackground" : "#8F9CAF",
         "text" : "Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..)"
       }
     ],
@@ -19,16 +21,19 @@
       {
         "imgName":"object-painting",
         "title":"la peinture",
+        "backgroundColor" : "#AEBFD7",
         "routeParam": "peinture"
       },
       {
         "imgName":"object-painting",
         "title":"la sculture",
+        "backgroundColor" : "#AEBFD7",
         "routeParam": "sculture"
       },
       {
         "imgName":"object-painting",
         "title":"la parole",
+        "backgroundColor" : "#AEBFD7",
         "routeParam": "parole"
       }
     ],
@@ -54,34 +59,6 @@
         "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
         "background" : "background"
       }
-    },
-    "quizz" : {
-      "questions" : [
-        {
-          "questionText" : "Les premiers humains dessinaient ?",
-          "responses" : [
-            { "text" : "Des animaux"},
-            { "text" : "Des voitures", "correct" : true},
-            { "text" : "Des immeubles"}
-          ]
-        },
-        {
-          "questionText" : "La sculpture retrouvée est un homme",
-          "responses" : [
-            { "text" : "chien"},
-            { "text" : "singe", "correct" : true},
-            { "text" : "lion"}
-          ]
-        },
-        {
-          "questionText" : "Les animaux peuvent communiquer ?",
-          "responses" : [
-            { "text" : "un danger"},
-            { "text" : "la météo", "correct" : true},
-            { "text" : "l’heure qu’il est"}
-          ]
-        }
-      ]
     }
   },
   {
@@ -97,6 +74,7 @@
         "titlePeriod" : "LES OBJETS DE COMMUNICATION EGYPTE",
         "img" : "../assets/images/perso-one.svg" ,
         "background" : "background-egypte",
+        "buttonBackground" : "#D28A61",
         "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens."
       }
     ],
@@ -104,11 +82,13 @@
       {
         "imgName":"object-painting",
         "title":"hiéroglyphes",
+        "backgroundColor" : "#FFBB95",
         "routeParam": "hiéroglyphes"
       },
       {
         "imgName":"object-painting",
         "title":"La pierre de Rosette",
+        "backgroundColor" : "#FFBB95",
         "routeParam": "pierrerosette"
       }
     ],
@@ -127,35 +107,41 @@
         "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
         "background" : "background-egypte"
       }
-    },
-    "quizz" : {
-      "questions" : [
-        {
-          "questionText" : "L’un des premiers systèmes d’écriture s’appelle ?",
-          "responses" : [
-            { "text" : "Cunéiforme"},
-            { "text" : "Cur-nez-iforme", "correct" : true},
-            { "text" : "Carréiforme"}
-          ]
-        },
-        {
-          "questionText" : "Les hiéroglyphes ont été utilisés ?",
-          "responses" : [
-            { "text" : "En france"},
-            { "text" : "Dans l’empire romain", "correct" : true},
-            { "text" : "En Egypte"}
-          ]
-        },
-        {
-          "questionText" : "Les scribes ?",
-          "responses" : [
-            { "text" : "chantaient "},
-            { "text" : "écrivaient", "correct" : true},
-            { "text" : "dansaient"}
-          ]
-        }
-      ],
-      "linkNextPeriode" : "/Periode/Egypte"
+    }
+  },
+  {
+    "periodName": "moyen-age",
+    "title": "Invention imprimerie",
+    "subtitle" : "Moyen Age",
+    "text" : "1454",
+    "background" : "background-moyen-age",
+    "rigthPerson" : "perso-egypte",
+    "leftPerson" : "perso-egypte",
+    "objects": [
+      {
+        "titlePeriod" : "LES OBJETS DE COMMUNICATION DU MOYEN AGE",
+        "img" : "../assets/images/perso-one.svg" ,
+        "background" : "background-moyen-age",
+        "buttonBackground" : "#AED7C8",
+        "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454"
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"object-painting",
+        "title":"Imprimerie",
+        "backgroundColor" : "#AED7C8",
+        "routeParam": "imprimerie"
+      }
+    ],
+    "objectDesc" : {
+      "hiéroglyphes" : {
+        "objectTitle" : "Imprimerie",
+        "imgName" : "object-painting",
+        "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background-moyen-age"
+      }
     }
   }
   

@@ -14,7 +14,7 @@
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/slider">Moyen-age</router-link>
+          <router-link :to="{path : '/Periode/moyen-age' }">Moyen-age</router-link>
         </div>
       </div>
       <div class="block">
@@ -60,7 +60,7 @@ export default {
   height: auto;
   position: absolute;
   display: flex;
-  bottom: 6em;
+  bottom: 4.5em;
   justify-content: space-evenly;
   z-index: 3;
 
