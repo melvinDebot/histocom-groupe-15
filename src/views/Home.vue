@@ -5,15 +5,12 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import PagePeriode from '../templates/PagePeriode.vue';
-// import PageObjet from '../templates/PageObjet.vue'
 import Intro from '../components/Intro.vue';
 export default {
   name: 'Home',
   components: {
     PagePeriode,
-    // PageObjet,
     Intro
   },
   data : ()=> {

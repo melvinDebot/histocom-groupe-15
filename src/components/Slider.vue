@@ -120,7 +120,7 @@ export default {
 <style lang="scss" scoped>
   .containt-slider{
     width: 100%;
-    height: 80%;
+    height: 100%;
     margin-top: 15%;
     display: flex;
     justify-content: center;

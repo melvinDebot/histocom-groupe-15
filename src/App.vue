@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <div class="logo">HISTOCOM</div> -->
       <div class="block">
         <div class="block--text">
           <router-link :to="{path : '/Periode/prehistoire' }">La préhistoire</router-link>
@@ -61,12 +60,6 @@ export default {
   bottom: 4.5em;
   justify-content: space-evenly;
   z-index: 3;
-  // .logo{
-  //   position: absolute;
-  //   left: 50%;
-  //   top: -30em;
-  //   // transform: translate(-50%)
-  // }
   .block {
     width: 140.73px;
     height: 125.27px;
@@ -124,7 +117,4 @@ export default {
 .block:nth-child(5) {
   background: #e299e3;
 }
-// #nav a.router-link-exact-active {
-//   color: #42b983;
-// }
 </style>

@@ -93,10 +93,6 @@ export default {
         margin-top: 10px;
         margin-bottom: 0;
       }
-      //p{
-      //  font-weight: 500;
-      //  font-size: 16px;
-      //}
       button {
         width: 266px;
         height: 48px;
@@ -120,8 +116,5 @@ export default {
       }
     }
   }
-}
-#nav {
-  //display: none;
 }
 </style>

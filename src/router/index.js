@@ -1,14 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-// TEMPLATE
+// TEMPLATES
 import PagePeriode from '../templates/PagePeriode.vue';
 import ObjectDesc from '../templates/ObjectDesc.vue';
 import Intro from '../components/Intro.vue';
 import PageObjet from '../templates/PageObjet.vue';
 import Quizz from '../templates/Quizz.vue';
-
-// import Slider from '../components/Slider.vue';
 
 Vue.use(VueRouter);
 
@@ -23,7 +21,7 @@ const routes = [
     path: '/periode/:type',
     name: 'Periode',
     component: PagePeriode,
-    meta: { transitionName: 'fade' },
+    meta: { transitionName: 'overlay-left' },
   },
   {
     path: '/objectdesc/:type/:activity',

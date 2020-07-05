@@ -68,7 +68,6 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      // align-items: start;
       h1{
         margin-left: 0px;
         font-weight: 500;
@@ -98,8 +97,6 @@ export default {
           color: #AEBFD7;
         }
         button {
-          //width: 270px;
-          //height: 69px;
           padding: 15px 30px;
           background: #4F5A67;
           margin-right: 20px;

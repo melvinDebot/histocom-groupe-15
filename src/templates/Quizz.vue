@@ -50,11 +50,6 @@ export default {
       this.currentQuestion++;
       this.currentAnswer = null;
     },
-    // removeAnswer() {
-    //   this.Answers.pop();
-    //   this.currentQuestion--;
-    //   this.currentAnswer = null;
-    // },
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`);
     },

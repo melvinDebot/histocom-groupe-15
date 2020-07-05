@@ -6,7 +6,7 @@
     <img
       :src="getImagePath(currentPeriod.rigthPerson)"
       alt="personnage préhistoire droite"
-      class="img-person"
+      class="img-person left"
     />
     <div class="page-periode-text">
       <h3>{{ currentPeriod.title }}</h3>
@@ -64,9 +64,9 @@ export default {
     top: 20vh;
     z-index: 0;
     margin-left: 20px;
-    &:nth-child(2) {
-      right: 0;
-    }
+  }
+  .left{
+    left: -5em;
   }
   .right {
     right: 40px;
@@ -95,14 +95,11 @@ export default {
       margin-bottom: 15px;
     }
     button {
-      //width: 266px;
-      //height: 48px;
       padding: 15px 25px;
       background: #4f5a67;
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
       border-radius: 10px;
       text-align: center;
-      //line-height: 48px;
       font-size: 25px;
       border: none;
       color: white;
