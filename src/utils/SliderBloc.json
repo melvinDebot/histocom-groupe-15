@@ -3,7 +3,7 @@
     "peinture" : {
       "imgName":"object-painting",
       "title":"la peinture",
-      "routeParam": "prehistoire"
+      "routeParam": "peinture"
     },
     "sculture" : {
       "imgName":"object-painting",

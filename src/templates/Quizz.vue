@@ -2,13 +2,14 @@
   <main>
     <h1>Quizz</h1>
     <div>
-      <h2>{{ currentQuizz.questions[0].questionText }}</h2>
+      <h2>{{ currentQuizz.questions[currentQuestion].questionText }}</h2>
       <ul>
-        <li v-for="(response, index) in currentQuizz.questions[0].responses" :key="response.id">
+        <li v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
           <label>
             <input
               type="radio"
-              v-bind:value="response.correct"
+              :id="index"
+              v-bind:value="response.value"
               v-bind:name="index"
               v-model="currentAnswer"
             />
@@ -34,11 +35,11 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 // import gsap from 'gsap';
 
-import quizz from "@/utils/quizz.json";
+import quizz from '@/utils/quizz.json';
 
 export default {
-  name: "Quizz",
-  data: function() {
+  name: 'Quizz',
+  data() {
     return {
       currentQuestion: 0,
       Answers: [],
@@ -47,36 +48,33 @@ export default {
   },
 
   methods: {
-    next: function() {
+    next() {
       this.questionIndex++;
     },
-    prev: function() {
+    prev() {
       this.questionIndex--;
     },
-    score: function() {
-      return this.userResponses.filter(function(val) {
-        return val;
-      }).length;
+    score() {
+      return this.userResponses.filter((val) => val).length;
     },
-    addAnswer () {
-      this.Answers.push(this.currentAnswer)
-      this.currentQuestion++
-      this.currentAnswer = null
+    addAnswer() {
+      this.Answers.push(this.currentAnswer);
+      this.currentQuestion++;
+      this.currentAnswer = null;
     },
     removeAnswer() {
-      this.Answers.pop()
-      this.currentQuestion--
-      this.currentAnswer = null
-    }
+      this.Answers.pop();
+      this.currentQuestion--;
+      this.currentAnswer = null;
+    },
   },
   computed: {
     currentQuizz() {
       return quizz[this.$route.params.period];
-    }
-  }
+    },
+  },
 };
 </script>
-
 
 <style>
 main {

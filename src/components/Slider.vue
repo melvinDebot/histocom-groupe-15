@@ -6,7 +6,7 @@
         <div v-for="(bloc, index) in blocs" :key="'bloc' + index" >
           <img :src="getImagePath(bloc.imgName)" style="width:100%" />
           <router-link 
-            :to="{name:'ObjectDesc', params: {period: bloc.routeParam}}"
+            :to="{name:'ObjectDesc', params: {period: currentPeriodName , activity : bloc.routeParam}}"
           >
             <h4>{{ bloc.title }}</h4>
           </router-link>
@@ -41,9 +41,9 @@ export default {
     }
   },
   computed : {
-    // currentPeriod(){
-    //   return this.slides.find(slide => slide.name === this.$route.params.type)
-    // }
+    currentPeriodName(){
+      return this.$route.params.type
+    }
   },
   created(){
     // var slide = setInterval(()=>this.slideLoop(this.direction),2000)

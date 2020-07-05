@@ -4,34 +4,36 @@
     :mode="transitionMode"
     :enter-active-class="transitionEnterActiveClass"
   >
-    <slot/>
+    <slot />
     <div class="overlay"></div>
   </transition>
 </template>
 
 <script>
-const DEFAULT_TRANSITION = `fade`;
-const DEFAULT_TRANSITION_MODE = `out-in`;
+const DEFAULT_TRANSITION = 'fade';
+const DEFAULT_TRANSITION_MODE = 'out-in';
 export default {
-  name: `TransitionPage`,
+  name: 'TransitionPage',
   data() {
     return {
       transitionName: DEFAULT_TRANSITION,
       transitionMode: DEFAULT_TRANSITION_MODE,
-      transitionEnterActiveClass: ``,
+      transitionEnterActiveClass: '',
     };
   },
   created() {
     this.$router.beforeEach((to, from, next) => {
-      let transitionName = to.meta.transitionName || from.meta.transitionName || DEFAULT_TRANSITION;
+      const transitionName = to.meta.transitionName
+        || from.meta.transitionName
+        || DEFAULT_TRANSITION;
       this.transitionMode = DEFAULT_TRANSITION_MODE;
 
       this.transitionEnterActiveClass = `${transitionName}-enter-active`;
-      if (to.meta.transitionName === `zoom`) {
-        this.transitionMode = `in-out`;
-        this.transitionEnterActiveClass = `zoom-enter-active`;
+      if (to.meta.transitionName === 'zoom') {
+        this.transitionMode = 'in-out';
+        this.transitionEnterActiveClass = 'zoom-enter-active';
       }
-      if (from.meta.transitionName === `zoom`) {
+      if (from.meta.transitionName === 'zoom') {
         this.transitionMode = null;
         this.transitionEnterActiveClass = null;
       }
@@ -39,14 +41,10 @@ export default {
       next();
     });
   },
-  
 };
 </script>
 
 <style>
-
-
-
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;
@@ -56,9 +54,8 @@ export default {
 }
 .fade-enter,
 .fade-leave-active {
-  opacity: 0
+  opacity: 0;
 }
-
 
 .zoom-enter-active,
 .zoom-leave-active {

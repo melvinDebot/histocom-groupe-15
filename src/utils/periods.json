@@ -19,7 +19,7 @@
       {
         "imgName":"object-painting",
         "title":"la peinture",
-        "routeParam": "prehistoire"
+        "routeParam": "peinture"
       },
       {
         "imgName":"object-painting",
@@ -85,7 +85,7 @@
     }
   },
   {
-    "periodName": "Egypte",
+    "periodName": "egypte",
     "title": "Invention de l'écriture",
     "subtitle" : "Moyen Orient",
     "text" : "-30 000 AVJC",
