@@ -6,7 +6,7 @@
       "routeParam": "peinture"
     },
     "sculture" : {
-      "imgName":"object-painting",
+      "imgName":"object-painting-two",
       "title":"la sculture",
       "routeParam": "sculture"
     },

@@ -8,7 +8,7 @@
       "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
       "background" : "background",
       "backgroundButton" : "#8F9CAF",
-      "backgroundImg" :"#8F9CAF",
+      "backgroundImg" :"#AEBFD7",
       "route" : "/quizz/prehistoire"
     },
     "sculture" : {
@@ -19,7 +19,7 @@
       "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
       "background" : "background",
       "backgroundButton" : "#8F9CAF",
-      "backgroundImg" :"#8F9CAF",
+      "backgroundImg" :"#AEBFD7",
       "route" : "/quizz/prehistoire"
     },
     "parole" : {
@@ -30,7 +30,7 @@
       "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
       "background" : "background",
       "backgroundButton" : "#8F9CAF",
-      "backgroundImg" :"#8F9CAF",
+      "backgroundImg" :"#AEBFD7",
       "route" : "/quizz/prehistoire"
     }
   },
@@ -59,7 +59,17 @@
   "moyen-age" : {
     "imprimerie" : {
       "objectTitle" : "imprimerie",
-      "imgName" : "object-painting",
+      "imgName" : "imprimerie",
+      "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background-moyen-age",
+      "backgroundButton" : "#AED7C8",
+      "backgroundImg" :"#AED7C8",
+      "route" : "/quizz/moyen-age"
+    },
+    "ecriture" : {
+      "objectTitle" : "ecriture",
+      "imgName" : "ecriture",
       "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454",
       "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
       "background" : "background-moyen-age",

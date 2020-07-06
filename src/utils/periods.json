@@ -25,13 +25,13 @@
         "routeParam": "peinture"
       },
       {
-        "imgName":"object-painting",
+        "imgName":"object-painting-two",
         "title":"la sculture",
         "backgroundColor" : "#AEBFD7",
         "routeParam": "sculture"
       },
       {
-        "imgName":"object-painting",
+        "imgName":"parole",
         "title":"la parole",
         "backgroundColor" : "#AEBFD7",
         "routeParam": "parole"
@@ -128,10 +128,16 @@
     ],
     "sliderBlocs" :[
       {
-        "imgName":"object-painting",
+        "imgName":"imprimerie",
         "title":"Imprimerie",
         "backgroundColor" : "#AED7C8",
         "routeParam": "imprimerie"
+      },
+      {
+        "imgName":"ecriture",
+        "title":"Ecriture",
+        "backgroundColor" : "#AED7C8",
+        "routeParam": "ecriture"
       }
     ],
     "objectDesc" : {
