@@ -1,7 +1,7 @@
 {
   "prehistoire":{
     "background" : "background",
-    "leftPerson" : "perso-two",
+    "leftPerson" : "perso-prehistoire",
     "questions":[
       {
         "questionText":"Les premiers humains dessinaient ?",
@@ -62,7 +62,7 @@
   },
   "egypte":{
     "background" : "background-egypte",
-    "leftPerson" : "perso-egypte",
+    "leftPerson" : "perso-romain",
     "questions":[
       {
         "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
@@ -123,7 +123,7 @@
   },
   "moyen-age":{
     "background" : "background-moyen-age",
-    "leftPerson" : "perso-egypte",
+    "leftPerson" : "perso-moyen-age",
     "questions":[
       {
         "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
@@ -184,7 +184,7 @@
   },
   "moderne":{
     "background" : "background-moderne",
-    "leftPerson" : "perso-egypte",
+    "leftPerson" : "perso-moderne",
     "questions":[
       {
         "questionText":"Qui a inventé l'imprimerie ?",

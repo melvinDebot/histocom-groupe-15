@@ -50,7 +50,7 @@
         "objectTitle" : "La sculture",
         "imgName" : "object-painting-two",
         "text" : "Les premières sculptures sont apparues peu après la peinture. Elles représentaient des objets réels, comme des hommes ou des femmes mais aussi, de temps en temps, des choses fictives. Par exemple, la sculpture de l’homme-lion (ou femme-lionne) retrouvée en Allemagne mélange le corps d’un homme et la tête d’un lion. Elle a été fabriquée il y a environ 32 000 ans.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/9GPy5KKlSZE",
         "background" : "background"
       },
       "parole" : {
@@ -81,13 +81,13 @@
     ],
     "sliderBlocs" :[
       {
-        "imgName":"object-painting",
+        "imgName":"hieroglyphes",
         "title":"hiéroglyphes",
         "backgroundColor" : "#FFBB95",
         "routeParam": "hiéroglyphes"
       },
       {
-        "imgName":"object-painting",
+        "imgName":"rosseta",
         "title":"La pierre de Rosette",
         "backgroundColor" : "#FFBB95",
         "routeParam": "pierrerosette"
@@ -98,14 +98,14 @@
         "objectTitle" : "hiéroglyphes",
         "imgName" : "object-painting",
         "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/SrBLTMs71x0",
         "background" : "background-egypte"
       },
       "pierrerosette" : {
         "objectTitle" : "La pierre de Rosette",
         "imgName" : "object-painting-two",
         "text" : "La pierre de Rosette est une pierre gravée d’un texte traduit en Grec et en hiéroglyphes. A l’époque de sa découverte les européens savaient déjà lire le grec, donc la compréhension des hiéroglyphes s’est faite sans problème. Ainsi la signification des signes et phrases s’est éclaircie à l’aide de cette pierre.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/SrBLTMs71x0",
         "background" : "background-egypte"
       }
     }
@@ -142,11 +142,11 @@
       }
     ],
     "objectDesc" : {
-      "hiéroglyphes" : {
+      "imprimerie" : {
         "objectTitle" : "Imprimerie",
         "imgName" : "object-painting",
         "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/C6fRa8vbXh4",
         "background" : "background-moyen-age"
       }
     }
@@ -193,14 +193,14 @@
         "objectTitle" : "Télégraphe",
         "imgName" : "telegraphe",
         "text" : "Le télégraphe est la première technologie qui permit à une information de parcourir de grandes distances en quelques minutes. En effet, le télégraphe de Chappe a permis de transmettre sur 200 KM un message en seulement 9 minutes ! incroyable ! Par la suite un fût remplacé par le télégraphe électrique qui utilise le morse (les lettres sont remplacées par des séries de son courts et longs). Ainsi, les messages arrivent instantanément chez leur destinataire.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/DhGP42Z7gJ0",
         "background" : "background-moderne"
       },
       "telephone" : {
         "objectTitle" : "Téléphone",
         "imgName" : "telephone",
         "text" : "Le téléphone a été inventé en 1876 par Graham Bell aux USA. Il permet à deux personnes d’avoir une conversation orale à distance. D’abord uniquement filaire, il est devenu sans fil dans la 2eme moitié du XXe siècle.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/0QnWm4WrRcg",
         "background" : "background-moderne"
       },
       "television" : {
@@ -248,7 +248,7 @@
         "objectTitle" : "internet",
         "imgName" : "internet",
         "text" : "Le réseau internet mondial que l’on connaît aujourd’hui a été inventé au cours du XXe siècle. Les sites internets sont stockés sur des serveurs partout dans le monde accessibles par tous les ordinateurs via une connexion internet. Cela permet aux utilisateurs de consulter les informations dont ils ont besoin n’importe quand. En plus, l’utilisateur peut regarder la télévision ou même parler avec ses amis.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/8qiEfhA-Wk4",
         "background" : "background-actuelle"
       },
       "message" : {

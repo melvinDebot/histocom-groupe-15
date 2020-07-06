@@ -66,9 +66,20 @@ export default {
     position: absolute;
     top: 20vh;
     z-index: 0;
+    animation: movePerso 3s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+  }
+  @keyframes movePerso {
+    0%{
+      transform: translateX(0px)
+    }
+    100%{
+      transform: translateX(20px)
+    }
   }
   .left{
-    left: 20px;
+    left: 80px;
+    animation-delay: 1s;
   }
   .right {
     right: 40px;
@@ -106,6 +117,7 @@ export default {
       border: none;
       color: white;
       cursor: pointer;
+      z-index: 10
     }
   }
 }

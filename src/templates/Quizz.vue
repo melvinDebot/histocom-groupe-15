@@ -1,7 +1,7 @@
 <template>
   <main >
-    <div class="quizz" :style="{backgroundImage : `url(${getImagePath(currentQuizz.background)})`}">
-      <img :src="getImagePath(currentQuizz.leftPerson)" alt="test"  class="left-img-person"/>
+    <div class="quizz" :style="{backgroundImage : `url(${getBackgroundPath(currentQuizz.background)})`}">
+      <img :src="getPersonPath(currentQuizz.leftPerson)" alt="test"  class="left-img-person"/>
       <div class="quizz--content">
         <h2>{{ currentQuizz.questions[currentQuestion].questionText }}</h2>
         <div class="question">
@@ -58,6 +58,12 @@ export default {
     },
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`);
+    },
+    getPersonPath(img){
+      return require(`@/assets/perso-periode/${img}.png`)
+    },
+    getBackgroundPath(img){
+      return require(`@/assets/background/${img}.png`)
     },
     clickAnswer(clickedValue){
       this.isGoodAnswer = clickedValue === this.currentQuizz.questions[this.currentQuestion].goodAnswer

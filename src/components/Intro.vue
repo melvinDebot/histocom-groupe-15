@@ -4,17 +4,24 @@
     <div class="intro--text">
       <h1>Bienvenue sur HistoCom <br />apprendre n’a jamais été aussi simple !</h1>
       <div class="text--containt">
-        <img :src="this.imageTwo" alt="" />
+        <img :src="this.imageTwo" alt="book intro" />
         <p>Découvre la communication à travers le temps !</p>
         <router-link :to="{path : '/Periode/prehistoire' }"><button>C'est parti !</button></router-link>
       </div>
+      <div class="text--containt">
+        <img :src="this.iconQuestion" alt="book intro" />
+        <p>Valide tes connaissances en commençant par un quizz</p>
+        <router-link :to="{path : '/quizz/prehistoire' }"><button>C'est parti !</button></router-link>
+      </div>
     </div>
+    <p class="disclaimer">Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales et ne sera pas publié</p>
   </div>
 </template>
 
 <script>
 import img from '../assets/images/perso-one.png';
 import book from '../assets/images/book.png';
+import iconQuestion from '../assets/images/quizz.png';
 import gsap , {Power3}from 'gsap'
 export default {
   name : 'Intro',
@@ -26,12 +33,14 @@ export default {
   data : ()=> {
     return {
       image : img,
-      imageTwo : book
+      imageTwo : book,
+      iconQuestion : iconQuestion
     }
   },
   mounted : ()=> {
     gsap.fromTo('.perso',3, {x : -150, opacity : 0}, { x:0, opacity : 1})
     gsap.to('.text--containt',1, {
+      y: -6,
       opacity : 1,
       ease : Power3.easeInOut,
       delay: 3
@@ -80,16 +89,18 @@ export default {
       }
       .text--containt{
         width: 90%;
-        height: 158px;
+        height: 138px;
         background:white;
         border-radius: 20px;
+        margin-top: 15px;
         opacity: 0;
         display: flex;
         align-items: center;
         justify-content:space-between;
         img{
-          width: 87px;
+          width: 67px;
           margin-left: 20px;
+          margin-right: 10px;
         }
         p{
           font-size: 30px;
@@ -108,6 +119,13 @@ export default {
           cursor: pointer;
         }
       }
+    }
+    .disclaimer{
+      width: 80%;
+      position: absolute;
+      left: 50%;
+      bottom: 4%;
+      transform: translate(-50%, -4%)
     }
   }
 @keyframes typing {

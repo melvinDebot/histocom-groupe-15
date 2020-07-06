@@ -87,6 +87,7 @@ export default {
       font-weight: 500;
       color: #6d6d6d;
       text-align: start;
+      margin-bottom: 20px;
       max-width: 400px;
       margin-top: 90px;
       span {
