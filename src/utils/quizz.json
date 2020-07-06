@@ -26,16 +26,16 @@
         "goodAnswer" : "chien",
         "responses":[
           {
-            "value" : "...chien",
-            "reponseText":"...chien"
+            "value" : "chien",
+            "reponseText":"chien"
           },
           {
-            "reponseText":"...singe",
-            "value" : "...singe"
+            "reponseText":"singe",
+            "value" : "singe"
           },
           {
-            "reponseText":"...lion",
-            "value" : "...lion"
+            "reponseText":"lion",
+            "value" : "lion"
           }
         ]
       },
