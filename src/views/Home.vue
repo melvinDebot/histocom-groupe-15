@@ -5,23 +5,18 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import PagePeriode from '../templates/PagePeriode.vue';
-// import PageObjet from '../templates/PageObjet.vue'
 import Intro from '../components/Intro.vue';
-
 export default {
-
   name: 'Home',
   components: {
     PagePeriode,
-    // PageObjet,
     Intro
   },
   data : ()=> {
     return {
       toggle : true,
-      showPage : false
+      showPage : false,
     }
   },
   methods : {
@@ -40,6 +35,7 @@ export default {
   .home{
     width: 100vw;
     height: 100vh;
+    border: 1px solid red;
     background-image: url('../assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,4 +44,3 @@ export default {
     align-items: flex-start;
   }
 </style>
-

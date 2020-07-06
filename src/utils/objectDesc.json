@@ -1,0 +1,71 @@
+{
+  "prehistoire" : {
+    "peinture" : {
+      "objectTitle" : "Les objets de communications",
+      "objectSubtitle" : "La peinture",
+      "imgName" : "object-painting",
+      "text" : "Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..)",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background",
+      "backgroundButton" : "#8F9CAF",
+      "backgroundImg" :"#8F9CAF",
+      "route" : "/quizz/prehistoire"
+    },
+    "sculture" : {
+      "objectTitle" : "Les objets de communications",
+      "objectSubtitle" : "La sculture",
+      "imgName" : "object-painting-two",
+      "text" : "Les premières sculptures sont apparues peu après la peinture. Elles représentaient des objets réels, comme des hommes ou des femmes mais aussi, de temps en temps, des choses fictives. Par exemple, la sculpture de l’homme-lion (ou femme-lionne) retrouvée en Allemagne mélange le corps d’un homme et la tête d’un lion. Elle a été fabriquée il y a environ 32 000 ans.",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background",
+      "backgroundButton" : "#8F9CAF",
+      "backgroundImg" :"#8F9CAF",
+      "route" : "/quizz/prehistoire"
+    },
+    "parole" : {
+      "objectTitle" : "Les objets de communications",
+      "objectSubtitle" : "La parole",
+      "imgName" : "object-painting-two",
+      "text" : "Les humains comme les autres animaux peuvent communiquer par la parole. Un son correspond à un message (de danger ou d’amour par exemple). Mais les premiers humains de notre espèce ont su créer des phrases complexes qui permettent de dire des choses plus détaillées et précis",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background",
+      "backgroundButton" : "#8F9CAF",
+      "backgroundImg" :"#8F9CAF",
+      "route" : "/quizz/prehistoire"
+    }
+  },
+  "egypte" : {
+    "hiéroglyphes" : {
+      "objectTitle" : "hiéroglyphes",
+      "imgName" : "object-painting",
+      "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens.",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background-egypte",
+      "backgroundButton" : "#D28A61",
+      "backgroundImg" :"#FFBB95",
+      "route" : "/quizz/egypte"
+    },
+    "pierrerosette" : {
+      "objectTitle" : "La pierre de Rosette",
+      "imgName" : "object-painting-two",
+      "text" : "La pierre de Rosette est une pierre gravée d’un texte traduit en Grec et en hiéroglyphes. A l’époque de sa découverte les européens savaient déjà lire le grec, donc la compréhension des hiéroglyphes s’est faite sans problème. Ainsi la signification des signes et phrases s’est éclaircie à l’aide de cette pierre.",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background-egypte",
+      "backgroundButton" : "#D28A61",
+      "backgroundImg" :"#FFBB95",
+      "route" : "/quizz/moyen-age"
+    }
+  },
+  "moyen-age" : {
+    "imprimerie" : {
+      "objectTitle" : "imprimerie",
+      "imgName" : "object-painting",
+      "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454",
+      "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+      "background" : "background-moyen-age",
+      "backgroundButton" : "#AED7C8",
+      "backgroundImg" :"#AED7C8",
+      "route" : "/quizz/moyen-age"
+    }
+  }
+}
