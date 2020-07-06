@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Fin du jeu</h1>
-    <router-link :to="{path : '/Periode/prehistoire' }">Revenir dans la page d'accueil</router-link>
+    <router-link :to="{path : '/' }">Revenir à la page d'accueil</router-link>
   </div>
 </template>
 
@@ -15,9 +15,22 @@ export default {
 div{
   width: 100%;
   height: 100vh;
-  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   justify-content: center;
   align-items: center;
+  background-color: #AEBFD7;
+  color: white;
+  h1{
+    margin-top: 12.5%;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
 }
 
 </style>
