@@ -3,7 +3,7 @@ module.exports = {
   pwa : {
     name : 'histocom',
     short_name : 'histocom',
-    themeColor : '#C15A1A',
+    themeColor : '#8F9CAF',
     msTileColor: '#ffffff',
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'default',
