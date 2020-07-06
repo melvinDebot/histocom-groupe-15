@@ -18,12 +18,12 @@
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">Moderne</router-link>
+          <router-link :to="{path : '/Periode/moderne' }">Moderne</router-link>
         </div>
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">Actuelle</router-link>
+          <router-link :to="{path : '/Periode/actuelle' }">Actuelle</router-link>
         </div>
       </div>
       <div class="bar"></div>
@@ -57,12 +57,12 @@ export default {
   height: auto;
   position: absolute;
   display: flex;
-  bottom: 4.5em;
+  bottom: 2.5em;
   justify-content: space-evenly;
   z-index: 3;
   .block {
     width: 140.73px;
-    height: 125.27px;
+    height: 115.27px;
     display: flex;
     border-radius: 10px 10px 10px 10px;
     z-index: 1;

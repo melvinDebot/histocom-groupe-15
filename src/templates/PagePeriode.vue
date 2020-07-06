@@ -1,10 +1,10 @@
 <template>
   <div
     class="page-periode"
-    :style="{backgroundImage : `url(${getImagePath(currentPeriod.background)})`}"
+    :style="{backgroundImage : `url(${getBackgroundPath(currentPeriod.background)})`}"
   >
     <img
-      :src="getImagePath(currentPeriod.rigthPerson)"
+      :src="getPersonPath(currentPeriod.rigthPerson)"
       alt="personnage préhistoire droite"
       class="img-person left"
     />
@@ -17,7 +17,7 @@
       </router-link>
     </div>
     <img
-      :src="getImagePath(currentPeriod.rigthPerson)"
+      :src="getPersonPath(currentPeriod.rigthPerson)"
       alt="personnage préhistoire"
       class="img-person right"
     />
@@ -29,9 +29,12 @@ import periods from '@/utils/periods.json';
 export default {
   name: 'PagePeriode',
   methods: {
-    getImagePath(imgName) {
-      return require(`@/assets/images/${imgName}.png`);
+    getBackgroundPath(img){
+      return require(`@/assets/background/${img}.png`)
     },
+    getPersonPath(img){
+      return require(`@/assets/perso-periode/${img}.png`)
+    }
   },
   computed: {
     periods() {
