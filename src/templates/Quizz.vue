@@ -7,7 +7,7 @@
         <div class="question">
           <div class="question--content" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
             <!-- IMAGE -->
-            <div class="question--input">
+            <div :class="{'question--input': true, 'is-wrong': isGoodAnswer === false && response.value === currentAnswer, 'is-good': isGoodAnswer && response.value === currentAnswer}">
                 <label>
                   <input
                   type="radio"
@@ -15,7 +15,7 @@
                   v-bind:value="response.value"
                   v-bind:name="index"
                   v-model="currentAnswer"
-                  @click="clickAnswer()"
+                  @click="clickAnswer(response.value)"
                 />
                 {{ response.reponseText }}
               </label>
@@ -43,7 +43,8 @@ export default {
       currentQuestion: 0,
       Answers: [],
       currentAnswer: null,
-      nextStep : false
+      nextStep : false,
+      isGoodAnswer: null
     };
   },
   methods: {
@@ -58,13 +59,8 @@ export default {
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`);
     },
-    // Vérifier si l'utilisateur à cliquer sur la bonne réponse
-    clickAnswer(){
-      if(this.currentQuizz.questions[this.currentQuestion].goodAnswer === this.currentQuizz.questions[this.currentQuestion].responses.value){
-        console.log('Bonne réponse')
-      }else {
-        console.log('mausvaise response')
-      }
+    clickAnswer(clickedValue){
+      this.isGoodAnswer = clickedValue === this.currentQuizz.questions[this.currentQuestion].goodAnswer
     }
   },
   computed: {
@@ -170,6 +166,13 @@ main {
         }
       }
     }
+  }
+
+  .is-wrong {
+    border: solid 2px red;
+  }
+  .is-good {
+    border: solid 2px green;
   }
 }
 </style>
