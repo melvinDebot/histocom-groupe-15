@@ -66,10 +66,9 @@ export default {
     position: absolute;
     top: 20vh;
     z-index: 0;
-    margin-left: 20px;
   }
   .left{
-    left: -5em;
+    left: 20px;
   }
   .right {
     right: 40px;

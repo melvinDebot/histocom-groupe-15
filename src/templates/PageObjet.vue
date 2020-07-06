@@ -71,7 +71,7 @@ export default {
       height: 80vh;
       top: 20vh;
       position: absolute;
-      left: -30px;
+      left: 10px;
     }
     &:nth-child(1) {
       width: 80%;
@@ -86,6 +86,7 @@ export default {
       text-align: left;
       padding-left: 14em;
       color: white;
+      z-index: 99999;
       h2 {
         font-weight: 500;
         font-size: 38px;
