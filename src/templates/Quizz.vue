@@ -7,7 +7,7 @@
         <div class="question">
           <div class="question--content" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
             <!-- IMAGE -->
-            <div class="question--input" ref="input">
+            <div class="question--input">
                 <label>
                   <input
                   type="radio"
@@ -62,10 +62,8 @@ export default {
     clickAnswer(){
       if(this.currentQuizz.questions[this.currentQuestion].goodAnswer === this.currentQuizz.questions[this.currentQuestion].responses.value){
         console.log('Bonne réponse')
-        this.ref.style.border = "1px solid green"
       }else {
         console.log('mausvaise response')
-        this.ref.style.border = "1px solid red"
       }
     }
   },
