@@ -63,16 +63,15 @@ export default {
   top: 0;
   left: 0;
   z-index: 5;
+  overflow: hidden;
   .page--containt {
     width: 50%;
     height: 100%;
-    
     .img-person-left {
-      margin-top: 20vh;
-      margin-left: 20px;
       height: 80vh;
+      top: 20vh;
       position: absolute;
-      left: -100px;
+      left: -30px;
     }
     &:nth-child(1) {
       width: 80%;

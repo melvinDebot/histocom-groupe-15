@@ -65,6 +65,7 @@ export default {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: 5;
@@ -87,7 +88,7 @@ export default {
       color: #6d6d6d;
       text-align: start;
       max-width: 400px;
-      margin-top: 45px;
+      margin-top: 90px;
       span {
         color: white;
       }
@@ -104,7 +105,7 @@ export default {
     h4 {
       font-weight: 500;
       font-size: 30px;
-      color: black;
+      color: #6D6D6D;
       font-family: Gotham rounded, Helvetica, Arial, sans-serif;
     }
   }

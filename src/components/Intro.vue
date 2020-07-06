@@ -41,12 +41,6 @@ export default {
 </script>
 
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
-  .perso{
-    height: 80vh;
-    position: absolute;
-    top: 20vh;
-    left: 20px;
-  }
   .intro{
     width: 100vw;
     height: 100vh;
@@ -61,6 +55,12 @@ export default {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
+    .perso{
+      height: 80vh;
+      position: absolute;
+      top: 20vh;
+      left: 20px;
+    }
     .intro--text{
       margin-left: 30%;
       width: 70%;

@@ -1,7 +1,7 @@
 [
   {
     "periodName": "prehistoire",
-    "title": "Invention de la peinture",
+    "title": "La préhistoire",
     "subtitle" : "Afrique, Europe, Asie",
     "text" : "-30 000 AVJC",
     "rigthPerson" : "perso-prehistoire",
@@ -63,7 +63,7 @@
   },
   {
     "periodName": "egypte",
-    "title": "Invention de l'écriture",
+    "title": "L'Egypte",
     "subtitle" : "Moyen Orient",
     "text" : "-30 000 AVJC",
     "background" : "background-egypte",
@@ -111,8 +111,8 @@
   },
   {
     "periodName": "moyen-age",
-    "title": "Invention imprimerie",
-    "subtitle" : "Moyen Age",
+    "title": "Le Moyen-âge",
+    "subtitle" : "Europe",
     "text" : "1454",
     "background" : "background-moyen-age",
     "rigthPerson" : "perso-romain",
@@ -152,8 +152,8 @@
   },
   {
     "periodName": "moderne",
-    "title": "Invention Télégraphe",
-    "subtitle" : "Epoque moderne",
+    "title": "La période moderne",
+    "subtitle" : "Monde entier",
     "text" : "1876",
     "background" : "background-moderne",
     "rigthPerson" : "perso-romain",
@@ -213,8 +213,8 @@
   },
   {
     "periodName": "actuelle",
-    "title": "Invention Internet",
-    "subtitle" : "Epoque actuelle",
+    "title": "La période actuelle",
+    "subtitle" : "Monde entier",
     "text" : "XXe siècle",
     "background" : "background-actuelle",
     "rigthPerson" : "perso-romain",

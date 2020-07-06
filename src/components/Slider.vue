@@ -121,7 +121,7 @@ export default {
   .containt-slider{
     width: 100%;
     height: 100%;
-    margin-top: 15%;
+    //margin-top: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +167,7 @@ export default {
       h4{
         font-weight: 500;
         font-size: 20px;
-        color: #6D6D6D;
+        color: white;
       }
     }
     

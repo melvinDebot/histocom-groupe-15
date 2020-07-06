@@ -53,11 +53,15 @@ export default {
   color: #2c3e50;
 }
 #nav {
-  width: 100%;
+  //width: 100%;
+  width: 80%;
   height: auto;
   position: absolute;
   display: flex;
-  bottom: 2.5em;
+  //bottom: 2.5em;
+  bottom: 10px;
+  //left: 0;
+  left: 10%;
   justify-content: space-evenly;
   z-index: 3;
   .block {
