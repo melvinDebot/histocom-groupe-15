@@ -4,9 +4,12 @@ import VueRouter from 'vue-router';
 // TEMPLATES
 import PagePeriode from '../templates/PagePeriode.vue';
 import ObjectDesc from '../templates/ObjectDesc.vue';
-import Intro from '../components/Intro.vue';
 import PageObjet from '../templates/PageObjet.vue';
 import Quizz from '../templates/Quizz.vue';
+
+// COMPONENTS
+import Intro from '../components/Intro.vue';
+import FinalPage from '../components/FinalPage.vue'
 
 Vue.use(VueRouter);
 
@@ -40,6 +43,12 @@ const routes = [
     name: 'Quizz',
     component: Quizz,
     meta: { transitionName: 'fade' },
+  },
+  {
+    path: '/final',
+    name: 'Final',
+    component: FinalPage,
+    meta: { transitionName: 'overlay-left' },
   },
 ];
 
