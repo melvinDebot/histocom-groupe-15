@@ -131,10 +131,10 @@ main {
             height: 100%;
             font-size: 16px;
             border-radius: 20px;
-            
-            // input[type="radio"] {
-            //   display: none;
-            // }
+            transition: border 0.3s ease-in;
+            input[type="radio"] {
+              display: none;
+            }
           }
         }
       }

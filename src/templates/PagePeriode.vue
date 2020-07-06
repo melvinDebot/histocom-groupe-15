@@ -17,7 +17,7 @@
       </router-link>
     </div>
     <img
-      :src="getPersonPath(currentPeriod.rigthPerson)"
+      :src="getPersonPath(currentPeriod.leftPerson)"
       alt="personnage préhistoire"
       class="img-person right"
     />

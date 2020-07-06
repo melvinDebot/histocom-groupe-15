@@ -27,11 +27,7 @@
         "responses":[
           {
             "value" : "chien",
-<<<<<<< HEAD
-            "reponseText":"...chien"
-=======
             "reponseText":"chien"
->>>>>>> 6cc1c612667917ef425b46f2e2119a8c90e209d8
           },
           {
             "reponseText":"singe",
