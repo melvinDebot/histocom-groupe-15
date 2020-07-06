@@ -5,7 +5,7 @@
       <h1>Bienvenue sur Histo <br />apprendre n’a jamais été aussi simple !</h1>
       <div class="text--containt">
         <img :src="this.imageTwo" alt="" />
-        <p>Découvrer la communication à travers le temps !</p>
+        <p>Découvre la communication à travers le temps !</p>
         <router-link :to="{path : '/Periode/prehistoire' }"><button>C'est parti !</button></router-link>
       </div>
     </div>
