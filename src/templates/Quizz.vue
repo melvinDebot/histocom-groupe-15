@@ -7,7 +7,7 @@
         <div class="question">
           <div class="question--content" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
             <!-- IMAGE -->
-            <div class="question--input">
+            <div class="question--input" ref="input">
                 <label>
                   <input
                   type="radio"
@@ -15,6 +15,7 @@
                   v-bind:value="response.value"
                   v-bind:name="index"
                   v-model="currentAnswer"
+                  @click="clickAnswer()"
                 />
                 {{ response.reponseText }}
               </label>
@@ -22,7 +23,7 @@
           </div>
         </div>
         <div class="quizz--buttons">
-          <router-link :to="currentQuizz.linkNextPeriode">
+          <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
             <button>Chapitre suivant</button>
           </router-link>
           <button @click="addAnswer()">Question Suivante {{  currentQuestion }} / {{ currentQuizz.questions.length }}</button>
@@ -42,6 +43,7 @@ export default {
       currentQuestion: 0,
       Answers: [],
       currentAnswer: null,
+      nextStep : false
     };
   },
   methods: {
@@ -49,10 +51,23 @@ export default {
       this.Answers.push(this.currentAnswer);
       this.currentQuestion++;
       this.currentAnswer = null;
+      if(this.currentQuestion === 2){
+        this.nextStep = true
+      }
     },
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`);
     },
+    // Vérifier si l'utilisateur à cliquer sur la bonne réponse
+    clickAnswer(){
+      if(this.currentQuizz.questions[this.currentQuestion].goodAnswer === this.currentQuizz.questions[this.currentQuestion].responses.value){
+        console.log('Bonne réponse')
+        this.ref.style.border = "1px solid green"
+      }else {
+        console.log('mausvaise response')
+        this.ref.style.border = "1px solid red"
+      }
+    }
   },
   computed: {
     currentQuizz() {
@@ -109,9 +124,9 @@ main {
         justify-content: space-between;
         .question--content{
           width: 248px;
-          height: 145px;
+          height: 75px;
           background: #AEBFD7;
-          border-radius: 10px;
+          border-radius: 20px;
           .question--input {
             background: #8F9CAF;
             color: white;
@@ -119,8 +134,13 @@ main {
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 20px;
+            height: 100%;
             font-size: 16px;
+            border-radius: 20px;
+            
+            // input[type="radio"] {
+            //   display: none;
+            // }
           }
         }
       }
