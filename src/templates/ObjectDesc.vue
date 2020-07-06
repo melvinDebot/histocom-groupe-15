@@ -4,11 +4,11 @@
       <ButtonBack :backgroundColor="currentDesc[currentActivity].backgroundButton" @click="$router.go(-1)"/>
       <h2>{{ currentDesc[currentActivity].objectTitle }}</h2>
       <div class="containt-img" :style="{backgroundColor : currentDesc[currentActivity].backgroundImg}">
-        <img :src="getImagePath(currentDesc[currentActivity].imgName)" alt="image" />
+        <img :src="getObjectPath(currentDesc[currentActivity].imgName)" alt="image" />
       </div>
       <h4>{{ currentDesc[currentActivity].objectSubtitle }}</h4>
     </div>
-    <div class="containt-video" :style="{backgroundImage : `url(${getImagePath(currentDesc[currentActivity].background)})`}">
+    <div class="containt-video" :style="{backgroundImage : `url(${getBackgroundPath(currentDesc[currentActivity].background)})`}">
       <div>
         <div class="video">
           <iframe
@@ -35,11 +35,13 @@ export default {
   components : {
     ButtonBack
   },
-  data: () => ({}),
   methods: {
-    getImagePath(imgName) {
-      return require(`@/assets/images/${imgName}.png`);
+    getObjectPath(img){
+      return require(`@/assets/object-periode/${img}.png`)
     },
+  getBackgroundPath(img){
+      return require(`@/assets/background/${img}.png`)
+    }
   },
   computed: {
     desc() {

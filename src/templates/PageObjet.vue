@@ -2,10 +2,10 @@
   <div class="page">
     <div
       class="page--containt"
-      :style="{backgroundImage : `url(${getImagePath(currentPeriod.objects[0].background)})`}"
+      :style="{backgroundImage : `url(${getBackgroundPath(currentPeriod.objects[0].background)})`}"
     >
       <ButtonBack :backgroundColor="currentPeriod.objects[0].buttonBackground" @click="$router.go(-1)"/>
-      <img :src="this.image" alt="personnage" class="img-person-left" />
+      <img :src="getPersonPath(currentPeriod.objects[0].persoPeriode)" alt="personnage" class="img-person-left" />
       <div class="page-text">
         <h2>{{ currentPeriod.objects[0].titlePeriod }}</h2>
         <h4>{{ currentPeriod.objects[0].subtitle }}</h4>
@@ -34,9 +34,12 @@ export default {
     arrowBack : arrowBack
   }),
   methods: {
-    getImagePath(imgName) {
-      return require(`@/assets/images/${imgName}.png`);
+    getBackgroundPath(img){
+      return require(`@/assets/background/${img}.png`)
     },
+    getPersonPath(img){
+      return require(`@/assets/perso-periode/${img}.png`)
+    }
   },
   computed: {
     periods() {
@@ -68,6 +71,8 @@ export default {
       margin-top: 20vh;
       margin-left: 20px;
       height: 80vh;
+      position: absolute;
+      left: -100px;
     }
     &:nth-child(1) {
       width: 80%;
@@ -80,6 +85,7 @@ export default {
     .page-text {
       width: 410px;
       text-align: left;
+      padding-left: 14em;
       color: white;
       h2 {
         font-weight: 500;
