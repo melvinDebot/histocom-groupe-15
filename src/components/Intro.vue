@@ -1,5 +1,6 @@
 <template>
   <div class="intro">
+    <Logo />
     <img :src="this.image" alt="personnage"  class="perso"/>
     <div class="introText">
       <h1>Bienvenue sur HistoCom <br />apprendre n’a jamais été aussi simple !</h1>
@@ -24,9 +25,13 @@
 import img from '../assets/images/perso-one.png';
 import book from '../assets/images/book.png';
 import iconQuestion from '../assets/images/quizz.png';
+import Logo from '../components/Logo.vue'
 import gsap , {Power3}from 'gsap'
 export default {
   name : 'Intro',
+  components : {
+    Logo
+  },
   props : {
     show : {
       type : Function

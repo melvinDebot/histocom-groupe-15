@@ -245,7 +245,7 @@
   },
   "actuelle":{
     "background" : "background-actuelle",
-    "leftPerson" : "perso-egypte",
+    "leftPerson" : "perso-actuelle",
     "questions":[
       {
         "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",

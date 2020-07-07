@@ -3,6 +3,7 @@
     class="pagePeriode"
     :style="{backgroundImage : `url(${getBackgroundPath(currentPeriod.background)})`}"
   >
+    <Logo />
     <img
       :src="getPersonPath(currentPeriod.rigthPerson)"
       alt="personnage préhistoire droite"
@@ -26,8 +27,12 @@
 
 <script>
 import periods from '@/utils/periods.json';
+import Logo from '../components/Logo.vue'
 export default {
   name: 'PagePeriode',
+  components : {
+    Logo
+  },
   methods: {
     getBackgroundPath(img){
       return require(`@/assets/background/${img}.png`)
