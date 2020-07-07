@@ -23,11 +23,14 @@
           </div>
         </div>
         <div class="quizzButtons">
-          <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
-            <button>Chapitre suivant</button>
-          </router-link>
-          <button @click="addAnswer()">Question Suivante {{  currentQuestion }} / {{ currentQuizz.questions.length }}</button>
+          <div class="counter">
+            {{  currentQuestion }} / {{ currentQuizz.questions.length }}
+          </div>
+          <button @click="addAnswer()">Question Suivante </button>
         </div>
+        <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
+          <button class="nextStep">Chapitre suivant</button>
+        </router-link> 
       </div>
     </div>
   </main>
@@ -55,9 +58,6 @@ export default {
       if(this.currentQuestion === 2){
         this.nextStep = true
       }
-    },
-    getImagePath(imgName) {
-      return require(`@/assets/images/${imgName}.png`);
     },
     getPersonPath(img){
       return require(`@/assets/perso-periode/${img}.png`)
@@ -135,11 +135,12 @@ main {
             justify-content: center;
             width: 100%;
             height: 100%;
-            font-size: 16px;
+            font-size: 20px;
             border-radius: 20px;
             transition: border 0.3s ease-in;
             input[type="radio"] {
               display: none;
+              
             }
           }
         }
@@ -149,18 +150,16 @@ main {
         height: 56px;
         display: flex;
         justify-content: space-between;
-        button:nth-child(1){
-          width: 296px;
-          height: 57px;
-          background: #4F5A67;
-          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-          border-radius: 10px;
+        .counter{
+          background: #8F9CAF;
           color: white;
-          font-weight: 500;
+          border-radius: 10px;
+          line-height: 54px;
+          width: 100px;
+          text-align: center;
           font-size: 20px;
-          border: none;
         }
-        button:nth-child(2){
+        button{
           width: 296px;
           height: 57px;
           background: #8F9CAF;
@@ -172,6 +171,19 @@ main {
         }
       }
     }
+  }
+  .nextStep{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 296px;
+    height: 57px;
+    background: #8F9CAF;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
   }
 
   .is-wrong {
