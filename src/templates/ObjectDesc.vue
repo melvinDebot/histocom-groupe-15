@@ -19,7 +19,7 @@
         </div>
         <p>{{ currentDesc[currentActivity].text }}</p>
         <router-link :to="{name:'Quizz', params: {type: $route.params.type}}">
-          <button>Lancez le quizz</button>
+          <button>Lance le quizz</button>
         </router-link>
       </div>
     </div>

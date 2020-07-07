@@ -23,37 +23,37 @@
       },
       {
         "questionText":"La sculpture retrouvée est un homme...",
-        "goodAnswer" : "chien",
+        "goodAnswer" : "Lion",
         "responses":[
           {
-            "value" : "chien",
-            "reponseText":"chien"
+            "value" : "Chien",
+            "reponseText":"Chien"
           },
           {
-            "reponseText":"singe",
-            "value" : "singe"
+            "reponseText":"Singe",
+            "value" : "Singe"
           },
           {
-            "reponseText":"lion",
-            "value" : "lion"
+            "reponseText":"Lion",
+            "value" : "Lion"
           }
         ]
       },
       {
         "questionText":"Les animaux peuvent communiquer ?",
-        "goodAnswer" : "un danger",
+        "goodAnswer" : "Un danger",
         "responses":[
           {
-            "value" : "un danger",
-            "reponseText":"un danger"
+            "value" : "Un danger",
+            "reponseText":"Un danger"
           },
           {
-            "reponseText":"la météo",
-            "value" : "la météo"
+            "reponseText":"La météo",
+            "value" : "La météo"
           },
           {
-            "value" : "l’heure qu’il est",
-            "reponseText":"l’heure qu’il est"
+            "value" : "L’heure qu’il est",
+            "reponseText":"L’heure qu’il est"
           }
         ]
       }
@@ -83,16 +83,16 @@
         ]
       },
       {
-        "questionText":"Les hiéroglyphes ont été utilisés",
+        "questionText":"Les hiéroglyphes ont été utilisés...",
         "goodAnswer" : "En Egypte",
         "responses":[
           {
-            "reponseText":"En france",
-            "value" : "En france"
+            "reponseText":"En France",
+            "value" : "En France"
           },
           {
-            "reponseText":"Dans l’empire romain",
-            "value" : "Dans l’empire romain"
+            "reponseText":"Dans l’Empire Romain",
+            "value" : "Dans l’Empire Romain"
           },
           {
             "reponseText":"En Egypte",
@@ -101,20 +101,20 @@
         ]
       },
       {
-        "questionText":"Les scribes ?",
-        "goodAnswer" : "écrivaient",
+        "questionText":"Les scribes...",
+        "goodAnswer" : "Ecrivaient",
         "responses":[
           {
-            "reponseText":"chantaient",
-            "value" : "chantaient"
+            "reponseText":"Chantaient",
+            "value" : "Chantaient"
           },
           {
-            "reponseText":"écrivaient",
-            "value" : "écrivaient"
+            "reponseText":"Ecrivaient",
+            "value" : "Ecrivaient"
           },
           {
-            "reponseText":"dansaient",
-            "value" : "dansaient"
+            "reponseText":"Dansaient",
+            "value" : "Dansaient"
           }
         ]
       }
@@ -124,67 +124,6 @@
   "moyen-age":{
     "background" : "background-moyen-age",
     "leftPerson" : "perso-moyen-age",
-    "questions":[
-      {
-        "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
-        "goodAnswer" : "Cunéiforme",
-        "responses":[
-          {
-            "reponseText":"Cunéiforme",
-            "value" : "Cunéiforme"
-          },
-          {
-            "reponseText":"Cur-nez-iforme",
-            "value" : "Cur-nez-iforme"
-          },
-          {
-            "reponseText":"Carréiforme",
-            "value" : "Carréiforme"
-          }
-        ]
-      },
-      {
-        "questionText":"Les hiéroglyphes ont été utilisés",
-        "goodAnswer" : "En france",
-        "responses":[
-          {
-            "reponseText":"En france",
-            "value" : "En france"
-          },
-          {
-            "reponseText":"Dans l’empire romain",
-            "value" : "Dans l’empire romain"
-          },
-          {
-            "reponseText":"En Egypte",
-            "value" : "En Egypte"
-          }
-        ]
-      },
-      {
-        "questionText":"Les scribes ?",
-        "goodAnswer" : "chantaient",
-        "responses":[
-          {
-            "reponseText":"chantaient",
-            "value" : "chantaient"
-          },
-          {
-            "reponseText":"écrivaient",
-            "value" : "écrivaient"
-          },
-          {
-            "reponseText":"dansaient",
-            "value" : "dansaient"
-          }
-        ]
-      }
-    ],
-    "linkNextPeriode":"/Periode/moderne"
-  },
-  "moderne":{
-    "background" : "background-moderne",
-    "leftPerson" : "perso-moderne",
     "questions":[
       {
         "questionText":"Qui a inventé l'imprimerie ?",
@@ -237,6 +176,67 @@
           {
             "reponseText":"Le journal de Mickey",
             "value" : "Le journal de mickey"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/moderne"
+  },
+  "moderne":{
+    "background" : "background-moderne",
+    "leftPerson" : "perso-moderne",
+    "questions":[
+      {
+        "questionText":"Comment s'appelle l'alphabet utilisé sur le télégraphe électrique ?",
+        "goodAnswer" : "Morse",
+        "responses":[
+          {
+            "reponseText":"Morse",
+            "value" : "Morse"
+          },
+          {
+            "reponseText":"Latin",
+            "value" : "Latin"
+          },
+          {
+            "reponseText":"Arabe",
+            "value" : "Arabe"
+          }
+        ]
+      },
+      {
+        "questionText":"Les premiers téléphones permettaient les appels...",
+        "goodAnswer" : "Avec la voix",
+        "responses":[
+          {
+            "reponseText":"En vidéo",
+            "value" : "En vidéo"
+          },
+          {
+            "reponseText":"En langue des signes",
+            "value" : "En langue des signes"
+          },
+          {
+            "reponseText":"Avec la voix",
+            "value" : "Avec la voix"
+          }
+        ]
+      },
+      {
+        "questionText":"Les informations sur la télévision étaient...",
+        "goodAnswer" : "Plus rapides que les journaux papiers",
+        "responses":[
+          {
+            "reponseText":"Plus lentes que les journaux papiers",
+            "value" : "Plus lentes que les journaux papiers"
+          },
+          {
+            "reponseText":"Aussi rapides que les journaux papiers",
+            "value" : "Aussi rapides que les journaux papiers"
+          },
+          {
+            "reponseText":"Plus rapides que les journaux papiers",
+            "value" : "Plus rapides que les journaux papiers"
           }
         ]
       }
