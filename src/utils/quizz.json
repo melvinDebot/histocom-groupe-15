@@ -1,7 +1,7 @@
 {
   "prehistoire":{
     "background" : "background",
-    "leftPerson" : "perso-two",
+    "leftPerson" : "perso-prehistoire",
     "questions":[
       {
         "questionText":"Les premiers humains dessinaient ?",
@@ -22,7 +22,7 @@
         ]
       },
       {
-        "questionText":"La sculpture retrouvée est un homme ?",
+        "questionText":"La sculpture retrouvée est un homme...",
         "goodAnswer" : "chien",
         "responses":[
           {
@@ -49,7 +49,7 @@
           },
           {
             "reponseText":"la météo",
-            "value" : "écrivaient"
+            "value" : "la météo"
           },
           {
             "value" : "l’heure qu’il est",
@@ -62,7 +62,7 @@
   },
   "egypte":{
     "background" : "background-egypte",
-    "leftPerson" : "perso-egypte",
+    "leftPerson" : "perso-romain",
     "questions":[
       {
         "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
@@ -84,7 +84,7 @@
       },
       {
         "questionText":"Les hiéroglyphes ont été utilisés",
-        "goodAnswer" : "En france",
+        "goodAnswer" : "En Egypte",
         "responses":[
           {
             "reponseText":"En france",
@@ -102,7 +102,7 @@
       },
       {
         "questionText":"Les scribes ?",
-        "goodAnswer" : "chantaient",
+        "goodAnswer" : "écrivaient",
         "responses":[
           {
             "reponseText":"chantaient",
@@ -122,7 +122,129 @@
     "linkNextPeriode":"/Periode/moyen-age"
   },
   "moyen-age":{
-    "background" : "background-egypte",
+    "background" : "background-moyen-age",
+    "leftPerson" : "perso-moyen-age",
+    "questions":[
+      {
+        "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
+        "goodAnswer" : "Cunéiforme",
+        "responses":[
+          {
+            "reponseText":"Cunéiforme",
+            "value" : "Cunéiforme"
+          },
+          {
+            "reponseText":"Cur-nez-iforme",
+            "value" : "Cur-nez-iforme"
+          },
+          {
+            "reponseText":"Carréiforme",
+            "value" : "Carréiforme"
+          }
+        ]
+      },
+      {
+        "questionText":"Les hiéroglyphes ont été utilisés",
+        "goodAnswer" : "En france",
+        "responses":[
+          {
+            "reponseText":"En france",
+            "value" : "En france"
+          },
+          {
+            "reponseText":"Dans l’empire romain",
+            "value" : "Dans l’empire romain"
+          },
+          {
+            "reponseText":"En Egypte",
+            "value" : "En Egypte"
+          }
+        ]
+      },
+      {
+        "questionText":"Les scribes ?",
+        "goodAnswer" : "chantaient",
+        "responses":[
+          {
+            "reponseText":"chantaient",
+            "value" : "chantaient"
+          },
+          {
+            "reponseText":"écrivaient",
+            "value" : "écrivaient"
+          },
+          {
+            "reponseText":"dansaient",
+            "value" : "dansaient"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/moderne"
+  },
+  "moderne":{
+    "background" : "background-moderne",
+    "leftPerson" : "perso-moderne",
+    "questions":[
+      {
+        "questionText":"Qui a inventé l'imprimerie ?",
+        "goodAnswer" : "Gutenberg",
+        "responses":[
+          {
+            "reponseText":"Gutenberg",
+            "value" : "Gutenberg"
+          },
+          {
+            "reponseText":"Louis XIV",
+            "value" : "Louis XIV"
+          },
+          {
+            "reponseText":"Toi !",
+            "value" : "Toi !"
+          }
+        ]
+      },
+      {
+        "questionText":"L'imprimerie a accéléré...",
+        "goodAnswer" : "...la transmission du savoir",
+        "responses":[
+          {
+            "reponseText":"...La vitesse de marche",
+            "value" : "...La vitesse de marche"
+          },
+          {
+            "reponseText":"...le temps",
+            "value" : "...le temps"
+          },
+          {
+            "reponseText":"...la transmission du savoir",
+            "value" : "...la transmission du savoir"
+          }
+        ]
+      },
+      {
+        "questionText":"Quel est le premier livre imprimé ?",
+        "goodAnswer" : "La Bible",
+        "responses":[
+          {
+            "reponseText":"Oui-oui à la ferme",
+            "value" : "Oui-oui à la ferme"
+          },
+          {
+            "reponseText":"La Bible",
+            "value" : "La Bible"
+          },
+          {
+            "reponseText":"Le journal de Mickey",
+            "value" : "Le journal de mickey"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/actuelle"
+  },
+  "actuelle":{
+    "background" : "background-actuelle",
     "leftPerson" : "perso-egypte",
     "questions":[
       {
@@ -179,6 +301,7 @@
           }
         ]
       }
-    ]
+    ],
+    "linkNextPeriode":"/final"
   }
 }

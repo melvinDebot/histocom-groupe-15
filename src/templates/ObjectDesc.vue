@@ -4,11 +4,11 @@
       <ButtonBack :backgroundColor="currentDesc[currentActivity].backgroundButton" @click="$router.go(-1)"/>
       <h2>{{ currentDesc[currentActivity].objectTitle }}</h2>
       <div class="containt-img" :style="{backgroundColor : currentDesc[currentActivity].backgroundImg}">
-        <img :src="getImagePath(currentDesc[currentActivity].imgName)" alt="image" />
+        <img :src="getObjectPath(currentDesc[currentActivity].imgName)" alt="image" />
       </div>
       <h4>{{ currentDesc[currentActivity].objectSubtitle }}</h4>
     </div>
-    <div class="containt-video" :style="{backgroundImage : `url(${getImagePath(currentDesc[currentActivity].background)})`}">
+    <div class="containt-video" :style="{backgroundImage : `url(${getBackgroundPath(currentDesc[currentActivity].background)})`}">
       <div>
         <div class="video">
           <iframe
@@ -35,11 +35,13 @@ export default {
   components : {
     ButtonBack
   },
-  data: () => ({}),
   methods: {
-    getImagePath(imgName) {
-      return require(`@/assets/images/${imgName}.png`);
+    getObjectPath(img){
+      return require(`@/assets/object-periode/${img}.png`)
     },
+  getBackgroundPath(img){
+      return require(`@/assets/background/${img}.png`)
+    }
   },
   computed: {
     desc() {
@@ -63,6 +65,7 @@ export default {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: 5;
@@ -84,8 +87,9 @@ export default {
       font-weight: 500;
       color: #6d6d6d;
       text-align: start;
+      margin-bottom: 20px;
       max-width: 400px;
-      margin-top: 45px;
+      margin-top: 90px;
       span {
         color: white;
       }
@@ -102,7 +106,7 @@ export default {
     h4 {
       font-weight: 500;
       font-size: 30px;
-      color: black;
+      color: #6D6D6D;
       font-family: Gotham rounded, Helvetica, Arial, sans-serif;
     }
   }

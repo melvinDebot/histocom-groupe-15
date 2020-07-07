@@ -1,9 +1,9 @@
 module.exports = {
   // lintOnSave: false
-  pwa: {
-    name: 'histocom',
-    short_name: 'histocom',
-    themeColor: '#C15A1A',
+  pwa : {
+    name : 'histocom',
+    short_name : 'histocom',
+    themeColor : '#8F9CAF',
     msTileColor: '#ffffff',
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'default',

@@ -1,13 +1,13 @@
 <template>
   <main >
-    <div class="quizz" :style="{backgroundImage : `url(${getImagePath(currentQuizz.background)})`}">
-      <img :src="getImagePath(currentQuizz.leftPerson)" alt="test"  class="left-img-person"/>
+    <div class="quizz" :style="{backgroundImage : `url(${getBackgroundPath(currentQuizz.background)})`}">
+      <img :src="getPersonPath(currentQuizz.leftPerson)" alt="test"  class="left-img-person"/>
       <div class="quizz--content">
         <h2>{{ currentQuizz.questions[currentQuestion].questionText }}</h2>
         <div class="question">
           <div class="question--content" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
             <!-- IMAGE -->
-            <div class="question--input">
+            <div :class="{'question--input': true, 'is-wrong': isGoodAnswer === false && response.value === currentAnswer, 'is-good': isGoodAnswer && response.value === currentAnswer}">
                 <label>
                   <input
                   type="radio"
@@ -15,6 +15,7 @@
                   v-bind:value="response.value"
                   v-bind:name="index"
                   v-model="currentAnswer"
+                  @click="clickAnswer(response.value)"
                 />
                 {{ response.reponseText }}
               </label>
@@ -22,7 +23,7 @@
           </div>
         </div>
         <div class="quizz--buttons">
-          <router-link :to="currentQuizz.linkNextPeriode">
+          <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
             <button>Chapitre suivant</button>
           </router-link>
           <button @click="addAnswer()">Question Suivante {{  currentQuestion }} / {{ currentQuizz.questions.length }}</button>
@@ -42,6 +43,8 @@ export default {
       currentQuestion: 0,
       Answers: [],
       currentAnswer: null,
+      nextStep : false,
+      isGoodAnswer: null
     };
   },
   methods: {
@@ -49,10 +52,22 @@ export default {
       this.Answers.push(this.currentAnswer);
       this.currentQuestion++;
       this.currentAnswer = null;
+      if(this.currentQuestion === 2){
+        this.nextStep = true
+      }
     },
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`);
     },
+    getPersonPath(img){
+      return require(`@/assets/perso-periode/${img}.png`)
+    },
+    getBackgroundPath(img){
+      return require(`@/assets/background/${img}.png`)
+    },
+    clickAnswer(clickedValue){
+      this.isGoodAnswer = clickedValue === this.currentQuizz.questions[this.currentQuestion].goodAnswer
+    }
   },
   computed: {
     currentQuizz() {
@@ -109,9 +124,9 @@ main {
         justify-content: space-between;
         .question--content{
           width: 248px;
-          height: 145px;
+          height: 75px;
           background: #AEBFD7;
-          border-radius: 10px;
+          border-radius: 20px;
           .question--input {
             background: #8F9CAF;
             color: white;
@@ -119,8 +134,13 @@ main {
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 20px;
+            height: 100%;
             font-size: 16px;
+            border-radius: 20px;
+            transition: border 0.3s ease-in;
+            input[type="radio"] {
+              display: none;
+            }
           }
         }
       }
@@ -152,6 +172,13 @@ main {
         }
       }
     }
+  }
+
+  .is-wrong {
+    border: solid 2px red;
+  }
+  .is-good {
+    border: solid 2px green;
   }
 }
 </style>

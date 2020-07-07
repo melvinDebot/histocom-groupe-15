@@ -18,12 +18,12 @@
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">Moderne</router-link>
+          <router-link :to="{path : '/Periode/moderne' }">Moderne</router-link>
         </div>
       </div>
       <div class="block">
         <div class="block--text">
-          <router-link to="/">Actuelle</router-link>
+          <router-link :to="{path : '/Periode/actuelle' }">Actuelle</router-link>
         </div>
       </div>
       <div class="bar"></div>
@@ -45,24 +45,30 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: Gotham rounded, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 #nav {
-  width: 100%;
+  //width: 100%;
+  width: 80%;
   height: auto;
   position: absolute;
   display: flex;
-  bottom: 4.5em;
+  //bottom: 2.5em;
+  bottom: 10px;
+  //left: 0;
+  left: 10%;
   justify-content: space-evenly;
   z-index: 3;
   .block {
     width: 140.73px;
-    height: 125.27px;
+    height: 115.27px;
     display: flex;
     border-radius: 10px 10px 10px 10px;
     z-index: 1;

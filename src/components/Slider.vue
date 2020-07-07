@@ -4,7 +4,7 @@
       <h2>Les objets de communication</h2>
       <div id="slide">
         <div v-for="(bloc, index) in blocs" :key="'bloc' + index" :style="{backgroundColor : bloc.backgroundColor}">
-          <img :src="getImagePath(bloc.imgName)" />
+          <img :src="getObjectPath(bloc.imgName)" />
           <router-link 
             class="link"
             :to="{name:'ObjectDesc', params: {period: currentPeriodName , activity : bloc.routeParam}}"
@@ -112,7 +112,10 @@ export default {
     },
     getImagePath(imgName) {
       return require(`@/assets/images/${imgName}.png`)
-    }
+    },
+    getObjectPath(img){
+      return require(`@/assets/object-periode/${img}.png`)
+    },
   }
 }
 </script>
@@ -121,7 +124,7 @@ export default {
   .containt-slider{
     width: 100%;
     height: 100%;
-    margin-top: 15%;
+    //margin-top: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +170,8 @@ export default {
       h4{
         font-weight: 500;
         font-size: 20px;
-        color: #6D6D6D;
+        color: white;
+        text-align: center;
       }
     }
     
