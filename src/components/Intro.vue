@@ -74,8 +74,9 @@ export default {
     }
     .introText{
       margin-left: 30%;
+      margin-top: 5%;
       width: 70%;
-      height: 100%;
+      height: 80%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -91,7 +92,7 @@ export default {
       }
       .textContent{
         width: 90%;
-        height: 138px;
+        height: 110px;
         background:white;
         border-radius: 20px;
         margin-top: 15px;
@@ -110,7 +111,9 @@ export default {
           color: #AEBFD7;
         }
         button {
-          padding: 15px 30px;
+          //padding: 15px 30px;
+          width: 200px;
+          height: 50px;
           background: #4F5A67;
           margin-right: 20px;
           box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
