@@ -1,5 +1,5 @@
 <template>
-  <div class="containt-slider">
+  <div class="contentSlider">
     <div class="slider">
       <h2>Les objets de communication</h2>
       <div id="slide">
@@ -121,10 +121,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .containt-slider{
+  .contentSlider{
     width: 100%;
     height: 100%;
-    //margin-top: 15%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;

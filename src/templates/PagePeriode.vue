@@ -1,6 +1,6 @@
 <template>
   <div
-    class="page-periode"
+    class="pagePeriode"
     :style="{backgroundImage : `url(${getBackgroundPath(currentPeriod.background)})`}"
   >
     <img
@@ -8,7 +8,7 @@
       alt="personnage préhistoire droite"
       class="img-person left"
     />
-    <div class="page-periode-text">
+    <div class="pagePeriodeText">
       <h3>{{ currentPeriod.title }}</h3>
       <h4>{{ currentPeriod.subtitle }}</h4>
       <p>{{ currentPeriod.text }}</p>
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
-.page-periode {
+.pagePeriode {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -84,7 +84,7 @@ export default {
   .right {
     right: 40px;
   }
-  .page-periode-text {
+  .pagePeriodeText {
     width: 427px;
     height: 300px;
     color: white;

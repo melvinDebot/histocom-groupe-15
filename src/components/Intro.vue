@@ -1,20 +1,22 @@
 <template>
   <div class="intro">
     <img :src="this.image" alt="personnage"  class="perso"/>
-    <div class="intro--text">
+    <div class="introText">
       <h1>Bienvenue sur HistoCom <br />apprendre n’a jamais été aussi simple !</h1>
-      <div class="text--containt">
+      <div class="textContent">
         <img :src="this.imageTwo" alt="book intro" />
         <p>Découvre la communication à travers le temps !</p>
         <router-link :to="{path : '/Periode/prehistoire' }"><button>C'est parti !</button></router-link>
       </div>
-      <div class="text--containt">
+      <div class="textContent">
         <img :src="this.iconQuestion" alt="book intro" />
         <p>Valide tes connaissances en commençant par un quizz</p>
         <router-link :to="{path : '/quizz/prehistoire' }"><button>C'est parti !</button></router-link>
       </div>
     </div>
-    <p class="disclaimer">Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales et ne sera pas publié</p>
+    <div class="disclaimer">
+      <p class="disclaimerContent">Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales et ne sera pas publié</p>
+    </div>
   </div>
 </template>
 
@@ -39,7 +41,7 @@ export default {
   },
   mounted : ()=> {
     gsap.fromTo('.perso',3, {x : -150, opacity : 0}, { x:0, opacity : 1})
-    gsap.to('.text--containt',1, {
+    gsap.to('.textContent',1, {
       y: -6,
       opacity : 1,
       ease : Power3.easeInOut,
@@ -70,7 +72,7 @@ export default {
       top: 20vh;
       left: 20px;
     }
-    .intro--text{
+    .introText{
       margin-left: 30%;
       width: 70%;
       height: 100%;
@@ -87,7 +89,7 @@ export default {
         animation: typing 3s steps(40, end);
         white-space: nowrap;
       }
-      .text--containt{
+      .textContent{
         width: 90%;
         height: 138px;
         background:white;
@@ -121,11 +123,16 @@ export default {
       }
     }
     .disclaimer{
-      width: 80%;
       position: absolute;
-      left: 50%;
-      bottom: 4%;
-      transform: translate(-50%, -4%)
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      justify-content: center;
+      .disclaimerContent{
+        text-align: center;
+        margin: 10px;
+      }
     }
   }
 @keyframes typing {

@@ -1,18 +1,18 @@
 <template>
   <div class="page">
     <div
-      class="page--containt"
+      class="pageContent"
       :style="{backgroundImage : `url(${getBackgroundPath(currentPeriod.objects[0].background)})`}"
     >
       <ButtonBack :backgroundColor="currentPeriod.objects[0].buttonBackground" @click="$router.go(-1)"/>
       <img :src="getPersonPath(currentPeriod.objects[0].persoPeriode)" alt="personnage" class="img-person-left" />
-      <div class="page-text">
+      <div class="pageText">
         <h2>{{ currentPeriod.objects[0].titlePeriod }}</h2>
         <h4>{{ currentPeriod.objects[0].subtitle }}</h4>
         <p>{{ currentPeriod.objects[0].text }}</p>
       </div>
     </div>
-    <div class="page--containt">
+    <div class="pageContent">
       <Slider :blocs="currentPeriod.sliderBlocs" />
     </div>
   </div>
@@ -64,7 +64,7 @@ export default {
   left: 0;
   z-index: 5;
   overflow: hidden;
-  .page--containt {
+  .pageContent {
     width: 50%;
     height: 100%;
     .img-person-left {
@@ -81,7 +81,7 @@ export default {
       justify-content: center;
       align-items: center;
     }
-    .page-text {
+    .pageText {
       width: 410px;
       text-align: left;
       padding-left: 14em;

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Fin du jeu</h1>
+  <div class="content">
+    <h1 class="finalTitle">Fin du jeu</h1>
     <router-link :to="{path : '/' }">Revenir à la page d'accueil</router-link>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div{
+.content{
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -23,7 +23,7 @@ div{
   align-items: center;
   background-color: #AEBFD7;
   color: white;
-  h1{
+  .finalTitle{
     margin-top: 12.5%;
   }
   a{

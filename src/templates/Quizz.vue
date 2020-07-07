@@ -2,12 +2,12 @@
   <main >
     <div class="quizz" :style="{backgroundImage : `url(${getBackgroundPath(currentQuizz.background)})`}">
       <img :src="getPersonPath(currentQuizz.leftPerson)" alt="test"  class="left-img-person"/>
-      <div class="quizz--content">
+      <div class="quizzContent">
         <h2>{{ currentQuizz.questions[currentQuestion].questionText }}</h2>
         <div class="question">
-          <div class="question--content" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
+          <div class="questionContent" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
             <!-- IMAGE -->
-            <div :class="{'question--input': true, 'is-wrong': isGoodAnswer === false && response.value === currentAnswer, 'is-good': isGoodAnswer && response.value === currentAnswer}">
+            <div :class="{'questionInput': true, 'is-wrong': isGoodAnswer === false && response.value === currentAnswer, 'is-good': isGoodAnswer && response.value === currentAnswer}">
                 <label>
                   <input
                   type="radio"
@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div class="quizz--buttons">
+        <div class="quizzButtons">
           <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
             <button>Chapitre suivant</button>
           </router-link>
@@ -101,7 +101,7 @@ main {
       left : -10px;
       z-index:-2
     }
-    .quizz--content{
+    .quizzContent{
       width: 881px;
       height: 426px;
       background: #FFFFFF;
@@ -122,12 +122,12 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .question--content{
+        .questionContent{
           width: 248px;
           height: 75px;
           background: #AEBFD7;
           border-radius: 20px;
-          .question--input {
+          .questionInput {
             background: #8F9CAF;
             color: white;
             display: flex;
@@ -144,7 +144,7 @@ main {
           }
         }
       }
-      .quizz--buttons{
+      .quizzButtons{
         width: 800px;
         height: 56px;
         display: flex;
