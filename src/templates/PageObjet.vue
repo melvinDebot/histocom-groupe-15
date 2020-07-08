@@ -9,7 +9,6 @@
       <div class="pageText">
         <h2>{{ currentPeriod.objects[0].titlePeriod }}</h2>
         <h4>{{ currentPeriod.objects[0].subtitle }}</h4>
-        <p>{{ currentPeriod.objects[0].text }}</p>
       </div>
     </div>
     <div class="pageContent">
