@@ -38,6 +38,7 @@ Nous avons choisi d’utiliser le framework Vue.js pour sa fonctionnalité de ro
 Nous avons utilisé SCSS pour le rendu css car il permet de limiter le scope des balises css. Dans la mesure ou plusieurs templates se trouvent en même temps sur une même page (par exemple : pagePeriode.vue et App.vue) les scope limités du SCSS permet d’éviter au maximum les conflits de css.
 
 # GREENSOCK
+Nous avons utilisé la librairie greensock car elle permet de simplifier des animations Javascript mais aussi compatible sur tous les navigateurs, mais aussi qui permettent de rendre un rendu efficace et fluide.
 
 
 # Client side rendering
@@ -51,7 +52,14 @@ Notre site s’adressant à des enfants de 8 à 13 ans qui ont, pour les plus je
 # High-tech
 
 # Amélioration progressive 
+audits du site :
+- Performance : 95
+- Accesibilité : 100
+- Bonne pratiques : 100
+- SEO: 95
 
 # PWA
+Nous avons mis en place une progressif web app car elle permet une meilleure expérience utilisateur pour notre site, comme le systeme offline mais aussi un rendu fullscreen sur ordinateur
 
 # Compatibilité 
+le site est compatible sur chrome et safari 

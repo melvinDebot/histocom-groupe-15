@@ -47,7 +47,7 @@ export default {
       Answers: [],
       currentAnswer: null,
       nextStep : false,
-      isGoodAnswer: null
+      isGoodAnswer: null,
     };
   },
   methods: {
