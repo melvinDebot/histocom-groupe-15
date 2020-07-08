@@ -24,8 +24,6 @@ N'ayant pas de développeur back, nous utilisons un fichier Json pour stocker le
 ## Site Histocom
 
 [Pour voir le site cliquez ici](https://histocom.netlify.app/#/)
-<<<<<<< HEAD
-=======
 
 
 ## Argumentaire
@@ -56,4 +54,3 @@ Notre site s’adressant à des enfants de 8 à 13 ans qui ont, pour les plus je
 # PWA
 
 # Compatibilité 
->>>>>>> 11127971a81a65ef61199df3c0bfe0dd1b895010
