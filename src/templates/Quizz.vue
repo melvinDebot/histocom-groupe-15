@@ -26,7 +26,7 @@
           <div class="counter">
             {{  currentQuestion }} / {{ currentQuizz.questions.length }}
           </div>
-          <button @click="addAnswer()">Question Suivante </button>
+          <button @click="addAnswer()" v-if="nextQuestion">Question Suivante </button>
         </div>
         <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
           <button class="nextStep">Chapitre suivant</button>
@@ -48,6 +48,7 @@ export default {
       currentAnswer: null,
       nextStep : false,
       isGoodAnswer: null,
+      nextQuestion: true,
     };
   },
   methods: {
@@ -57,6 +58,7 @@ export default {
       this.currentAnswer = null;
       if(this.currentQuestion === 2){
         this.nextStep = true
+        this.nextQuestion = false
       }
     },
     getPersonPath(img){
