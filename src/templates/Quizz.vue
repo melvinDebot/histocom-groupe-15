@@ -120,6 +120,7 @@ main {
         font-weight: 500;
         font-size: 30px;
         color: #6D6D6D;
+        width: 80%;
       }
       .question{
         width: 805px;
