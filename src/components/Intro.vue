@@ -1,5 +1,11 @@
 <template>
   <div class="intro">
+    <div class="warning" v-if="warning">
+      <div>
+        <h1>Ce site est prévu pour une navigation sur ordinateur uniquement.</h1>
+        <button @click="warningOff()">J'ai compris !</button>
+      </div>
+    </div>
     <Logo />
     <img :src="this.image" alt="personnage"  class="perso"/>
     <div class="introText">
@@ -41,7 +47,8 @@ export default {
     return {
       image : img,
       imageTwo : book,
-      iconQuestion : iconQuestion
+      iconQuestion : iconQuestion,
+      warning : true
     }
   },
   mounted : ()=> {
@@ -52,6 +59,11 @@ export default {
       ease : Power3.easeInOut,
       delay: 3
     })
+  },
+  methods: {
+    warningOff() {
+      this.warning = false
+    }
   }
 }
 </script>
@@ -71,6 +83,40 @@ export default {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
+    .warning{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #AEBFD7;
+      z-index: 999999;
+      div{
+        margin-top: 50vh;
+        transform: translate(-0%,-50%);
+        h1{
+          color: white;
+          text-align: center;
+        }
+        button{
+          width: 296px;
+          height: 57px;
+          background: #8F9CAF;
+          border-radius: 10px;
+          color: white;
+          font-weight: 500;
+          font-size: 20px;
+          border: none;
+          margin-top: 50px;
+          font-family: Gotham rounded, Helvetica, Arial, sans-serif;
+        }
+        h1,
+        button{
+          margin-left: 50vw;
+          transform: translate(-50%,-0%);
+        }
+      }
+    }
     .perso{
       height: 80vh;
       position: absolute;
