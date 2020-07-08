@@ -98,8 +98,10 @@ main {
     align-items: center;
     .left-img-person{
       position: absolute;
-      left : -10px;
-      z-index:-2
+      left : 20px;
+      top: 20vh;
+      height: 80vh;
+      z-index:-2;
     }
     .quizzContent{
       width: 881px;
@@ -111,6 +113,7 @@ main {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      margin-top: 20px;
       h2{
         font-weight: 500;
         font-size: 30px;
@@ -174,8 +177,8 @@ main {
   }
   .nextStep{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     width: 296px;
     height: 57px;
     background: #8F9CAF;
