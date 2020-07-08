@@ -1,104 +1,307 @@
 {
   "prehistoire":{
+    "background" : "background",
+    "leftPerson" : "perso-prehistoire",
     "questions":[
-        {
-          "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
-          "goodAnswer" : "Cunéiforme",
-          "responses":[
-              {
-                "value" : "Cunéiforme",
-                "text":"Cunéiforme"
-              },
-              {
-                "text":"Cur-nez-iforme",
-                "value" : "Cur-nez-iforme"
-              },
-              {
-                "value" : "Carréiforme",
-                "text":"Carréiforme"
-              }
-          ]
-        },
-        {
-          "questionText":"Les hiéroglyphes ont été utilisés ?",
-          "responses":[
-              {
-                "text":"En france"
-              },
-              {
-                "text":"Dans l’empire romain",
-                "correct":true
-              },
-              {
-                "text":"En Egypte"
-              }
-          ]
-        },
-        {
-          "questionText":"Les scribes ?",
-          "responses":[
-              {
-                "text":"chantaient "
-              },
-              {
-                "text":"écrivaient",
-                "correct":true
-              },
-              {
-                 "text":"dansaient"
-              }
-           ]
-        }
-     ],
-     "linkNextPeriode":"/Periode/Egypte"
+      {
+        "questionText":"Les premiers humains dessinaient ?",
+        "goodAnswer" : "Des animaux",
+        "responses":[
+          {
+            "value" : "Des animaux",
+            "reponseText":"Des animaux"
+          },
+          {
+            "reponseText":"Des voitures",
+            "value" : "Des voitures"
+          },
+          {
+            "value" : "Des immeubles",
+            "reponseText":"Des immeubles"
+          }
+        ]
+      },
+      {
+        "questionText":"La sculpture retrouvée est un homme...",
+        "goodAnswer" : "Lion",
+        "responses":[
+          {
+            "value" : "Chien",
+            "reponseText":"Chien"
+          },
+          {
+            "reponseText":"Singe",
+            "value" : "Singe"
+          },
+          {
+            "reponseText":"Lion",
+            "value" : "Lion"
+          }
+        ]
+      },
+      {
+        "questionText":"Les animaux peuvent communiquer ?",
+        "goodAnswer" : "Un danger",
+        "responses":[
+          {
+            "value" : "Un danger",
+            "reponseText":"Un danger"
+          },
+          {
+            "reponseText":"La météo",
+            "value" : "La météo"
+          },
+          {
+            "value" : "L’heure qu’il est",
+            "reponseText":"L’heure qu’il est"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/egypte"
   },
   "egypte":{
-     "questions":[
-        {
-           "questionText":"Les premiers humains dessinaient ?",
-           "responses":[
-              {
-                 "text":"Des animaux"
-              },
-              {
-                 "text":"Des voitures",
-                 "correct":true
-              },
-              {
-                 "text":"Des immeubles"
-              }
-           ]
-        },
-        {
-           "questionText":"La sculpture retrouvée est un homme",
-           "responses":[
-              {
-                 "text":"chien"
-              },
-              {
-                 "text":"singe",
-                 "correct":true
-              },
-              {
-                 "text":"lion"
-              }
-           ]
-        },
-        {
-           "questionText":"Les animaux peuvent communiquer ?",
-           "responses":[
-              {
-                 "text":"un danger"
-              },
-              {
-                 "text":"la météo",
-                 "correct":true
-              },
-              {
-                 "text":"l’heure qu’il est"
-              }
-           ]
-        }
-     ]
+    "background" : "background-egypte",
+    "leftPerson" : "perso-romain",
+    "questions":[
+      {
+        "questionText":"L’un des premiers systèmes d’écriture s’appelle ?",
+        "goodAnswer" : "Cunéiforme",
+        "responses":[
+          {
+            "reponseText":"Cunéiforme",
+            "value" : "Cunéiforme"
+          },
+          {
+            "reponseText":"Cur-nez-iforme",
+            "value" : "Cur-nez-iforme"
+          },
+          {
+            "reponseText":"Carréiforme",
+            "value" : "Carréiforme"
+          }
+        ]
+      },
+      {
+        "questionText":"Les hiéroglyphes ont été utilisés...",
+        "goodAnswer" : "En Egypte",
+        "responses":[
+          {
+            "reponseText":"En France",
+            "value" : "En France"
+          },
+          {
+            "reponseText":"Dans l’Empire Romain",
+            "value" : "Dans l’Empire Romain"
+          },
+          {
+            "reponseText":"En Egypte",
+            "value" : "En Egypte"
+          }
+        ]
+      },
+      {
+        "questionText":"Les scribes...",
+        "goodAnswer" : "Ecrivaient",
+        "responses":[
+          {
+            "reponseText":"Chantaient",
+            "value" : "Chantaient"
+          },
+          {
+            "reponseText":"Ecrivaient",
+            "value" : "Ecrivaient"
+          },
+          {
+            "reponseText":"Dansaient",
+            "value" : "Dansaient"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/moyen-age"
+  },
+  "moyen-age":{
+    "background" : "background-moyen-age",
+    "leftPerson" : "perso-moyen-age",
+    "questions":[
+      {
+        "questionText":"Qui a inventé l'imprimerie ?",
+        "goodAnswer" : "Gutenberg",
+        "responses":[
+          {
+            "reponseText":"Gutenberg",
+            "value" : "Gutenberg"
+          },
+          {
+            "reponseText":"Louis XIV",
+            "value" : "Louis XIV"
+          },
+          {
+            "reponseText":"Toi !",
+            "value" : "Toi !"
+          }
+        ]
+      },
+      {
+        "questionText":"L'imprimerie a accéléré...",
+        "goodAnswer" : "...la transmission du savoir",
+        "responses":[
+          {
+            "reponseText":"...La vitesse de marche",
+            "value" : "...La vitesse de marche"
+          },
+          {
+            "reponseText":"...le temps",
+            "value" : "...le temps"
+          },
+          {
+            "reponseText":"...la transmission du savoir",
+            "value" : "...la transmission du savoir"
+          }
+        ]
+      },
+      {
+        "questionText":"Quel est le premier livre imprimé ?",
+        "goodAnswer" : "La Bible",
+        "responses":[
+          {
+            "reponseText":"Oui-oui à la ferme",
+            "value" : "Oui-oui à la ferme"
+          },
+          {
+            "reponseText":"La Bible",
+            "value" : "La Bible"
+          },
+          {
+            "reponseText":"Le journal de Mickey",
+            "value" : "Le journal de mickey"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/moderne"
+  },
+  "moderne":{
+    "background" : "background-moderne",
+    "leftPerson" : "perso-moderne",
+    "questions":[
+      {
+        "questionText":"Comment s'appelle l'alphabet utilisé sur le télégraphe électrique ?",
+        "goodAnswer" : "Morse",
+        "responses":[
+          {
+            "reponseText":"Morse",
+            "value" : "Morse"
+          },
+          {
+            "reponseText":"Latin",
+            "value" : "Latin"
+          },
+          {
+            "reponseText":"Arabe",
+            "value" : "Arabe"
+          }
+        ]
+      },
+      {
+        "questionText":"Les premiers téléphones permettaient les appels...",
+        "goodAnswer" : "Avec la voix",
+        "responses":[
+          {
+            "reponseText":"En vidéo",
+            "value" : "En vidéo"
+          },
+          {
+            "reponseText":"En langue des signes",
+            "value" : "En langue des signes"
+          },
+          {
+            "reponseText":"Avec la voix",
+            "value" : "Avec la voix"
+          }
+        ]
+      },
+      {
+        "questionText":"Les informations sur la télévision étaient...",
+        "goodAnswer" : "Plus rapides que les journaux papiers",
+        "responses":[
+          {
+            "reponseText":"Plus lentes que les journaux papiers",
+            "value" : "Plus lentes que les journaux papiers"
+          },
+          {
+            "reponseText":"Aussi rapides que les journaux papiers",
+            "value" : "Aussi rapides que les journaux papiers"
+          },
+          {
+            "reponseText":"Plus rapides que les journaux papiers",
+            "value" : "Plus rapides que les journaux papiers"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/Periode/actuelle"
+  },
+  "actuelle":{
+    "background" : "background-actuelle",
+    "leftPerson" : "perso-actuelle",
+    "questions":[
+      {
+        "questionText":"Quand a été inventé internet ?",
+        "goodAnswer" : "Au XXe siècle",
+        "responses":[
+          {
+            "reponseText":"Au moyen-âge",
+            "value" : "Au moyen-âge"
+          },
+          {
+            "reponseText":"Hier",
+            "value" : "Hier"
+          },
+          {
+            "reponseText":"Au XXe siècle",
+            "value" : "Au XXe siècle"
+          }
+        ]
+      },
+      {
+        "questionText":"Qu'est ce qu'on ne peut pas envoyer par messagerie instantanée ?",
+        "goodAnswer" : "Des odeurs",
+        "responses":[
+          {
+            "reponseText":"Des vidéos",
+            "value" : "Des vidéos"
+          },
+          {
+            "reponseText":"Des odeurs",
+            "value" : "Des odeurs"
+          },
+          {
+            "reponseText":"Des messages écrits",
+            "value" : "Des messages écrits"
+          }
+        ]
+      },
+      {
+        "questionText":"Les scribes ?",
+        "goodAnswer" : "chantaient",
+        "responses":[
+          {
+            "reponseText":"chantaient",
+            "value" : "chantaient"
+          },
+          {
+            "reponseText":"écrivaient",
+            "value" : "écrivaient"
+          },
+          {
+            "reponseText":"dansaient",
+            "value" : "dansaient"
+          }
+        ]
+      }
+    ],
+    "linkNextPeriode":"/final"
   }
 }

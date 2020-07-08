@@ -1,17 +1,20 @@
 [
   {
     "periodName": "prehistoire",
-    "title": "Invention de la peinture",
+    "title": "La préhistoire",
     "subtitle" : "Afrique, Europe, Asie",
     "text" : "-30 000 AVJC",
-    "rigthPerson" : "perso-one",
-    "leftPerson" : "perso-two",
+    "rigthPerson" : "perso-prehistoire",
+    "leftPerson" : "perso-prehistoire-two",
     "background" : "background",
     "objects": [
       {
-        "titlePeriod" : "LES OBJETS DE COMMUNICATION PRE-HISTOIRE",
-        "img" : "../assets/images/perso-one.svg" ,
+        "titlePeriod" : "La préhistoire",
+        "subtitle" : "Afrique, Europe, Asie",
+        "persoPeriode" : "perso-prehistoire" ,
         "background" : "background",
+        "buttonBackground" : "#8F9CAF",
+        "testImg" : "../assets/perso-periode/test.gif",
         "text" : "Les premiers Humains ont commencé à raconter leur histoire à travers des peintures. Ils dessinaient des animaux des hommes et des femmes. Ils utilisaient des poils d’animaux, des os ou des morceaux de bois pour peindre. Ils prenaient ce qu’ils trouvaient autour d’eux pour faire les couleurs (des fleurs pour le jaune, de la terre pour le marron ou du sang pour le rouge..)"
       }
     ],
@@ -19,16 +22,19 @@
       {
         "imgName":"object-painting",
         "title":"la peinture",
-        "routeParam": "prehistoire"
+        "backgroundColor" : "#AEBFD7",
+        "routeParam": "peinture"
       },
       {
-        "imgName":"object-painting",
+        "imgName":"object-painting-two",
         "title":"la sculture",
+        "backgroundColor" : "#AEBFD7",
         "routeParam": "sculture"
       },
       {
-        "imgName":"object-painting",
+        "imgName":"parole",
         "title":"la parole",
+        "backgroundColor" : "#AEBFD7",
         "routeParam": "parole"
       }
     ],
@@ -44,7 +50,7 @@
         "objectTitle" : "La sculture",
         "imgName" : "object-painting-two",
         "text" : "Les premières sculptures sont apparues peu après la peinture. Elles représentaient des objets réels, comme des hommes ou des femmes mais aussi, de temps en temps, des choses fictives. Par exemple, la sculpture de l’homme-lion (ou femme-lionne) retrouvée en Allemagne mélange le corps d’un homme et la tête d’un lion. Elle a été fabriquée il y a environ 32 000 ans.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/9GPy5KKlSZE",
         "background" : "background"
       },
       "parole" : {
@@ -54,61 +60,36 @@
         "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
         "background" : "background"
       }
-    },
-    "quizz" : {
-      "questions" : [
-        {
-          "questionText" : "Les premiers humains dessinaient ?",
-          "responses" : [
-            { "text" : "Des animaux"},
-            { "text" : "Des voitures", "correct" : true},
-            { "text" : "Des immeubles"}
-          ]
-        },
-        {
-          "questionText" : "La sculpture retrouvée est un homme",
-          "responses" : [
-            { "text" : "chien"},
-            { "text" : "singe", "correct" : true},
-            { "text" : "lion"}
-          ]
-        },
-        {
-          "questionText" : "Les animaux peuvent communiquer ?",
-          "responses" : [
-            { "text" : "un danger"},
-            { "text" : "la météo", "correct" : true},
-            { "text" : "l’heure qu’il est"}
-          ]
-        }
-      ]
     }
   },
   {
-    "periodName": "Egypte",
-    "title": "Invention de l'écriture",
+    "periodName": "egypte",
+    "title": "L'Egypte",
     "subtitle" : "Moyen Orient",
     "text" : "-30 000 AVJC",
     "background" : "background-egypte",
-    "rigthPerson" : "perso-egypte",
-    "leftPerson" : "perso-egypte",
+    "rigthPerson" : "perso-romain",
+    "leftPerson" : "perso-romain-two",
     "objects": [
       {
         "titlePeriod" : "LES OBJETS DE COMMUNICATION EGYPTE",
-        "img" : "../assets/images/perso-one.svg" ,
+        "persoPeriode" : "perso-romain" ,
         "background" : "background-egypte",
+        "buttonBackground" : "#D28A61",
         "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens."
       }
     ],
     "sliderBlocs" :[
       {
-        "imgName":"object-painting",
+        "imgName":"hieroglyphes",
         "title":"hiéroglyphes",
+        "backgroundColor" : "#FFBB95",
         "routeParam": "hiéroglyphes"
       },
       {
-        "imgName":"object-painting",
+        "imgName":"rosseta",
         "title":"La pierre de Rosette",
+        "backgroundColor" : "#FFBB95",
         "routeParam": "pierrerosette"
       }
     ],
@@ -117,45 +98,166 @@
         "objectTitle" : "hiéroglyphes",
         "imgName" : "object-painting",
         "text" : "Les hiéroglyphes, ces suites de dessins retrouvés sur les murs des pyramides forment l’un des plus anciens système d’écriture connu. Chaque dessin équivaut à un mot ou une partie d’un mot et donc une suite de dessins forme une phrase. Mais ce système d’écriture est resté très longtemps un mystère total pour les archéologues européens.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/SrBLTMs71x0",
         "background" : "background-egypte"
       },
       "pierrerosette" : {
         "objectTitle" : "La pierre de Rosette",
         "imgName" : "object-painting-two",
         "text" : "La pierre de Rosette est une pierre gravée d’un texte traduit en Grec et en hiéroglyphes. A l’époque de sa découverte les européens savaient déjà lire le grec, donc la compréhension des hiéroglyphes s’est faite sans problème. Ainsi la signification des signes et phrases s’est éclaircie à l’aide de cette pierre.",
-        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "video" : "https://youtu.be/SrBLTMs71x0",
         "background" : "background-egypte"
       }
-    },
-    "quizz" : {
-      "questions" : [
-        {
-          "questionText" : "L’un des premiers systèmes d’écriture s’appelle ?",
-          "responses" : [
-            { "text" : "Cunéiforme"},
-            { "text" : "Cur-nez-iforme", "correct" : true},
-            { "text" : "Carréiforme"}
-          ]
-        },
-        {
-          "questionText" : "Les hiéroglyphes ont été utilisés ?",
-          "responses" : [
-            { "text" : "En france"},
-            { "text" : "Dans l’empire romain", "correct" : true},
-            { "text" : "En Egypte"}
-          ]
-        },
-        {
-          "questionText" : "Les scribes ?",
-          "responses" : [
-            { "text" : "chantaient "},
-            { "text" : "écrivaient", "correct" : true},
-            { "text" : "dansaient"}
-          ]
-        }
-      ],
-      "linkNextPeriode" : "/Periode/Egypte"
+    }
+  },
+  {
+    "periodName": "moyen-age",
+    "title": "Le Moyen-âge",
+    "subtitle" : "Europe",
+    "text" : "1454",
+    "background" : "background-moyen-age",
+    "rigthPerson" : "perso-moyen-age",
+    "leftPerson" : "perso-moyen-age-two",
+    "objects": [
+      {
+        "titlePeriod" : "LES OBJETS DE COMMUNICATION DU MOYEN AGE",
+        "persoPeriode" : "perso-moyen-age" ,
+        "background" : "background-moyen-age",
+        "buttonBackground" : "#AED7C8",
+        "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454"
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"imprimerie",
+        "title":"Imprimerie",
+        "backgroundColor" : "#AED7C8",
+        "routeParam": "imprimerie"
+      },
+      {
+        "imgName":"ecriture",
+        "title":"Ecriture",
+        "backgroundColor" : "#AED7C8",
+        "routeParam": "ecriture"
+      }
+    ],
+    "objectDesc" : {
+      "imprimerie" : {
+        "objectTitle" : "Imprimerie",
+        "imgName" : "object-painting",
+        "text" : "Le moyen-âge a vu apparaître une invention qui a grandement accéléré la transmission du savoir. En effet l’imprimerie a permis de multiplier les exemplaires des livres qui étaient autrefois recopiés à la main, souvent par des moines. Ainsi Gutenberg a imprimé le premier livre de l’histoire, la Bible en 1454",
+        "video" : "https://youtu.be/C6fRa8vbXh4",
+        "background" : "background-moyen-age"
+      }
+    }
+  },
+  {
+    "periodName": "moderne",
+    "title": "La période moderne",
+    "subtitle" : "Monde entier",
+    "text" : "1876",
+    "background" : "background-moderne",
+    "rigthPerson" : "perso-moderne",
+    "leftPerson" : "perso-moderne-two",
+    "objects": [
+      {
+        "titlePeriod" : "LES OBJETS DE COMMUNICATION EPOQUE MODERNE",
+        "persoPeriode" : "perso-moderne" ,
+        "background" : "background-moderne",
+        "buttonBackground" : "#6D1313",
+        "text" : "Le télégraphe est la première technologie qui permit à une information de parcourir de grandes distances en quelques minutes. En effet, le télégraphe de Chappe a permis de transmettre sur 200 KM un message en seulement 9 minutes ! incroyable ! Par la suite un fût remplacé par le télégraphe électrique qui utilise le morse (les lettres sont remplacées par des séries de son courts et longs). Ainsi, les messages arrivent instantanément chez leur destinataire."
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"telegraphe",
+        "title":"Télégraphe",
+        "backgroundColor" : "#EC8181",
+        "routeParam": "telegraphe"
+      },
+      {
+        "imgName":"telephone",
+        "title":"Téléphone",
+        "backgroundColor" : "#EC8181",
+        "routeParam": "telephone"
+      },
+      {
+        "imgName":"television",
+        "title":"Télévison",
+        "backgroundColor" : "#EC8181",
+        "routeParam": "television"
+      }
+    ],
+    "objectDesc" : {
+      "telegraphe" : {
+        "objectTitle" : "Télégraphe",
+        "imgName" : "telegraphe",
+        "text" : "Le télégraphe est la première technologie qui permit à une information de parcourir de grandes distances en quelques minutes. En effet, le télégraphe de Chappe a permis de transmettre sur 200 KM un message en seulement 9 minutes ! incroyable ! Par la suite un fût remplacé par le télégraphe électrique qui utilise le morse (les lettres sont remplacées par des séries de son courts et longs). Ainsi, les messages arrivent instantanément chez leur destinataire.",
+        "video" : "https://youtu.be/DhGP42Z7gJ0",
+        "background" : "background-moderne"
+      },
+      "telephone" : {
+        "objectTitle" : "Téléphone",
+        "imgName" : "telephone",
+        "text" : "Le téléphone a été inventé en 1876 par Graham Bell aux USA. Il permet à deux personnes d’avoir une conversation orale à distance. D’abord uniquement filaire, il est devenu sans fil dans la 2eme moitié du XXe siècle.",
+        "video" : "https://youtu.be/0QnWm4WrRcg",
+        "background" : "background-moderne"
+      },
+      "television" : {
+        "objectTitle" : "Télévision",
+        "imgName" : "television",
+        "text" : "La télévision fait suite à la radio. Ces deux technologies ont permis la diffusion massive et rapide d’information sans limite de distance ou de nombre de destinataire. Au cours de la 2e moitié du XXe siècle, les émission de télévision ont commencé à être diffusées en direct, cela a permis d’avoir des information toujours plus récentes.",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background-moderne"
+      }
+    }
+  },
+  {
+    "periodName": "actuelle",
+    "title": "La période actuelle",
+    "subtitle" : "Monde entier",
+    "text" : "XXe siècle",
+    "background" : "background-actuelle",
+    "rigthPerson" : "perso-actuelle",
+    "leftPerson" : "perso-actuelle-two",
+    "objects": [
+      {
+        "titlePeriod" : "LES OBJETS DE COMMUNICATION EPOQUE ACTUELLE",
+        "persoPeriode" : "perso-actuelle" ,
+        "background" : "background-actuelle",
+        "buttonBackground" : "#E06AE1",
+        "text" : "Le réseau internet mondial que l’on connaît aujourd’hui a été inventé au cours du XXe siècle. Les sites internets sont stockés sur des serveurs partout dans le monde accessibles par tous les ordinateurs via une connexion internet. Cela permet aux utilisateurs de consulter les informations dont ils ont besoin n’importe quand. En plus, l’utilisateur peut regarder la télévision ou même parler avec ses amis."
+      }
+    ],
+    "sliderBlocs" :[
+      {
+        "imgName":"internet",
+        "title":"internet",
+        "backgroundColor" : "#E299E3",
+        "routeParam": "internet"
+      },
+      {
+        "imgName":"message",
+        "title":"messageries instantanées",
+        "backgroundColor" : "#E299E3",
+        "routeParam": "message"
+      }
+    ],
+    "objectDesc" : {
+      "internet" : {
+        "objectTitle" : "internet",
+        "imgName" : "internet",
+        "text" : "Le réseau internet mondial que l’on connaît aujourd’hui a été inventé au cours du XXe siècle. Les sites internets sont stockés sur des serveurs partout dans le monde accessibles par tous les ordinateurs via une connexion internet. Cela permet aux utilisateurs de consulter les informations dont ils ont besoin n’importe quand. En plus, l’utilisateur peut regarder la télévision ou même parler avec ses amis.",
+        "video" : "https://youtu.be/8qiEfhA-Wk4",
+        "background" : "background-actuelle"
+      },
+      "message" : {
+        "objectTitle" : "messageries instantanées",
+        "imgName" : "message",
+        "text" : "Les messageries instantanées sont apparues grâce à internet. Elles permettent à deux utilisateurs ou plus de s’envoyer des messages écrits, audio, vidéos ou bien des photos. Rares sont les personnes qui n’utilisent pas de messagerie instantanée aujourd’hui !",
+        "video" : "https://www.youtube.com/embed/vFFvBLG31PY",
+        "background" : "background-actuelle"
+      }
     }
   }
   

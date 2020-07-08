@@ -1,13 +1,22 @@
 <template>
   <div class="intro">
+    <Logo />
     <img :src="this.image" alt="personnage"  class="perso"/>
-    <div class="intro--text">
-      <h1>Bienvenue sur Histo apprendre n’a jamais été aussi simple !</h1>
-      <div class="text--containt">
-        <img :src="this.imageTwo" alt="" />
-        <p>Découvrer la communication à travers le temps !</p>
+    <div class="introText">
+      <h1>Bienvenue sur HistoCom <br />apprendre n’a jamais été aussi simple !</h1>
+      <div class="textContent">
+        <img :src="this.imageTwo" alt="book intro" />
+        <p>Découvre la communication à travers le temps !</p>
         <router-link :to="{path : '/Periode/prehistoire' }"><button>C'est parti !</button></router-link>
       </div>
+      <div class="textContent">
+        <img :src="this.iconQuestion" alt="book intro" />
+        <p>Valide tes connaissances en commençant par un quizz</p>
+        <router-link :to="{path : '/quizz/prehistoire' }"><button>C'est parti !</button></router-link>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <p class="disclaimerContent">Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales et ne sera pas publié</p>
     </div>
   </div>
 </template>
@@ -15,10 +24,14 @@
 <script>
 import img from '../assets/images/perso-one.png';
 import book from '../assets/images/book.png';
+import iconQuestion from '../assets/images/quizz.png';
+import Logo from '../components/Logo.vue'
 import gsap , {Power3}from 'gsap'
-
 export default {
   name : 'Intro',
+  components : {
+    Logo
+  },
   props : {
     show : {
       type : Function
@@ -27,12 +40,14 @@ export default {
   data : ()=> {
     return {
       image : img,
-      imageTwo : book
+      imageTwo : book,
+      iconQuestion : iconQuestion
     }
   },
   mounted : ()=> {
     gsap.fromTo('.perso',3, {x : -150, opacity : 0}, { x:0, opacity : 1})
-    gsap.to('.text--containt',1, {
+    gsap.to('.textContent',1, {
+      y: -6,
       opacity : 1,
       ease : Power3.easeInOut,
       delay: 3
@@ -62,14 +77,24 @@ export default {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
-    .intro--text{
+    .perso{
+      height: 80vh;
+      position: absolute;
+      top: 20vh;
+      left: 20px;
+    }
+    .introText{
       margin-left: 30%;
+      margin-top: 5%;
       width: 70%;
-      height: 100%;
+      height: 80%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+<<<<<<< HEAD
       // align-items: start;
+=======
+>>>>>>> 11127971a81a65ef61199df3c0bfe0dd1b895010
       h1{
         margin-left: 0px;
         font-weight: 500;
@@ -80,18 +105,20 @@ export default {
         animation: typing 3s steps(40, end);
         white-space: nowrap;
       }
-      .text--containt{
+      .textContent{
         width: 90%;
-        height: 158px;
+        height: 110px;
         background:white;
         border-radius: 20px;
+        margin-top: 15px;
         opacity: 0;
         display: flex;
         align-items: center;
         justify-content:space-between;
         img{
-          width: 87px;
+          width: 67px;
           margin-left: 20px;
+          margin-right: 10px;
         }
         p{
           font-size: 30px;
@@ -99,9 +126,9 @@ export default {
           color: #AEBFD7;
         }
         button {
-          //width: 270px;
-          //height: 69px;
-          padding: 15px 30px;
+          //padding: 15px 30px;
+          width: 200px;
+          height: 50px;
           background: #4F5A67;
           margin-right: 20px;
           box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
@@ -111,6 +138,18 @@ export default {
           font-size: 30px;
           cursor: pointer;
         }
+      }
+    }
+    .disclaimer{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      justify-content: center;
+      .disclaimerContent{
+        text-align: center;
+        margin: 10px;
       }
     }
   }
@@ -123,5 +162,3 @@ export default {
     }
 }
 </style>
-
-
