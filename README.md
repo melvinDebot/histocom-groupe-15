@@ -40,6 +40,18 @@ Nous avons utilisé SCSS pour le rendu css car il permet de limiter le scope des
 # GREENSOCK
 Nous avons utilisé la librairie greensock car elle permet de simplifier des animations Javascript mais aussi compatible sur tous les navigateurs, mais aussi qui permettent de rendre un rendu efficace et fluide.
 
+```javascript
+// Intro.vue
+
+gsap.to('.textContent',1, {
+  y: -6,
+  opacity : 1,
+  ease : Power3.easeInOut,
+  delay: 3
+})
+
+```
+
 
 # Client side rendering
 
