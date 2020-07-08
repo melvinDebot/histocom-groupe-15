@@ -29,15 +29,15 @@ N'ayant pas de développeur back, nous utilisons un fichier Json pour stocker le
 
 ## Argumentaire
 
-# Vue.js 
+### Vue.js 
 
 Nous avons choisi d’utiliser le framework Vue.js pour sa fonctionnalité de routing plus simple à mettre en place. De plus, Vue.js a la capacité de gérer des templates dynamiques avec un contenu stocké dans un ou plusieurs fichiers .json. Cela nous a permis de développer un nombre limité de pages ou templates de pages pour un grand nombre final de page. 
 
-# SCSS
+### SCSS
 
 Nous avons utilisé SCSS pour le rendu css car il permet de limiter le scope des balises css. Dans la mesure ou plusieurs templates se trouvent en même temps sur une même page (par exemple : pagePeriode.vue et App.vue) les scope limités du SCSS permet d’éviter au maximum les conflits de css.
 
-# GREENSOCK
+### GREENSOCK
 Nous avons utilisé la librairie greensock car elle permet de simplifier des animations Javascript mais aussi compatible sur tous les navigateurs, mais aussi qui permettent de rendre un rendu efficace et fluide.
 
 ```javascript
@@ -52,26 +52,24 @@ gsap.to('.textContent',1, {
 
 ```
 
-
-# Client side rendering
+### Client side rendering
 
 Dans la mesure où nous n’avons pas de développeur back, nous avons choisi d’utiliser le client side rendering. Notre site n’étant pas lourd, les temps de chargement ne sont pas trop ralongés comparé au server side rendering.
 
-# Desktop first
+### Desktop first
 
 Notre site s’adressant à des enfants de 8 à 13 ans qui ont, pour les plus jeunes, rarement des smartphones ou des tablettes à eux, nous avons décidé de développer en desktop first. En effet, le principal accès à internet d’un enfant est l’ordinateur familial. Néanmoins, les enfants ont de plus en plus de smartphones et donc une version mobile de notre site sera à prévoir pour les années futures.
 
-# High-tech
 
-# Amélioration progressive 
+### Amélioration progressive 
 audits du site :
 - Performance : 95
 - Accesibilité : 100
 - Bonne pratiques : 100
 - SEO: 95
 
-# PWA
+### PWA
 Nous avons mis en place une progressif web app car elle permet une meilleure expérience utilisateur pour notre site, comme le systeme offline mais aussi un rendu fullscreen sur ordinateur
 
-# Compatibilité 
+### Compatibilité 
 le site est compatible sur chrome et safari 
