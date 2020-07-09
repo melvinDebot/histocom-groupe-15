@@ -110,17 +110,37 @@ export default {
 }
 .block:nth-child(1) {
   background: #aebfd7;
+  background-image: url('./assets/thumnail/perso-prehistoire.png');
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 .block:nth-child(2) {
   background: #ffbb95;
+  background-image: url('./assets/thumnail/perso-egypte.png');
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 .block:nth-child(3) {
   background: #aed7c8;
+  background-image: url('./assets/thumnail/perso-moyen-age.png');
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 .block:nth-child(4) {
   background: #ec8181;
+  background-image: url('./assets/thumnail/perso-moderne.png');
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 .block:nth-child(5) {
   background: #e299e3;
+  background-image: url('./assets/thumnail/perso-actuelle.png');
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 </style>
