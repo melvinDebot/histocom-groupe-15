@@ -31,7 +31,7 @@ export default {
       arrowOne : leftArrow,
       arrowTwo: rightArrow,
       direction: 'forward',
-      frame: 2,
+      frame: 1,
       count : 0
     }
   },
@@ -46,45 +46,7 @@ export default {
       return this.$route.params.type
     }
   },
-  created(){
-    // var slide = setInterval(()=>this.slideLoop(this.direction),2000)
-  },
   methods:{
-    slideLoop(pass) {
-      let steps = this.items.length - this.frame
-      if(this.count >= steps & pass == "forward"){
-        this.direction = "backward"
-        this.previous()
-        return
-      }
-      if(this.count <= steps & pass == "backward"){
-        if(this.count <= 0){
-          this.count = 0
-          this.direction = "forward"
-          this.next();
-          return
-        }
-        this.previous()
-        return
-      }
-      if(this.count < steps & pass == "forward"){
-        if(this.count < 0){
-          this.resetScroll()
-          return
-        }else if(this.count == 0){
-          this.next()
-          return
-        }
-        this.next()
-        return
-      }
-      this.resetScroll()
-    },
-    resetScroll(){
-      this.count = 0
-      this.direction = "forward"
-      this.scroll("reset")
-    },
     previous() {
       this.count--
       this.scroll("previous")
@@ -96,8 +58,8 @@ export default {
     scroll(position) {
       let el = document.getElementById("slide")
       let pos = 0;
-      let id = setInterval(frame, 5);
-      let num = this.items.length - this.frame
+      let id = setInterval(frame, 3);
+      let num = this.bloc.imgName.length - this.frame
       let width = 265;
       let resize = num * width
       let check = position == "reset" ? resize : width 
@@ -105,8 +67,8 @@ export default {
         if (pos == check) {
           clearInterval(id);
         } else {
-          pos += 5; 
-          el.scrollLeft += position === 'next' ? 5 : -5
+          pos += 3; 
+          el.scrollLeft += position === 'next' ? 3 : -3
         }
       }
     },
