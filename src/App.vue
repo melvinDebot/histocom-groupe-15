@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div class="app">
+    <div class="nav">
       <div class="block">
-        <div class="block--text">
+        <div class="blockText">
           <router-link :to="{path : '/Periode/prehistoire' }">La préhistoire</router-link>
         </div>
       </div>
       <div class="block">
-        <div class="block--text">
+        <div class="blockText">
           <router-link :to="{path : '/Periode/egypte' }">Egypte</router-link>
         </div>
       </div>
       <div class="block">
-        <div class="block--text">
-          <router-link :to="{path : '/Periode/moyen-age' }">Moyen-age</router-link>
+        <div class="blockText">
+          <router-link :to="{path : '/Periode/moyen-age' }">Moyen-âge</router-link>
         </div>
       </div>
       <div class="block">
-        <div class="block--text">
+        <div class="blockText">
           <router-link :to="{path : '/Periode/moderne' }">Moderne</router-link>
         </div>
       </div>
       <div class="block">
-        <div class="block--text">
+        <div class="blockText">
           <router-link :to="{path : '/Periode/actuelle' }">Actuelle</router-link>
         </div>
       </div>
@@ -49,12 +49,12 @@ export default {
   padding: 0;
   margin: 0;
 }
-#app {
+.app {
   font-family: Gotham rounded, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#nav {
+.nav {
   //width: 100%;
   width: 80%;
   height: auto;
@@ -77,7 +77,7 @@ export default {
     &:active {
       color: red;
     }
-    .block--text {
+    .blockText {
       width: 100%;
       height: 20px;
       align-self: flex-end;
@@ -110,18 +110,33 @@ export default {
 }
 .block:nth-child(1) {
   background: #aebfd7;
+  background-image: url('./assets/thumnail/perso-prehistoire.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .block:nth-child(2) {
   background: #ffbb95;
+  background-image: url('./assets/thumnail/perso-egypte.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .block:nth-child(3) {
   background: #aed7c8;
+  background-image: url('./assets/thumnail/perso-moyen-age.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .block:nth-child(4) {
   background: #ec8181;
+  background-image: url('./assets/thumnail/perso-moderne.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .block:nth-child(5) {
   background: #e299e3;
+  background-image: url('./assets/thumnail/perso-actuelle.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 </style>
 

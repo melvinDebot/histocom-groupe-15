@@ -1,14 +1,13 @@
 <template>
-  <div class="containt--objet">
-    <div class="containt-name">
+  <div class="contentObjet">
+    <div class="contentName">
       <ButtonBack :backgroundColor="currentDesc[currentActivity].backgroundButton" @click="$router.go(-1)"/>
       <h2>{{ currentDesc[currentActivity].objectTitle }}</h2>
-      <div class="containt-img" :style="{backgroundColor : currentDesc[currentActivity].backgroundImg}">
+      <div class="contentImg" :style="{backgroundColor : currentDesc[currentActivity].backgroundImg}">
         <img :src="getObjectPath(currentDesc[currentActivity].imgName)" alt="image" />
       </div>
-      <h4>{{ currentDesc[currentActivity].objectSubtitle }}</h4>
     </div>
-    <div class="containt-video" :style="{backgroundImage : `url(${getBackgroundPath(currentDesc[currentActivity].background)})`}">
+    <div class="contentVideo" :style="{backgroundImage : `url(${getBackgroundPath(currentDesc[currentActivity].background)})`}">
       <div>
         <div class="video">
           <iframe
@@ -20,7 +19,7 @@
         </div>
         <p>{{ currentDesc[currentActivity].text }}</p>
         <router-link :to="{name:'Quizz', params: {type: $route.params.type}}">
-          <button>Lancez le quizz</button>
+          <button>Lance le quizz</button>
         </router-link>
       </div>
     </div>
@@ -58,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss">
-.containt--objet {
+.contentObjet {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -70,7 +69,7 @@ export default {
   left: 0;
   z-index: 5;
   background: white;
-  .containt-name {
+  .contentName {
     width: 40%;
     height: 100%;
     display: flex;
@@ -94,23 +93,17 @@ export default {
         color: white;
       }
     }
-    .containt-img {
+    .contentImg {
       width: 485px;
-      height: 357px;
+      height: 350px;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 15px;
       
     }
-    h4 {
-      font-weight: 500;
-      font-size: 30px;
-      color: #6D6D6D;
-      font-family: Gotham rounded, Helvetica, Arial, sans-serif;
-    }
   }
-  .containt-video {
+  .contentVideo {
     width: 60%;
     height: 100%;
     display: flex;

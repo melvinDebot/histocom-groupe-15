@@ -2,12 +2,12 @@
   <main >
     <div class="quizz" :style="{backgroundImage : `url(${getBackgroundPath(currentQuizz.background)})`}">
       <img :src="getPersonPath(currentQuizz.leftPerson)" alt="test"  class="left-img-person"/>
-      <div class="quizz--content">
+      <div class="quizzContent">
         <h2>{{ currentQuizz.questions[currentQuestion].questionText }}</h2>
         <div class="question">
-          <div class="question--content" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
+          <div class="questionContent" v-for="(response, index) in currentQuizz.questions[currentQuestion].responses" :key="response.id">
             <!-- IMAGE -->
-            <div :class="{'question--input': true, 'is-wrong': isGoodAnswer === false && response.value === currentAnswer, 'is-good': isGoodAnswer && response.value === currentAnswer}">
+            <div :class="{'questionInput': true, 'is-wrong': isGoodAnswer === false && response.value === currentAnswer, 'is-good': isGoodAnswer && response.value === currentAnswer}">
                 <label>
                   <input
                   type="radio"
@@ -22,12 +22,15 @@
             </div>
           </div>
         </div>
-        <div class="quizz--buttons">
-          <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
-            <button>Chapitre suivant</button>
-          </router-link>
-          <button @click="addAnswer()">Question Suivante {{  currentQuestion }} / {{ currentQuizz.questions.length }}</button>
+        <div class="quizzButtons">
+          <div class="counter">
+            {{  currentQuestion }} / {{ currentQuizz.questions.length }}
+          </div>
+          <button @click="addAnswer()" v-if="nextQuestion">Question Suivante </button>
         </div>
+        <router-link :to="currentQuizz.linkNextPeriode" v-if="nextStep">
+          <button class="nextStep">Chapitre suivant</button>
+        </router-link> 
       </div>
     </div>
   </main>
@@ -44,7 +47,8 @@ export default {
       Answers: [],
       currentAnswer: null,
       nextStep : false,
-      isGoodAnswer: null
+      isGoodAnswer: null,
+      nextQuestion: true,
     };
   },
   methods: {
@@ -54,10 +58,8 @@ export default {
       this.currentAnswer = null;
       if(this.currentQuestion === 2){
         this.nextStep = true
+        this.nextQuestion = false
       }
-    },
-    getImagePath(imgName) {
-      return require(`@/assets/images/${imgName}.png`);
     },
     getPersonPath(img){
       return require(`@/assets/perso-periode/${img}.png`)
@@ -98,10 +100,12 @@ main {
     align-items: center;
     .left-img-person{
       position: absolute;
-      left : -10px;
-      z-index:-2
+      left : 20px;
+      top: 20vh;
+      height: 80vh;
+      z-index:-2;
     }
-    .quizz--content{
+    .quizzContent{
       width: 881px;
       height: 426px;
       background: #FFFFFF;
@@ -111,10 +115,12 @@ main {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      margin-top: 20px;
       h2{
         font-weight: 500;
         font-size: 30px;
         color: #6D6D6D;
+        width: 80%;
       }
       .question{
         width: 805px;
@@ -122,12 +128,12 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .question--content{
+        .questionContent{
           width: 248px;
           height: 75px;
           background: #AEBFD7;
           border-radius: 20px;
-          .question--input {
+          .questionInput {
             background: #8F9CAF;
             color: white;
             display: flex;
@@ -135,32 +141,31 @@ main {
             justify-content: center;
             width: 100%;
             height: 100%;
-            font-size: 16px;
+            font-size: 20px;
             border-radius: 20px;
             transition: border 0.3s ease-in;
             input[type="radio"] {
               display: none;
+              
             }
           }
         }
       }
-      .quizz--buttons{
+      .quizzButtons{
         width: 800px;
         height: 56px;
         display: flex;
         justify-content: space-between;
-        button:nth-child(1){
-          width: 296px;
-          height: 57px;
-          background: #4F5A67;
-          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-          border-radius: 10px;
+        .counter{
+          background: #8F9CAF;
           color: white;
-          font-weight: 500;
+          border-radius: 10px;
+          line-height: 54px;
+          width: 100px;
+          text-align: center;
           font-size: 20px;
-          border: none;
         }
-        button:nth-child(2){
+        button{
           width: 296px;
           height: 57px;
           background: #8F9CAF;
@@ -172,6 +177,19 @@ main {
         }
       }
     }
+  }
+  .nextStep{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 296px;
+    height: 57px;
+    background: #8F9CAF;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
   }
 
   .is-wrong {
