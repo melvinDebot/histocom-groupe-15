@@ -8,11 +8,6 @@ yarn install
 ```
 yarn serve
 ```
-## Technos 
-- Vue Js
-- Greensock 
-- SASS
-
 
 ## Description 
 
@@ -28,6 +23,8 @@ N'ayant pas de développeur back, nous utilisons un fichier Json pour stocker le
 
 
 ## Argumentaire
+
+## Technos :
 
 ### Vue.js 
 
