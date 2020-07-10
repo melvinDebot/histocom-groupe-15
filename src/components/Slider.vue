@@ -102,7 +102,7 @@ export default {
   }
   h4{
     font-size: 20px;
-    color: #6D6D6D;
+    color: #fff;
     text-align: center;
   }
 }
@@ -111,6 +111,7 @@ h2{
   font-size: 38px;
   color: #6D6D6D;
   font-weight: 500;
+  margin-left: 20px;
 }
 
 
