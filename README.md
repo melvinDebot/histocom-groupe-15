@@ -38,7 +38,7 @@ Nous avons utilisé SCSS pour le rendu css car il permet de limiter le scope des
 Nous avons utilisé la librairie greensock car elle permet de simplifier des animations Javascript mais aussi compatible sur tous les navigateurs, mais aussi qui permettent de rendre un rendu efficace et fluide.
 
 ### HOOPER
-C'est une librairie javascript qui permet de mettre en place un caroussel 
+C'est une librairie Javascript qui permet de mettre en place un carrousel structuré, elle prend en charge le tactile, clavier, molette de la souris et navigation. Optimisé pour fonctionner avec le framework Vue, pas un wrapper pour une autre bibliothèque.
 
 ```javascript
 // Intro.vue
