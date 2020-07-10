@@ -121,6 +121,7 @@ h2{
   font-size: 38px;
   color: #6D6D6D;
   font-weight: 500;
+  margin-left: 20px;
 }
 
 
