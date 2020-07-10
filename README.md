@@ -37,6 +37,9 @@ Nous avons utilisé SCSS pour le rendu css car il permet de limiter le scope des
 ### GREENSOCK
 Nous avons utilisé la librairie greensock car elle permet de simplifier des animations Javascript mais aussi compatible sur tous les navigateurs, mais aussi qui permettent de rendre un rendu efficace et fluide.
 
+### HOOPER
+C'est une librairie javascript qui permet de mettre en place un caroussel 
+
 ```javascript
 // Intro.vue
 

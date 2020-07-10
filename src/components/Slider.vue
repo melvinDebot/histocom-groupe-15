@@ -2,16 +2,6 @@
   <div class="contentSlider">
     <div class="slider">
       <h2>Les objets de communication</h2>
-      <!-- <div
-          class="slide"
-          @click="$router.push({name:'ObjectDesc', params: {period: currentPeriodName , activity : bloc.routeParam}})"
-          v-for="(bloc, index) in blocs"
-          :key="'bloc' + index"
-          :style="{backgroundColor : bloc.backgroundColor}"
-        >
-              <img :src="getObjectPath(bloc.imgName)" />
-            <h4>{{ bloc.title }}</h4>
-      </div>-->
       <Hooper :mouseDrag="false" ref="carousel" :itemsToShow="2" pagination="no">
         <slide
           class="slide"
